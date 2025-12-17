@@ -2,83 +2,84 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Noi Acquistiamo Auto | Valutazione Professionale Roma</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --primary: #e10600; --secondary: #002e6d; --dark-blue: #0a192f; --light-bg: #f4f7fa; --white: #ffffff; --text: #1e293b; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+        body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; overflow-x: hidden; }
 
-        /* HEADER */
-        nav { background: var(--white); padding: 15px 8%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 1000; }
-        .logo { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 22px; color: var(--secondary); text-decoration: none; }
+        /* HEADER RESPONSIVE */
+        nav { background: var(--white); padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 1000; height: 70px; }
+        .logo { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 18px; color: var(--secondary); text-decoration: none; flex-shrink: 1; }
         .logo span { color: var(--primary); }
-        .phone-badge { background: #f1f5f9; padding: 10px 18px; border-radius: 50px; color: var(--primary); font-weight: 800; text-decoration: none; font-size: 14px; }
+        .phone-badge { background: #f1f5f9; padding: 8px 12px; border-radius: 50px; color: var(--primary); font-weight: 800; text-decoration: none; font-size: 13px; white-space: nowrap; margin-left: 10px; border: 1px solid #e2e8f0; }
 
-        /* HERO */
-        .hero { position: relative; background: linear-gradient(135deg, #0b1d33 0%, #162e4e 100%); color: white; padding: 70px 5% 150px; text-align: center; overflow: hidden; }
+        /* HERO - FIX MOBILE */
+        .hero { position: relative; background: linear-gradient(135deg, #0b1d33 0%, #162e4e 100%); color: white; padding: 40px 5% 120px; text-align: center; min-height: 400px; }
         .hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
-        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 42px; font-weight: 800; margin-bottom: 10px; }
-        .hero p { font-size: 20px; color: #cbd5e1; margin-bottom: 30px; }
-        .hero-img { position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 100%; max-width: 750px; opacity: 0.25; z-index: 1; pointer-events: none; }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 800; margin-bottom: 10px; line-height: 1.2; }
+        .hero p { font-size: 16px; color: #cbd5e1; margin-bottom: 20px; }
+        .hero-img { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 500px; opacity: 0.4; z-index: 1; pointer-events: none; }
 
         /* STATS BAR */
-        .stats-bar { background: var(--white); padding: 20px; border-radius: 50px; display: inline-flex; align-items: center; gap: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-top: -30px; position: relative; z-index: 4; }
-        .stats-bar i { color: #ffcc00; font-size: 24px; }
-        .stats-bar span { font-weight: 800; color: var(--secondary); font-size: 18px; }
+        .stats-bar { background: var(--white); padding: 12px 25px; border-radius: 50px; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-top: 10px; position: relative; z-index: 4; }
+        .stats-bar span { font-weight: 800; color: var(--secondary); font-size: 14px; }
 
         /* FORM CARD */
-        .form-wrapper { max-width: 580px; margin: -100px auto 60px; padding: 0 20px; position: relative; z-index: 5; }
-        .form-card { background: var(--white); padding: 40px; border-radius: 16px; box-shadow: 0 25px 50px rgba(0,0,0,0.15); border-top: 8px solid var(--primary); }
-        .progress-bar { height: 6px; background: #f1f5f9; border-radius: 10px; margin-bottom: 30px; overflow: hidden; }
+        .form-wrapper { max-width: 500px; margin: -80px auto 40px; padding: 0 15px; position: relative; z-index: 5; }
+        .form-card { background: var(--white); padding: 30px 20px; border-radius: 16px; box-shadow: 0 25px 50px rgba(0,0,0,0.15); border-top: 6px solid var(--primary); }
+        .progress-bar { height: 5px; background: #f1f5f9; border-radius: 10px; margin-bottom: 25px; overflow: hidden; }
         .progress-fill { height: 100%; background: var(--primary); width: 20%; transition: 0.5s; }
+        
         .step { display: none; }
-        .step.active { display: block; animation: fadeIn 0.4s; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        label { display: block; margin-bottom: 10px; font-weight: 700; color: var(--secondary); }
-        select, input { width: 100%; padding: 15px; margin-bottom: 20px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px; }
-        .btn-next { width: 100%; padding: 18px; background: var(--primary); color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: 800; cursor: pointer; text-transform: uppercase; }
+        .step.active { display: block; animation: fadeIn 0.3s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        label { display: block; margin-bottom: 8px; font-weight: 700; font-size: 14px; color: var(--secondary); }
+        select, input { width: 100%; padding: 14px; margin-bottom: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px; outline: none; }
+        .btn-next { width: 100%; padding: 16px; background: var(--primary); color: white; border: none; border-radius: 10px; font-size: 17px; font-weight: 800; cursor: pointer; text-transform: uppercase; }
+        .btn-back { background: none; border: none; color: #94a3b8; cursor: pointer; margin-top: 10px; width: 100%; text-decoration: underline; font-size: 13px; }
 
-        /* SEZIONE 3 PASSAGGI */
-        .section-padding { padding: 80px 8%; text-align: center; }
-        .bg-light { background: var(--light-bg); }
-        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
-        .step-card { background: white; padding: 40px 30px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); position: relative; }
-        .step-card .num { position: absolute; top: -20px; left: 50%; transform: translateX(-50%); width: 45px; height: 45px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; border: 4px solid var(--white); }
-        .step-card h3 { margin: 15px 0; color: var(--secondary); }
+        /* 3 PASSAGGI */
+        .section-padding { padding: 60px 5%; text-align: center; }
+        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
+        .step-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); position: relative; border: 1px solid #f1f5f9; }
+        .step-card .num { width: 40px; height: 40px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; margin: 0 auto 15px; }
 
-        /* PERCHÉ NOI */
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 40px; }
-        .feature-box { padding: 30px; border-radius: 15px; background: #fff; border: 1px solid #e2e8f0; transition: 0.3s; }
-        .feature-box:hover { border-color: var(--primary); transform: translateY(-5px); }
-        .feature-box i { font-size: 30px; color: #10b981; margin-bottom: 15px; }
+        /* PERCHÉ NOI - GRAFICA MIGLIORATA */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 30px; }
+        .feature-box { padding: 20px; border-radius: 12px; background: #fff; border: 1px solid #e2e8f0; text-align: center; transition: 0.3s; }
+        .feature-box i { font-size: 28px; color: #10b981; margin-bottom: 10px; display: block; }
+        .feature-box h3 { font-size: 16px; margin-bottom: 5px; color: var(--secondary); }
+        .feature-box p { font-size: 13px; color: #64748b; }
 
-        /* RECENSIONI */
-        .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 40px; }
-        .review-card { background: #fff; padding: 30px; border-radius: 15px; text-align: left; border-left: 5px solid var(--primary); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .stars { color: #ffcc00; margin-bottom: 10px; }
+        /* RECENSIONI & FAQ */
+        .review-card { background: #fff; padding: 20px; border-radius: 10px; text-align: left; border-left: 4px solid var(--primary); margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .faq-item { background: white; margin-bottom: 8px; border-radius: 8px; border: 1px solid #e2e8f0; overflow: hidden; }
+        .faq-trigger { width: 100%; padding: 15px; text-align: left; background: none; border: none; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; font-size: 14px; }
+        .faq-content { padding: 0 15px; max-height: 0; overflow: hidden; transition: 0.3s; font-size: 13px; color: #64748b; }
+        .faq-item.active .faq-content { padding: 0 15px 15px; max-height: 100px; }
 
-        /* FAQ */
-        .faq-box { max-width: 800px; margin: 40px auto 0; text-align: left; }
-        .faq-item { background: white; margin-bottom: 10px; border-radius: 10px; border: 1px solid #e2e8f0; }
-        .faq-trigger { width: 100%; padding: 20px; text-align: left; background: none; border: none; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; }
-        .faq-content { padding: 0 20px; max-height: 0; overflow: hidden; transition: 0.3s; color: #64748b; }
-        .faq-item.active .faq-content { padding: 0 20px 20px; max-height: 150px; }
+        /* MAPPA RIDOTTA */
+        .map-wrapper { max-width: 900px; margin: 20px auto; height: 300px; border-radius: 15px; overflow: hidden; border: 4px solid white; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
-        /* MAPPA COMPATTA */
-        .map-wrapper { max-width: 1000px; margin: 40px auto; height: 350px; border-radius: 20px; overflow: hidden; border: 5px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        /* LOADER VALUTAZIONE */
+        #evaluating-screen { display: none; text-align: center; padding: 20px; }
+        .spinner-ring { border: 4px solid #f3f3f3; border-top: 4px solid var(--primary); border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite; margin: 0 auto 20px; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
-        /* WHATSAPP */
-        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; }
+        footer { background: var(--secondary); color: #cbd5e1; padding: 40px 5%; text-align: center; }
+        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 1000; text-decoration: none; }
 
-        footer { background: var(--secondary); color: #cbd5e1; padding: 60px 8% 30px; text-align: center; }
-        .footer-logo { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 24px; color: white; margin-bottom: 20px; display: block; }
-        .footer-links a { color: white; text-decoration: none; margin: 0 15px; font-size: 14px; }
-        .footer-info { margin-top: 30px; padding-top: 30px; border-top: 1px solid #1e293b; font-size: 13px; }
-
-        @media (max-width: 768px) { .hero h1 { font-size: 30px; } .hero p { font-size: 18px; } }
+        @media (max-width: 480px) {
+            .logo { font-size: 15px; }
+            .phone-badge { font-size: 11px; padding: 6px 10px; }
+            .hero h1 { font-size: 24px; }
+            .form-card { padding: 20px 15px; }
+        }
     </style>
 </head>
 <body>
@@ -91,127 +92,191 @@
 <section class="hero">
     <div class="hero-content">
         <h1>Quanto vale la tua auto?</h1>
-        <p>Valutazione 100% gratuita, facile e veloce a Roma</p>
+        <p>Valutazione gratuita e immediata a Roma</p>
         <div class="stats-bar">
-            <i class="fas fa-award"></i>
-            <span>Oltre 1.000 auto valutate con successo</span>
+            <i class="fas fa-check-circle" style="color:#10b981"></i>
+            <span>Oltre 1.000 auto valutate</span>
         </div>
     </div>
-    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop" class="hero-img">
+    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=1000&auto=format&fit=crop" class="hero-img">
 </section>
 
 <div class="form-wrapper">
     <div class="form-card">
         <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        
         <form id="autoForm" action="https://formsubmit.co/pisanabravetta@gmail.com" method="POST">
             <input type="hidden" name="_captcha" value="false">
+            
             <div class="step active">
-                <label>Marca</label>
+                <label>Marca dell'auto</label>
                 <select name="Marca" id="marca" required>
                     <option value="">Seleziona Marca...</option>
-                    <option>Audi</option><option>BMW</option><option>Fiat</option><option>Ford</option><option>Jeep</option><option>Mercedes</option><option>Renault</option><option>Toyota</option><option>Volkswagen</option>
+                    <option>Alfa Romeo</option><option>Audi</option><option>BMW</option>
+                    <option>Citroen</option><option>Dacia</option><option>Fiat</option>
+                    <option>Ford</option><option>Hyundai</option><option>Jeep</option>
+                    <option>Lancia</option><option>Mercedes</option><option>Opel</option>
+                    <option>Peugeot</option><option>Renault</option><option>Toyota</option>
+                    <option>Volkswagen</option>
                 </select>
                 <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
             </div>
+
             <div class="step">
                 <label>Modello</label>
                 <select name="Modello" id="modello" required><option value="">Scegli marca...</option></select>
                 <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
+                <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
             </div>
+
             <div class="step">
-                <label>Anno e Chilometri</label>
+                <label>Anno</label>
                 <select name="Anno" id="anno" required></select>
+                <label>Chilometraggio</label>
                 <select name="KM" required>
-                    <option value="">KM percorsi...</option>
-                    <option>0-50k</option><option>50k-100k</option><option>100k-150k</option><option>Oltre 150k</option>
+                    <option value="">Chilometri percorsi...</option>
+                    <option>0 - 50.000</option><option>50.000 - 100.000</option>
+                    <option>100.000 - 150.000</option><option>Oltre 150.000</option>
                 </select>
                 <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
+                <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
             </div>
+
             <div class="step">
-                <label>Dati di Contatto</label>
-                <input type="text" name="Nome" placeholder="Tuo Nome" required>
-                <input type="tel" name="Telefono" placeholder="Tuo Cellulare" required>
-                <button type="submit" class="btn-next">Invia e Ricevi Offerta</button>
+                <label>Condizioni Generali</label>
+                <select name="Condizioni" required>
+                    <option value="">Com'è l'auto?</option>
+                    <option>Ottime (pari al nuovo)</option>
+                    <option>Buone (piccoli segni)</option>
+                    <option>Usurata (da ripristinare)</option>
+                    <option>Incidentata / Non marciante</option>
+                </select>
+                <label>Carburante e Cilindrata</label>
+                <input type="text" name="Motore" placeholder="Es: Diesel 1.6 120cv" required>
+                <button type="button" class="btn-next" onclick="move(1)">Ultimo Step</button>
+                <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
+            </div>
+
+            <div class="step">
+                <label>I tuoi recapiti</label>
+                <input type="text" name="Nome" placeholder="Nome" required>
+                <input type="tel" name="Telefono" placeholder="Cellulare" required>
+                <button type="submit" class="btn-next">Ottieni Valutazione</button>
+                <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
             </div>
         </form>
-        <div id="loader" style="display:none; text-align:center;"><i class="fas fa-spinner fa-spin fa-2x"></i></div>
-        <div id="success" style="display:none; text-align:center;"><h3>Richiesta Inviata!</h3><p>Ti contatteremo a breve.</p></div>
+
+        <div id="evaluating-screen">
+            <div class="spinner-ring"></div>
+            <h3 style="color:var(--secondary)">Stiamo valutando la sua auto...</h3>
+            <p>Analisi database quotazioni in corso</p>
+        </div>
+
+        <div id="success" style="display:none; text-align:center;">
+            <i class="fas fa-check-circle fa-3x" style="color:#10b981; margin-bottom:15px;"></i>
+            <h3 style="color:var(--secondary)">Richiesta avvenuta con successo!</h3>
+            <p>Un nostro esperto la contatterà a breve su WhatsApp.</p>
+        </div>
     </div>
 </div>
 
 <section class="section-padding">
-    <h2>Vendi la tua auto in 3 semplici passaggi</h2>
+    <h2 style="font-family: Montserrat; margin-bottom: 30px;">Vendi l'auto in 3 passaggi</h2>
     <div class="steps-grid">
-        <div class="step-card"><div class="num">1</div><h3>Ricevi offerta</h3><p>Ottieni una valutazione gratuita online in meno di 2 minuti.</p></div>
-        <div class="step-card"><div class="num">2</div><h3>Confermiamo i dati</h3><p>Verifichiamo insieme i dettagli della tua auto telefonicamente.</p></div>
-        <div class="step-card"><div class="num">3</div><h3>Ricevi pagamento</h3><p>Ricevi il pagamento istantaneo e gestiamo noi tutta la burocrazia.</p></div>
+        <div class="step-card"><div class="num">1</div><h3>Ricevi Offerta</h3><p>Valutazione online gratuita in 2 minuti.</p></div>
+        <div class="step-card"><div class="num">2</div><h3>Conferma Dati</h3><p>Verifica rapida telefonica o in sede.</p></div>
+        <div class="step-card"><div class="num">3</div><h3>Pagamento</h3><p>Bonifico istantaneo e pratiche incluse.</p></div>
     </div>
 </section>
 
-<section class="section-padding bg-light">
-    <h2>Perché scegliere NoiAcquistiamoAuto?</h2>
+<section class="section-padding" style="background:var(--light-bg)">
+    <h2 style="font-family: Montserrat; margin-bottom: 30px;">Perché scegliere noi?</h2>
     <div class="features-grid">
-        <div class="feature-box"><i class="fas fa-euro-sign"></i><h3>Valutazione Gratuita</h3><p>Nessun costo nascosto o obbligo di vendita.</p></div>
-        <div class="feature-box"><i class="fas fa-bolt"></i><h3>Pagamento Immediato</h3><p>Bonifico istantaneo garantito alla firma.</p></div>
-        <div class="feature-box"><i class="fas fa-file-signature"></i><h3>Burocrazia Zero</h3><p>Gestiamo noi il passaggio di proprietà.</p></div>
-        <div class="feature-box"><i class="fas fa-shield-alt"></i><h3>Sicurezza Totale</h3><p>Siamo una realtà fisica con sede a Roma.</p></div>
+        <div class="feature-box"><i class="fas fa-money-bill-wave"></i><h3>Miglior Prezzo</h3><p>Quotazioni reali di mercato.</p></div>
+        <div class="feature-box"><i class="fas fa-bolt"></i><h3>Velocità</h3><p>Concludi tutto in 24 ore.</p></div>
+        <div class="feature-box"><i class="fas fa-shield-alt"></i><h3>Sicurezza</h3><p>Sede fisica a Roma Pisana.</p></div>
     </div>
 </section>
 
 <section class="section-padding">
-    <h2>Cosa dicono di noi</h2>
-    <div class="review-grid">
-        <div class="review-card"><div class="stars">★★★★★</div><p>"Venduto la mia Panda velocemente. Professionali!"</p><strong>- Marco T.</strong></div>
-        <div class="review-card"><div class="stars">★★★★★</div><p>"Valutazione onesta e pagamento immediato."</p><strong>- Giulia M.</strong></div>
-        <div class="review-card"><div class="stars">★★★★★</div><p>"Hanno gestito tutto loro, zero stress."</p><strong>- Roberto F.</strong></div>
-    </div>
+    <h2 style="font-family: Montserrat; margin-bottom: 30px;">Cosa dicono i clienti</h2>
+    <div class="review-card"><div style="color:#ffcc00">★★★★★</div><p>"Veloci e precisi. Pagato subito!"</p><strong>- Marco T.</strong></div>
+    <div class="review-card"><div style="color:#ffcc00">★★★★★</div><p>"La valutazione più alta ricevuta a Roma."</p><strong>- Elena R.</strong></div>
 </section>
 
-<section class="section-padding bg-light">
-    <h2>Domande frequenti</h2>
-    <div class="faq-box">
-        <div class="faq-item"><button class="faq-trigger">Come ricevo il pagamento? <i class="fas fa-plus"></i></button><div class="faq-content"><p>Tramite bonifico istantaneo durante l'atto di vendita.</p></div></div>
-        <div class="faq-item"><button class="faq-trigger">Quanto tempo ci vuole? <i class="fas fa-plus"></i></button><div class="faq-content"><p>Dalla valutazione al pagamento possono passare meno di 24 ore.</p></div></div>
+<section class="section-padding" style="background:var(--light-bg)">
+    <h2 style="font-family: Montserrat; margin-bottom: 30px;">Domande Frequenti</h2>
+    <div class="faq-box" style="max-width:600px; margin:0 auto; text-align:left;">
+        <div class="faq-item"><button class="faq-trigger">È gratis? <i class="fas fa-plus"></i></button><div class="faq-content"><p>Sì, 100% gratuito e senza impegno.</p></div></div>
+        <div class="faq-item"><button class="faq-trigger">Come vengo pagato? <i class="fas fa-plus"></i></button><div class="faq-content"><p>Bonifico istantaneo immediato.</p></div></div>
     </div>
 </section>
 
 <section class="section-padding">
-    <h2>Vieni a trovarci</h2>
-    <p>Via della Pisana, 313 - Roma</p>
+    <h2 style="font-family: Montserrat;">Vieni in sede</h2>
+    <p style="margin-bottom:15px;">Via della Pisana, 313 - Roma</p>
     <div class="map-wrapper">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2971.071675122143!2d12.3995!3d41.8655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13258a6988f987f1%3A0x7d00000000000000!2sVia%20della%20Pisana%2C%20313%2C%2000163%20Roma%20RM!5e0!3m2!1sit!2sit!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.6231454556485!2d12.396860376554553!3d41.87948297124194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f5f142478f657%3A0xc68225e36509f635!2sVia%20della%20Pisana%2C%20313%2C%2000163%20Roma%20RM!5e0!3m2!1sit!2sit!4v1715600000000!5m2!1sit!2sit" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 </section>
 
 <footer>
     <span class="footer-logo">NOI<span>ACQUISTIAMO</span>AUTO</span>
-    <div class="footer-links">
-        <a href="#">Privacy</a> | <a href="#">Termini</a> | <a href="#">Contatti</a>
-    </div>
-    <p style="margin-top:20px;">Sede Operativa: Via della Pisana, 313 Roma</p>
-    <div class="footer-info">© 2024 NoiAcquistiamoAuto - Tutti i diritti riservati.</div>
+    <p>Via della Pisana, 313 Roma | Tel: 06 66152690</p>
+    <div style="margin-top:20px; font-size:12px; opacity:0.6;">© 2024 Tutti i diritti riservati.</div>
 </footer>
 
 <a href="https://wa.me/393203272238" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
 <script>
-    document.querySelectorAll('.faq-trigger').forEach(btn => { btn.onclick = () => btn.parentElement.classList.toggle('active'); });
-    const modelli = { Audi: ["A1", "A3", "Q3"], BMW: ["Serie 1", "X1"], Fiat: ["500", "Panda"], Ford: ["Fiesta", "Puma"], Jeep: ["Renegade"], Mercedes: ["Classe A"], Renault: ["Clio"], Toyota: ["Yaris"], Volkswagen: ["Golf", "Polo"] };
-    let s = 0; const steps = document.querySelectorAll(".step");
-    const annoS = document.getElementById("anno"); for(let y=2024; y>=2010; y--) { let o=document.createElement("option"); o.text=y; o.value=y; annoS.add(o); }
+    // FAQ
+    document.querySelectorAll('.faq-trigger').forEach(btn => {
+        btn.onclick = () => btn.parentElement.classList.toggle('active');
+    });
+
+    // DINAMIC MODELS
+    const modelli = {
+        "Alfa Romeo": ["Giulietta", "Stelvio", "Giulia"], "Audi": ["A1", "A3", "A4", "Q3", "Q5"],
+        "BMW": ["Serie 1", "Serie 3", "X1", "X3"], "Citroen": ["C3", "C4"], "Dacia": ["Sandero", "Duster"],
+        "Fiat": ["Panda", "500", "500X", "Tipo"], "Ford": ["Fiesta", "Focus", "Puma"],
+        "Hyundai": ["i10", "Tucson"], "Jeep": ["Renegade", "Compass"], "Lancia": ["Ypsilon"],
+        "Mercedes": ["Classe A", "Classe B", "GLA"], "Opel": ["Corsa", "Mokka"], "Peugeot": ["208", "2008", "3008"],
+        "Renault": ["Clio", "Captur"], "Toyota": ["Yaris", "Aygo"], "Volkswagen": ["Golf", "Polo", "T-Roc", "Tiguan"]
+    };
+
+    let step = 0; const steps = document.querySelectorAll(".step");
+    const annoS = document.getElementById("anno");
+    for(let y=2024; y>=2010; y--) { let o = document.createElement("option"); o.text=y; o.value=y; annoS.add(o); }
+
     document.getElementById("marca").onchange = function() {
         const mS = document.getElementById("modello"); mS.innerHTML = "";
-        if(modelli[this.value]) modelli[this.value].forEach(m => { let o=document.createElement("option"); o.text=m; o.value=m; mS.add(o); });
+        if(modelli[this.value]) modelli[this.value].forEach(m => { let o = document.createElement("option"); o.text=m; o.value=m; mS.add(o); });
     };
+
     function move(n) {
-        if(n===1 && !steps[s].querySelector("select, input").checkValidity()) return steps[s].querySelector("select, input").reportValidity();
-        steps[s].classList.remove("active"); s+=n; steps[s].classList.add("active");
-        document.getElementById("progressFill").style.width = ((s+1)/steps.length)*100+"%";
+        if (n === 1 && !steps[step].querySelector("select, input").checkValidity()) return steps[step].querySelector("select, input").reportValidity();
+        steps[step].classList.remove("active"); step += n; steps[step].classList.add("active");
+        document.getElementById("progressFill").style.width = ((step + 1) / steps.length) * 100 + "%";
     }
+
+    // FORM SUBMISSION WITH 5 SEC DELAY
     document.getElementById("autoForm").onsubmit = function(e) {
-        e.preventDefault(); this.style.display="none"; document.getElementById("loader").style.display="block";
-        fetch(this.action,{method:"POST",body:new FormData(this),headers:{'Accept':'application/json'}})
-        .then(()=>{document.getElementById("loader").style.display="none"; document.getElementById("success").style.display="block";});
+        e.preventDefault();
+        const form = this;
+        const evalScreen = document.getElementById("evaluating-screen");
+        const successScreen = document.getElementById("success");
+
+        form.style.display = "none";
+        evalScreen.style.display = "block";
+
+        // Simula valutazione per 5 secondi
+        setTimeout(() => {
+            fetch(form.action, { method: "POST", body: new FormData(form), headers: {'Accept': 'application/json'} })
+            .then(() => {
+                evalScreen.style.display = "none";
+                successScreen.style.display = "block";
+            });
+        }, 5000);
     };
 </script>
 </body>

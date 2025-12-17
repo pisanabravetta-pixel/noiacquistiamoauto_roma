@@ -36,11 +36,11 @@
         
         label { display: block; margin-bottom: 8px; font-weight: 700; font-size: 14px; color: var(--secondary); }
         select, input { width: 100%; padding: 14px; margin-bottom: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px; outline: none; }
-        .privacy-check { display: flex; align-items: flex-start; gap: 10px; font-size: 11px; color: #64748b; margin-bottom: 15px; text-align: left; }
+        .privacy-check { display: flex; align-items: flex-start; gap: 10px; font-size: 11px; color: #64748b; margin-bottom: 15px; text-align: left; cursor: pointer; }
         .btn-next { width: 100%; padding: 16px; background: var(--primary); color: white; border: none; border-radius: 10px; font-size: 17px; font-weight: 800; cursor: pointer; text-transform: uppercase; }
         .btn-back { background: none; border: none; color: #94a3b8; cursor: pointer; margin-top: 10px; width: 100%; text-decoration: underline; font-size: 13px; }
 
-        /* GRID SECTIONS */
+        /* SEZIONI */
         .section-padding { padding: 60px 5%; text-align: center; }
         .bg-light { background: var(--light-bg); }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px; }
@@ -48,7 +48,7 @@
         .step-card { background: white; padding: 30px; border-radius: 15px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
         .step-card .num { width: 45px; height: 45px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; margin: 0 auto 15px; font-size: 20px; }
 
-        .reason-card { background: white; padding: 30px; border-radius: 20px; border: 1px solid #e2e8f0; text-align: left; transition: 0.3s; }
+        .reason-card { background: white; padding: 30px; border-radius: 20px; border: 1px solid #e2e8f0; text-align: left; }
         .reason-card i { font-size: 40px; color: var(--primary); margin-bottom: 20px; }
         .reason-card h3 { font-family: 'Montserrat'; font-size: 18px; margin-bottom: 10px; color: var(--secondary); }
 
@@ -63,6 +63,7 @@
         .faq-content { padding: 0 18px; max-height: 0; overflow: hidden; transition: 0.3s; font-size: 14px; color: #64748b; }
         .faq-item.active .faq-content { padding: 0 18px 18px; max-height: 150px; }
 
+        /* MAPPA */
         .map-container { margin-top: 30px; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }
 
         /* MODAL */
@@ -73,7 +74,7 @@
         footer { background: var(--secondary); color: #cbd5e1; padding: 50px 5%; text-align: center; }
         .footer-legal { margin-top: 25px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
         .ragione-sociale { font-size: 10px; text-transform: uppercase; opacity: 0.7; letter-spacing: 0.5px; }
-        .footer-links a { color: white; text-decoration: none; margin: 0 10px; opacity: 0.8; font-size: 12px; }
+        .footer-links a { color: white; text-decoration: none; margin: 0 10px; opacity: 0.8; font-size: 12px; cursor: pointer; }
         .wa-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; z-index: 1000; }
     </style>
 </head>
@@ -131,8 +132,8 @@
                 <input type="text" name="Nome" placeholder="Tuo Nome" required>
                 <input type="tel" name="Telefono" placeholder="Tuo Cellulare" required>
                 <div class="privacy-check">
-                    <input type="checkbox" required>
-                    <label>Accetto la <a href="javascript:void(0)" onclick="openModal()" style="color:var(--primary)">Privacy & Cookie Policy</a></label>
+                    <input type="checkbox" id="checkPriv" required>
+                    <label for="checkPriv">Accetto la <a href="javascript:void(0)" onclick="openModal()" style="color:var(--primary)">Privacy & Cookie Policy</a></label>
                 </div>
                 <button type="submit" class="btn-next">Invia Richiesta</button>
             </div>
@@ -143,13 +144,13 @@
         <div id="success" style="display:none; text-align:center;">
             <i class="fas fa-check-circle fa-4x" style="color:#10b981; margin-bottom:15px;"></i>
             <h3>Richiesta Inviata!</h3>
-            <p>Angelucci Domenico ti contatterà a breve.</p>
+            <p>Domenico ti contatterà a breve.</p>
         </div>
     </div>
 </div>
 
 <section class="section-padding">
-    <h2 style="font-family: Montserrat;">VENDI L'AUTO IN 3 PASSAGGI</h2>
+    <h2>VENDI L'AUTO IN 3 PASSAGGI</h2>
     <div class="grid">
         <div class="step-card"><div class="num">1</div><h3>Valutazione</h3><p>Ricevi la stima online gratuita.</p></div>
         <div class="step-card"><div class="num">2</div><h3>Incontro</h3><p>Verifica rapida in Via della Pisana.</p></div>
@@ -158,7 +159,7 @@
 </section>
 
 <section class="section-padding bg-light">
-    <h2 style="font-family: Montserrat;">COSA DICONO I NOSTRI CLIENTI</h2>
+    <h2>COSA DICONO I NOSTRI CLIENTI</h2>
     <div class="grid">
         <div class="review-card">
             <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
@@ -183,16 +184,6 @@
     </div>
 </section>
 
-<section class="section-padding">
-    <h2 style="font-family: Montserrat;">PERCHÉ SCEGLIERE NOI?</h2>
-    <div class="grid">
-        <div class="reason-card"><i class="fas fa-handshake"></i><h3>Nessuna Sorpresa</h3><p>Offerta reale basata sui dati forniti.</p></div>
-        <div class="reason-card"><i class="fas fa-leaf"></i><h3>Senza Stress</h3><p>Nessuna trattativa estenuante con privati.</p></div>
-        <div class="reason-card"><i class="fas fa-bolt"></i><h3>Rapidità</h3><p>Vendi la tua auto lo stesso giorno.</p></div>
-        <div class="reason-card"><i class="fas fa-file-contract"></i><h3>Burocrazia Zero</h3><p>Pensiamo noi a tutti i documenti.</p></div>
-    </div>
-</section>
-
 <section class="section-padding bg-light">
     <h2>DOMANDE FREQUENTI</h2>
     <div style="max-width:700px; margin:40px auto 0;">
@@ -207,7 +198,7 @@
     <h2>VIENI IN SEDE</h2>
     <p>Via della Pisana, 313 - Roma</p>
     <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.6186803276854!2d12.4042296!3d41.8813726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13258bd56f266205%3A0x66c5d985a111a196!2sVia%20della%20Pisana%2C%20313%2C%2000163%20Roma%20RM!5e0!3m2!1sit!2sit!4v1715800000000!5m2!1sit!2sit" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.625126131435!2d12.404675!3d41.879446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13258aa581977717%3A0x6a0c5c4e757f005!2sVia%20della%20Pisana%2C%20313%2C%2000163%20Roma%20RM!5e0!3m2!1sit!2sit!4v1700000000000" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 </section>
 
@@ -217,8 +208,7 @@
     <div class="footer-legal">
         <p class="ragione-sociale">Angelucci Domenico | P.IVA: 09496981003</p>
         <p class="footer-links" style="margin-top:15px;">
-            <a href="javascript:void(0)" onclick="openModal()">Privacy Policy</a> | 
-            <a href="javascript:void(0)" onclick="openModal()">Cookie Policy</a>
+            <a onclick="openModal()">Privacy Policy</a> | <a onclick="openModal()">Cookie Policy</a>
         </p>
     </div>
 </footer>
@@ -232,7 +222,7 @@
         <div style="font-size:14px; color:#475569; text-align:left; margin-top:20px; max-height:300px; overflow-y:auto;">
             <p><strong>Titolare del trattamento:</strong> Angelucci Domenico, Via della Pisana 313, Roma.</p><br>
             <p><strong>Dati raccolti:</strong> I dati personali forniti (nome, telefono, dati veicolo) sono utilizzati esclusivamente per formulare un'offerta di acquisto e per il contatto commerciale relativo alla valutazione.</p><br>
-            <p><strong>Cookie:</strong> Questo sito utilizza esclusivamente cookie tecnici necessari al corretto funzionamento del modulo di contatto. Non vengono utilizzati cookie di profilazione di terze parti.</p>
+            <p><strong>Cookie:</strong> Questo sito utilizza esclusivamente cookie tecnici necessari al corretto funzionamento del modulo di contatto. Non vengono utilizzati cookie di profilazione o di terze parti.</p>
         </div>
     </div>
 </div>
@@ -245,8 +235,12 @@
         btn.onclick = () => btn.parentElement.classList.toggle('active'); 
     });
 
+    // SISTEMAZIONE ANNO 2000 - 2024
     let step = 0; const steps = document.querySelectorAll(".step");
-    const annoS = document.getElementById("anno"); for(let y=2024; y>=2008; y--) { let o=document.createElement("option"); o.text=y; o.value=y; annoS.add(o); }
+    const annoS = document.getElementById("anno"); 
+    for(let y=2024; y>=2000; y--) { 
+        let o=document.createElement("option"); o.text=y; o.value=y; annoS.add(o); 
+    }
 
     function move(n) {
         if (n === 1 && !steps[step].querySelector("select, input").checkValidity()) return steps[step].querySelector("select, input").reportValidity();

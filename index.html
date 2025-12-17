@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #e10600; --secondary: #002e6d; --light-bg: #f8fafc; --white: #ffffff; --text: #1e293b; }
+        :root { --primary: #e10600; --secondary: #002e6d; --dark-blue: #0a192f; --light-bg: #f8fafc; --white: #ffffff; --text: #1e293b; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; overflow-x: hidden; }
 
@@ -21,6 +21,8 @@
         .hero { position: relative; background: linear-gradient(135deg, #0b1d33 0%, #162e4e 100%); color: white; padding: 40px 5% 120px; text-align: center; }
         .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 800; margin-bottom: 10px; }
         .hero p { font-size: 16px; color: #cbd5e1; margin-bottom: 20px; }
+        .stats-bar { background: var(--white); padding: 12px 25px; border-radius: 50px; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-top: 10px; position: relative; z-index: 4; }
+        .stats-bar span { font-weight: 800; color: var(--secondary); font-size: 14px; }
         .hero-img { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 500px; opacity: 0.3; z-index: 1; pointer-events: none; }
 
         /* FORM CARD */
@@ -42,30 +44,41 @@
         .section-padding { padding: 60px 5%; text-align: center; }
         .bg-light { background: var(--light-bg); }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px; }
-        
+
+        /* 3 PASSAGGI */
+        .step-card { background: white; padding: 30px; border-radius: 15px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .step-card .num { width: 45px; height: 45px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; margin: 0 auto 15px; font-size: 20px; }
+
+        /* PERCHÈ NOI */
+        .reason-card { background: white; padding: 30px; border-radius: 20px; border: 1px solid #e2e8f0; text-align: left; transition: 0.3s; }
+        .reason-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .reason-card i { font-size: 40px; color: var(--primary); margin-bottom: 20px; }
+        .reason-card h3 { font-family: 'Montserrat'; font-size: 18px; margin-bottom: 10px; color: var(--secondary); }
+
         /* RECENSIONI */
-        .review-card { background: white; padding: 25px; border-radius: 15px; border: 1px solid #e2e8f0; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        .stars { color: #facc15; margin-bottom: 10px; font-size: 14px; }
+        .review-card { background: white; padding: 25px; border-radius: 15px; border: 1px solid #e2e8f0; text-align: left; }
+        .stars { color: #facc15; margin-bottom: 10px; }
         .review-text { font-style: italic; font-size: 14px; color: #475569; margin-bottom: 15px; }
-        .review-author { font-weight: 700; font-size: 13px; color: var(--secondary); display: flex; align-items: center; gap: 8px; }
+        .review-author { font-weight: 700; font-size: 13px; color: var(--secondary); }
 
         /* FAQ */
         .faq-item { background: white; margin-bottom: 10px; border-radius: 10px; border: 1px solid #e2e8f0; text-align: left; overflow: hidden; }
-        .faq-trigger { width: 100%; padding: 15px; background: none; border: none; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; }
-        .faq-content { padding: 0 15px; max-height: 0; overflow: hidden; transition: 0.3s; font-size: 14px; color: #64748b; }
-        .faq-item.active .faq-content { padding: 0 15px 15px; max-height: 100px; }
+        .faq-trigger { width: 100%; padding: 18px; background: none; border: none; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-content { padding: 0 18px; max-height: 0; overflow: hidden; transition: 0.3s; font-size: 14px; color: #64748b; }
+        .faq-item.active .faq-content { padding: 0 18px 18px; max-height: 150px; }
+
+        /* MAPPA */
+        .map-container { margin-top: 30px; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
         /* MODAL */
         .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); overflow-y: auto; }
-        .modal-content { background: white; margin: 10% auto; padding: 30px; width: 90%; max-width: 600px; border-radius: 15px; position: relative; }
+        .modal-content { background: white; margin: 5% auto; padding: 30px; width: 90%; max-width: 600px; border-radius: 15px; position: relative; }
 
         /* FOOTER */
-        footer { background: var(--secondary); color: #cbd5e1; padding: 40px 5%; text-align: center; }
-        .footer-legal { margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
-        .ragione-sociale { font-size: 10px; text-transform: uppercase; opacity: 0.7; letter-spacing: 0.5px; }
+        footer { background: var(--secondary); color: #cbd5e1; padding: 50px 5%; text-align: center; }
+        .footer-legal { margin-top: 25px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+        .ragione-sociale { font-size: 10px; text-transform: uppercase; opacity: 0.7; }
         .wa-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; z-index: 1000; }
-
-        @media (max-width: 480px) { .hero h1 { font-size: 24px; } }
     </style>
 </head>
 <body>
@@ -78,6 +91,10 @@
 <section class="hero">
     <h1>Quanto vale la tua auto?</h1>
     <p>Valutazione gratuita e immediata a Roma</p>
+    <div class="stats-bar">
+        <i class="fas fa-check-circle" style="color:#10b981"></i>
+        <span>Oltre 1.000 auto valutate a Roma</span>
+    </div>
     <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=1000&auto=format&fit=crop" class="hero-img">
 </section>
 
@@ -104,11 +121,10 @@
             </div>
 
             <div class="step">
-                <label>Anno</label>
+                <label>Anno e Chilometri</label>
                 <select name="Anno" id="anno" required></select>
-                <label>Chilometraggio</label>
                 <select name="KM" required>
-                    <option value="">KM percorsi...</option>
+                    <option value="">Chilometri...</option>
                     <option>0 - 50.000</option><option>50.000 - 100.000</option><option>100.000 - 150.000</option><option>Oltre 150.000</option>
                 </select>
                 <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
@@ -126,51 +142,86 @@
             </div>
         </form>
         <div id="evaluating-screen" style="display:none; text-align:center;">
-            <p id="eval-text">Analisi database Quattroruote...</p>
+            <p id="eval-text">Analisi database Quattroruote ed Eurotax...</p>
         </div>
         <div id="success" style="display:none; text-align:center;">
-            <i class="fas fa-check-circle fa-3x" style="color:#10b981"></i>
+            <i class="fas fa-check-circle fa-4x" style="color:#10b981; margin-bottom:15px;"></i>
             <h3>Richiesta Inviata!</h3>
+            <p>Ti contatteremo a breve.</p>
         </div>
     </div>
 </div>
+
+<section class="section-padding">
+    <h2 style="font-family: Montserrat;">VENDI L'AUTO IN 3 PASSAGGI</h2>
+    <div class="grid">
+        <div class="step-card"><div class="num">1</div><h3>Valutazione</h3><p>Ricevi la stima online gratuita.</p></div>
+        <div class="step-card"><div class="num">2</div><h3>Incontro</h3><p>Verifica rapida in Via della Pisana.</p></div>
+        <div class="step-card"><div class="num">3</div><h3>Pagamento</h3><p>Bonifico istantaneo immediato.</p></div>
+    </div>
+</section>
 
 <section class="section-padding bg-light">
     <h2 style="font-family: Montserrat;">COSA DICONO I NOSTRI CLIENTI</h2>
     <div class="grid">
         <div class="review-card">
             <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="review-text">"Ho venduto la mia Smart in meno di un'ora. Valutazione onesta e bonifico istantaneo. Domenico è una persona seria."</p>
-            <div class="review-author"><i class="fas fa-user-circle"></i> Marco R. (Roma Nord)</div>
+            <p class="review-text">"Veloce, onesto e professionale. Domenico mi ha seguito dall'inizio alla fine. Bonifico arrivato in 5 minuti."</p>
+            <div class="review-author">Marco R. (Roma)</div>
         </div>
         <div class="review-card">
             <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="review-text">"Non avevo voglia di gestire mille telefonate da privati. Qui ho fatto tutto in sede alla Pisana senza stress."</p>
-            <div class="review-author"><i class="fas fa-user-circle"></i> Elena V. (Eur)</div>
+            <p class="review-text">"Ho venduto la mia Panda senza dover gestire perditempo su internet. Tutto risolto in un pomeriggio."</p>
+            <div class="review-author">Elena V. (Roma)</div>
         </div>
         <div class="review-card">
             <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="review-text">"Pagamento immediato come promesso. Pratiche auto sbrigate da loro in 10 minuti. Consigliatissimo!"</p>
-            <div class="review-author"><i class="fas fa-user-circle"></i> Roberto F. (Bravetta)</div>
+            <p class="review-text">"Ottima valutazione, superiore a quella di altri concessionari in zona. Pratiche sbrigate subito."</p>
+            <div class="review-author">Roberto F. (Bravetta)</div>
         </div>
         <div class="review-card">
             <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="review-text">"Personale professionale e cortese. Mi hanno dato il prezzo più alto rispetto ad altri concessionari in zona."</p>
-            <div class="review-author"><i class="fas fa-user-circle"></i> Sandra M. (Trastevere)</div>
+            <p class="review-text">"Puntuali e precisi. Sede facile da raggiungere e personale molto cordiale. Consigliato!"</p>
+            <div class="review-author">Sandra M. (Eur)</div>
         </div>
     </div>
 </section>
 
 <section class="section-padding">
-    <h2>Domande Frequenti</h2>
-    <div style="max-width:600px; margin:40px auto 0;">
-        <div class="faq-item"><button class="faq-trigger">Come ricevo il pagamento? <i class="fas fa-plus"></i></button><div class="faq-content"><p>Bonifico istantaneo contestuale al passaggio di proprietà.</p></div></div>
-        <div class="faq-item"><button class="faq-trigger">Serve l'appuntamento? <i class="fas fa-plus"></i></button><div class="faq-content"><p>Consigliamo di chiamare per fissare una verifica rapida in sede.</p></div></div>
+    <h2 style="font-family: Montserrat;">PERCHÉ SCEGLIERE NOI?</h2>
+    <div class="grid">
+        <div class="reason-card"><i class="fas fa-handshake"></i><h3>Nessuna Sorpresa</h3><p>Offerta reale basata sui dati forniti.</p></div>
+        <div class="reason-card"><i class="fas fa-leaf"></i><h3>Senza Stress</h3><p>Nessuna trattativa estenuante con privati.</p></div>
+        <div class="reason-card"><i class="fas fa-bolt"></i><h3>Rapidità</h3><p>Vendi la tua auto lo stesso giorno.</p></div>
+        <div class="reason-card"><i class="fas fa-file-contract"></i><h3>Burocrazia Zero</h3><p>Pensiamo noi a tutti i documenti.</p></div>
     </div>
 </section>
 
+<section class="section-padding bg-light">
+    <h2>DOMANDE FREQUENTI</h2>
+    <div style="max-width:700px; margin:40px auto 0;">
+        <div class="faq-item"><button class="faq-trigger">Come ricevo il pagamento? <i class="fas fa-chevron-down"></i></button><div class="faq-content"><p>Tramite bonifico istantaneo al momento della firma dei documenti.</p></div></div>
+        <div class="faq-item"><button class="faq-trigger">Serve l'appuntamento? <i class="fas fa-chevron-down"></i></button><div class="faq-content"><p>Sì, ti consigliamo di chiamare per evitare attese in sede.</p></div></div>
+        <div class="faq-item"><button class="faq-trigger">Acquistate auto con finanziamento? <i class="fas fa-chevron-down"></i></button><div class="faq-content"><p>Sì, ci occupiamo noi di estinguere il debito con la finanziaria.</p></div></div>
+        <div class="faq-item"><button class="faq-trigger">Che documenti servono? <i class="fas fa-chevron-down"></i></button><div class="faq-content"><p>Libretto, Certificato di Proprietà e documento d'identità valido.</p></div></div>
+    </div>
+</section>
+
+<section class="section-padding">
+    <h2>VIENI IN SEDE</h2>
+    <p>Via della Pisana, 313 - Roma</p>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.623124806282!2d12.404221776595562!3d41.8794406652433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13258bd56f298811%3A0x6b4737d25e0a6d0!2sVia%20della%20Pisana%2C%20313%2C%2000163%20Roma%20RM!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+<div id="privacyModal" class="modal">
+    <div class="modal-content"><span style="float:right; cursor:pointer;" onclick="closeModal()">×</span><h2>Privacy</h2><p>I dati forniti saranno trattati da Angelucci Domenico esclusivamente per la valutazione del veicolo.</p></div>
+</div>
+
 <footer>
-    <p>Via della Pisana, 313 Roma | Tel: 06 66152690</p>
+    <span class="logo" style="color:white">NOI<span>ACQUISTIAMO</span>AUTO</span>
+    <p style="margin-top:10px;">Via della Pisana, 313 Roma | Tel: 06 66152690</p>
     <div class="footer-legal">
         <p class="ragione-sociale">Angelucci Domenico | P.IVA: 09496981003</p>
         <p style="margin-top:10px;"><a href="javascript:void(0)" onclick="openModal()" style="color:white; font-size:12px;">Privacy Policy</a></p>
@@ -179,13 +230,10 @@
 
 <a href="https://wa.me/393203272238" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
-<div id="privacyModal" class="modal">
-    <div class="modal-content"><span style="float:right; cursor:pointer;" onclick="closeModal()">×</span><h2>Privacy</h2><p>I dati sono trattati da Angelucci Domenico solo per la valutazione dell'auto.</p></div>
-</div>
-
 <script>
     function openModal() { document.getElementById("privacyModal").style.display = "block"; }
     function closeModal() { document.getElementById("privacyModal").style.display = "none"; }
+    
     document.querySelectorAll('.faq-trigger').forEach(btn => { btn.onclick = () => btn.parentElement.classList.toggle('active'); });
 
     let step = 0; const steps = document.querySelectorAll(".step");

@@ -29,7 +29,7 @@
         .form-wrapper { max-width: 500px; margin: -80px auto 40px; padding: 0 15px; position: relative; z-index: 5; }
         .form-card { background: var(--white); padding: 30px 20px; border-radius: 16px; box-shadow: 0 25px 50px rgba(0,0,0,0.15); border-top: 6px solid var(--primary); }
         .progress-bar { height: 5px; background: #f1f5f9; border-radius: 10px; margin-bottom: 25px; overflow: hidden; }
-        .progress-fill { height: 100%; background: var(--primary); width: 20%; transition: 0.5s; }
+        .progress-fill { height: 100%; background: var(--primary); width: 25%; transition: 0.5s; }
         .step { display: none; }
         .step.active { display: block; animation: fadeIn 0.3s; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
@@ -40,22 +40,18 @@
         .btn-next { width: 100%; padding: 16px; background: var(--primary); color: white; border: none; border-radius: 10px; font-size: 17px; font-weight: 800; cursor: pointer; text-transform: uppercase; }
         .btn-back { background: none; border: none; color: #94a3b8; cursor: pointer; margin-top: 10px; width: 100%; text-decoration: underline; font-size: 13px; }
 
-        /* SEZIONI */
+        /* GRID SECTIONS */
         .section-padding { padding: 60px 5%; text-align: center; }
         .bg-light { background: var(--light-bg); }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px; }
 
-        /* 3 PASSAGGI */
         .step-card { background: white; padding: 30px; border-radius: 15px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
         .step-card .num { width: 45px; height: 45px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; margin: 0 auto 15px; font-size: 20px; }
 
-        /* PERCHÈ NOI */
         .reason-card { background: white; padding: 30px; border-radius: 20px; border: 1px solid #e2e8f0; text-align: left; transition: 0.3s; }
-        .reason-card:hover { transform: translateY(-5px); border-color: var(--primary); }
         .reason-card i { font-size: 40px; color: var(--primary); margin-bottom: 20px; }
         .reason-card h3 { font-family: 'Montserrat'; font-size: 18px; margin-bottom: 10px; color: var(--secondary); }
 
-        /* RECENSIONI */
         .review-card { background: white; padding: 25px; border-radius: 15px; border: 1px solid #e2e8f0; text-align: left; }
         .stars { color: #facc15; margin-bottom: 10px; }
         .review-text { font-style: italic; font-size: 14px; color: #475569; margin-bottom: 15px; }
@@ -67,7 +63,6 @@
         .faq-content { padding: 0 18px; max-height: 0; overflow: hidden; transition: 0.3s; font-size: 14px; color: #64748b; }
         .faq-item.active .faq-content { padding: 0 18px 18px; max-height: 150px; }
 
-        /* MAPPA */
         .map-container { margin-top: 30px; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
         /* MODAL */
@@ -77,7 +72,8 @@
         /* FOOTER */
         footer { background: var(--secondary); color: #cbd5e1; padding: 50px 5%; text-align: center; }
         .footer-legal { margin-top: 25px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
-        .ragione-sociale { font-size: 10px; text-transform: uppercase; opacity: 0.7; }
+        .ragione-sociale { font-size: 10px; text-transform: uppercase; opacity: 0.7; letter-spacing: 0.5px; }
+        .footer-links a { color: white; text-decoration: none; margin: 0 10px; opacity: 0.8; font-size: 12px; }
         .wa-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; z-index: 1000; }
     </style>
 </head>
@@ -108,7 +104,7 @@
                 <label>Marca</label>
                 <select name="Marca" id="marca" required>
                     <option value="">Seleziona Marca...</option>
-                    <option>Abarth</option><option>Alfa Romeo</option><option>Audi</option><option>BMW</option><option>Citroen</option><option>Cupra</option><option>Dacia</option><option>Fiat</option><option>Ford</option><option>Hyundai</option><option>Jaguar</option><option>Jeep</option><option>Kia</option><option>Lancia</option><option>Land Rover</option><option>Maserati</option><option>Mazda</option><option>Mercedes-Benz</option><option>MINI</option><option>Nissan</option><option>Opel</option><option>Peugeot</option><option>Porsche</option><option>Renault</option><option>Skoda</option><option>Smart</option><option>Suzuki</option><option>Tesla</option><option>Toyota</option><option>Volkswagen</option><option>Volvo</option><option>Altro...</option>
+                    <option>Alfa Romeo</option><option>Audi</option><option>BMW</option><option>Citroen</option><option>Dacia</option><option>Fiat</option><option>Ford</option><option>Hyundai</option><option>Jeep</option><option>Kia</option><option>Lancia</option><option>Land Rover</option><option>Mercedes-Benz</option><option>MINI</option><option>Nissan</option><option>Opel</option><option>Peugeot</option><option>Renault</option><option>Smart</option><option>Suzuki</option><option>Toyota</option><option>Volkswagen</option><option>Altro...</option>
                 </select>
                 <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
             </div>
@@ -136,7 +132,7 @@
                 <input type="tel" name="Telefono" placeholder="Tuo Cellulare" required>
                 <div class="privacy-check">
                     <input type="checkbox" required>
-                    <label>Accetto la <a href="javascript:void(0)" onclick="openModal()" style="color:var(--primary)">Privacy Policy</a></label>
+                    <label>Accetto la <a href="javascript:void(0)" onclick="openModal()" style="color:var(--primary)">Privacy & Cookie Policy</a></label>
                 </div>
                 <button type="submit" class="btn-next">Invia Richiesta</button>
             </div>
@@ -147,7 +143,7 @@
         <div id="success" style="display:none; text-align:center;">
             <i class="fas fa-check-circle fa-4x" style="color:#10b981; margin-bottom:15px;"></i>
             <h3>Richiesta Inviata!</h3>
-            <p>Ti contatteremo a breve.</p>
+            <p>Angelucci Domenico ti contatterà a breve.</p>
         </div>
     </div>
 </div>
@@ -166,7 +162,7 @@
     <div class="grid">
         <div class="review-card">
             <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="review-text">"Veloce, onesto e professionale. Domenico mi ha seguito dall'inizio alla fine. Bonifico arrivato in 5 minuti."</p>
+            <p class="review-text">"Veloce, onesto e professionale. Domenico mi ha seguito dall'inizio alla fine. Bonifico arrivato subito."</p>
             <div class="review-author">Marco R. (Roma)</div>
         </div>
         <div class="review-card">
@@ -181,7 +177,7 @@
         </div>
         <div class="review-card">
             <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="review-text">"Puntuali e precisi. Sede facile da raggiungere e personale molto cordiale. Consigliato!"</p>
+            <p class="review-text">"Puntuali e precisi. Sede facile da raggiungere e personale molto cordiale. Consigliatissimo!"</p>
             <div class="review-author">Sandra M. (Eur)</div>
         </div>
     </div>
@@ -200,10 +196,10 @@
 <section class="section-padding bg-light">
     <h2>DOMANDE FREQUENTI</h2>
     <div style="max-width:700px; margin:40px auto 0;">
-        <div class="faq-item"><button class="faq-trigger">Come ricevo il pagamento? <i class="fas fa-chevron-down"></i></button><div class="faq-content"><p>Tramite bonifico istantaneo al momento della firma dei documenti.</p></div></div>
-        <div class="faq-item"><button class="faq-trigger">Serve l'appuntamento? <i class="fas fa-chevron-down"></i></button><div class="faq-content"><p>Sì, ti consigliamo di chiamare per evitare attese in sede.</p></div></div>
-        <div class="faq-item"><button class="faq-trigger">Acquistate auto con finanziamento? <i class="fas fa-chevron-down"></i></button><div class="faq-content"><p>Sì, ci occupiamo noi di estinguere il debito con la finanziaria.</p></div></div>
-        <div class="faq-item"><button class="faq-trigger">Che documenti servono? <i class="fas fa-chevron-down"></i></button><div class="faq-content"><p>Libretto, Certificato di Proprietà e documento d'identità valido.</p></div></div>
+        <div class="faq-item"><button class="faq-trigger">Ci pensate voi al passaggio di proprietà? <i class="fas fa-chevron-down"></i></button><div class="faq-content"><p>Certamente. Tutte le pratiche burocratiche e il costo del passaggio sono a nostro carico e vengono espletati immediatamente in sede.</p></div></div>
+        <div class="faq-item"><button class="faq-trigger">Come ricevo il pagamento? <i class="fas fa-chevron-down"></i></button><div class="faq-content"><p>Tramite bonifico istantaneo al momento della firma dei documenti, con valuta immediata sul tuo conto.</p></div></div>
+        <div class="faq-item"><button class="faq-trigger">Serve l'appuntamento? <i class="fas fa-chevron-down"></i></button><div class="faq-content"><p>Sì, ti consigliamo di chiamare lo 06 66152690 per fissare la perizia tecnica ed evitare attese.</p></div></div>
+        <div class="faq-item"><button class="faq-trigger">Che documenti servono? <i class="fas fa-chevron-down"></i></button><div class="faq-content"><p>Libretto di circolazione originale, Certificato di Proprietà (o CDPD) e un documento d'identità valido.</p></div></div>
     </div>
 </section>
 
@@ -211,30 +207,43 @@
     <h2>VIENI IN SEDE</h2>
     <p>Via della Pisana, 313 - Roma</p>
     <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.623124806282!2d12.404221776595562!3d41.8794406652433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13258bd56f298811%3A0x6b4737d25e0a6d0!2sVia%20della%20Pisana%2C%20313%2C%2000163%20Roma%20RM!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="http://googleusercontent.com/maps.google.com/6" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 </section>
-
-<div id="privacyModal" class="modal">
-    <div class="modal-content"><span style="float:right; cursor:pointer;" onclick="closeModal()">×</span><h2>Privacy</h2><p>I dati forniti saranno trattati da Angelucci Domenico esclusivamente per la valutazione del veicolo.</p></div>
-</div>
 
 <footer>
     <span class="logo" style="color:white">NOI<span>ACQUISTIAMO</span>AUTO</span>
     <p style="margin-top:10px;">Via della Pisana, 313 Roma | Tel: 06 66152690</p>
     <div class="footer-legal">
         <p class="ragione-sociale">Angelucci Domenico | P.IVA: 09496981003</p>
-        <p style="margin-top:10px;"><a href="javascript:void(0)" onclick="openModal()" style="color:white; font-size:12px;">Privacy Policy</a></p>
+        <p class="footer-links" style="margin-top:15px;">
+            <a href="javascript:void(0)" onclick="openModal()">Privacy Policy</a> | 
+            <a href="javascript:void(0)" onclick="openModal()">Cookie Policy</a>
+        </p>
     </div>
 </footer>
 
 <a href="https://wa.me/393203272238" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
+<div id="privacyModal" class="modal">
+    <div class="modal-content">
+        <span style="float:right; cursor:pointer; font-size:24px;" onclick="closeModal()">×</span>
+        <h2>Privacy & Cookie Policy</h2>
+        <div style="font-size:14px; color:#475569; text-align:left; margin-top:20px; max-height:300px; overflow-y:auto;">
+            <p><strong>Titolare del trattamento:</strong> Angelucci Domenico, Via della Pisana 313, Roma.</p><br>
+            <p><strong>Dati raccolti:</strong> I dati personali forniti (nome, telefono, dati veicolo) sono utilizzati esclusivamente per formulare un'offerta di acquisto e per il contatto commerciale relativo alla valutazione.</p><br>
+            <p><strong>Cookie:</strong> Questo sito utilizza esclusivamente cookie tecnici necessari al corretto funzionamento del modulo di contatto. Non vengono utilizzati cookie di profilazione di terze parti.</p>
+        </div>
+    </div>
+</div>
+
 <script>
     function openModal() { document.getElementById("privacyModal").style.display = "block"; }
     function closeModal() { document.getElementById("privacyModal").style.display = "none"; }
     
-    document.querySelectorAll('.faq-trigger').forEach(btn => { btn.onclick = () => btn.parentElement.classList.toggle('active'); });
+    document.querySelectorAll('.faq-trigger').forEach(btn => { 
+        btn.onclick = () => btn.parentElement.classList.toggle('active'); 
+    });
 
     let step = 0; const steps = document.querySelectorAll(".step");
     const annoS = document.getElementById("anno"); for(let y=2024; y>=2008; y--) { let o=document.createElement("option"); o.text=y; o.value=y; annoS.add(o); }
@@ -251,7 +260,10 @@
         this.style.display = "none";
         setTimeout(() => {
             fetch(this.action, { method: "POST", body: new FormData(this), headers: {'Accept': 'application/json'} })
-            .then(() => { document.getElementById("evaluating-screen").style.display = "none"; document.getElementById("success").style.display = "block"; });
+            .then(() => { 
+                document.getElementById("evaluating-screen").style.display = "none"; 
+                document.getElementById("success").style.display = "block"; 
+            });
         }, 3000);
     };
 </script>

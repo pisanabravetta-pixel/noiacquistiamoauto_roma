@@ -7,81 +7,78 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #e10600; --secondary: #002e6d; --dark-blue: #0a192f; --light-bg: #f8fafc; --white: #ffffff; --text: #1e293b; }
+        :root { --primary: #e10600; --secondary: #002e6d; --dark-blue: #0a192f; --light-bg: #f4f7fa; --white: #ffffff; --text: #1e293b; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
 
         /* HEADER */
         nav { background: var(--white); padding: 15px 8%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 1000; }
-        .logo { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 22px; color: var(--secondary); text-decoration: none; letter-spacing: -1px; }
+        .logo { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 22px; color: var(--secondary); text-decoration: none; }
         .logo span { color: var(--primary); }
-        .phone-badge { background: #f1f5f9; padding: 10px 18px; border-radius: 50px; color: var(--primary); font-weight: 800; font-size: 15px; text-decoration: none; border: 1px solid #e2e8f0; transition: 0.3s; }
-        .phone-badge:hover { background: var(--primary); color: white; }
+        .phone-badge { background: #f1f5f9; padding: 10px 18px; border-radius: 50px; color: var(--primary); font-weight: 800; text-decoration: none; font-size: 14px; }
 
-        /* HERO SECTION */
-        .hero { position: relative; background: linear-gradient(135deg, #0b1d33 0%, #162e4e 100%); color: white; padding: 80px 5% 160px; text-align: center; }
-        .hero-content { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; }
-        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 48px; font-weight: 800; margin-bottom: 15px; line-height: 1.1; }
-        .hero h2 { font-size: 26px; font-weight: 400; color: #cbd5e1; margin-bottom: 40px; }
-        
-        .hero-img { 
-            position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); 
-            width: 90%; max-width: 800px; opacity: 0.3; z-index: 1; pointer-events: none;
-        }
+        /* HERO */
+        .hero { position: relative; background: linear-gradient(135deg, #0b1d33 0%, #162e4e 100%); color: white; padding: 70px 5% 150px; text-align: center; overflow: hidden; }
+        .hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 42px; font-weight: 800; margin-bottom: 10px; }
+        .hero p { font-size: 20px; color: #cbd5e1; margin-bottom: 30px; }
+        .hero-img { position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 100%; max-width: 750px; opacity: 0.25; z-index: 1; pointer-events: none; }
+
+        /* STATS BAR */
+        .stats-bar { background: var(--white); padding: 20px; border-radius: 50px; display: inline-flex; align-items: center; gap: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-top: -30px; position: relative; z-index: 4; }
+        .stats-bar i { color: #ffcc00; font-size: 24px; }
+        .stats-bar span { font-weight: 800; color: var(--secondary); font-size: 18px; }
 
         /* FORM CARD */
-        .form-wrapper { max-width: 580px; margin: -120px auto 80px; padding: 0 20px; position: relative; z-index: 3; }
-        .form-card { background: var(--white); padding: 40px; border-radius: 16px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); border-top: 8px solid var(--primary); }
+        .form-wrapper { max-width: 580px; margin: -100px auto 60px; padding: 0 20px; position: relative; z-index: 5; }
+        .form-card { background: var(--white); padding: 40px; border-radius: 16px; box-shadow: 0 25px 50px rgba(0,0,0,0.15); border-top: 8px solid var(--primary); }
         .progress-bar { height: 6px; background: #f1f5f9; border-radius: 10px; margin-bottom: 30px; overflow: hidden; }
-        .progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary) 0%, #ff4d4d 100%); width: 15%; transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-        
+        .progress-fill { height: 100%; background: var(--primary); width: 20%; transition: 0.5s; }
         .step { display: none; }
-        .step.active { display: block; animation: slideIn 0.4s ease-out; }
-        @keyframes slideIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+        .step.active { display: block; animation: fadeIn 0.4s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        label { display: block; margin-bottom: 10px; font-weight: 700; color: var(--secondary); }
+        select, input { width: 100%; padding: 15px; margin-bottom: 20px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px; }
+        .btn-next { width: 100%; padding: 18px; background: var(--primary); color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: 800; cursor: pointer; text-transform: uppercase; }
 
-        label { display: block; margin-bottom: 10px; font-weight: 700; font-size: 16px; color: var(--secondary); }
-        select, input { width: 100%; padding: 16px; margin-bottom: 25px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px; appearance: none; background: #fff; }
-        select:focus, input:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 0 4px rgba(225, 6, 0, 0.1); }
+        /* SEZIONE 3 PASSAGGI */
+        .section-padding { padding: 80px 8%; text-align: center; }
+        .bg-light { background: var(--light-bg); }
+        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        .step-card { background: white; padding: 40px 30px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); position: relative; }
+        .step-card .num { position: absolute; top: -20px; left: 50%; transform: translateX(-50%); width: 45px; height: 45px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; border: 4px solid var(--white); }
+        .step-card h3 { margin: 15px 0; color: var(--secondary); }
 
-        .btn-next { width: 100%; padding: 20px; background: var(--primary); color: white; border: none; border-radius: 10px; font-size: 19px; font-weight: 800; cursor: pointer; text-transform: uppercase; transition: 0.3s; box-shadow: 0 10px 15px -3px rgba(225, 6, 0, 0.3); }
-        .btn-next:hover { transform: translateY(-2px); box-shadow: 0 15px 20px -5px rgba(225, 6, 0, 0.4); }
-        .btn-back { background: none; border: none; color: #94a3b8; cursor: pointer; margin-top: 20px; width: 100%; text-decoration: underline; font-size: 14px; }
+        /* PERCHÉ NOI */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 40px; }
+        .feature-box { padding: 30px; border-radius: 15px; background: #fff; border: 1px solid #e2e8f0; transition: 0.3s; }
+        .feature-box:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .feature-box i { font-size: 30px; color: #10b981; margin-bottom: 15px; }
 
-        /* HOW IT WORKS */
-        .how-it-works { padding: 80px 8%; text-align: center; background: var(--light-bg); }
-        .how-it-works h2 { font-family: 'Montserrat', sans-serif; font-size: 32px; margin-bottom: 50px; color: var(--secondary); }
-        .steps-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; }
-        .step-item { flex: 1; min-width: 280px; max-width: 350px; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .step-number { width: 50px; height: 50px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800; margin: 0 auto 20px; }
-
-        /* WHY US */
-        .why-us { padding: 80px 8%; text-align: center; }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1100px; margin: 40px auto; }
-        .feature-card { display: flex; align-items: center; gap: 15px; background: #fff; padding: 20px; border-radius: 12px; border: 1px solid #f1f5f9; text-align: left; }
-        .feature-card i { color: #10b981; font-size: 22px; }
-
-        /* MAP SECTION */
-        .map-section { padding: 60px 0 0; background: var(--white); text-align: center; }
-        .map-section h2 { margin-bottom: 30px; font-family: 'Montserrat', sans-serif; }
-        .map-container { width: 100%; height: 450px; border-top: 1px solid #e2e8f0; }
+        /* RECENSIONI */
+        .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 40px; }
+        .review-card { background: #fff; padding: 30px; border-radius: 15px; text-align: left; border-left: 5px solid var(--primary); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .stars { color: #ffcc00; margin-bottom: 10px; }
 
         /* FAQ */
-        .faq-section { padding: 80px 8%; background: var(--light-bg); }
-        .faq-box { max-width: 800px; margin: 0 auto; }
-        .faq-item { background: white; margin-bottom: 12px; border-radius: 10px; border: 1px solid #e2e8f0; }
+        .faq-box { max-width: 800px; margin: 40px auto 0; text-align: left; }
+        .faq-item { background: white; margin-bottom: 10px; border-radius: 10px; border: 1px solid #e2e8f0; }
         .faq-trigger { width: 100%; padding: 20px; text-align: left; background: none; border: none; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; }
-        .faq-content { padding: 0 20px; max-height: 0; overflow: hidden; transition: 0.3s ease-out; }
-        .faq-item.active .faq-content { padding: 0 20px 20px; max-height: 200px; }
+        .faq-content { padding: 0 20px; max-height: 0; overflow: hidden; transition: 0.3s; color: #64748b; }
+        .faq-item.active .faq-content { padding: 0 20px 20px; max-height: 150px; }
 
-        /* WHATSAPP FLOAT */
-        .wa-button { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; box-shadow: 0 10px 25px rgba(37,211,102,0.4); z-index: 1000; text-decoration: none; transition: 0.3s; }
+        /* MAPPA COMPATTA */
+        .map-wrapper { max-width: 1000px; margin: 40px auto; height: 350px; border-radius: 20px; overflow: hidden; border: 5px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 
-        footer { background: var(--secondary); color: #94a3b8; padding: 60px 8% 30px; text-align: center; }
-        .footer-logo { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 24px; color: white; text-decoration: none; margin-bottom: 20px; display: block; }
-        .footer-links a { color: #cbd5e1; text-decoration: none; margin: 0 15px; }
-        .footer-info { border-top: 1px solid #1e293b; padding-top: 30px; margin-top: 30px; font-size: 14px; color: #64748b; }
+        /* WHATSAPP */
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; }
 
-        @media (max-width: 768px) { .hero h1 { font-size: 32px; } .hero h2 { font-size: 18px; } }
+        footer { background: var(--secondary); color: #cbd5e1; padding: 60px 8% 30px; text-align: center; }
+        .footer-logo { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 24px; color: white; margin-bottom: 20px; display: block; }
+        .footer-links a { color: white; text-decoration: none; margin: 0 15px; font-size: 14px; }
+        .footer-info { margin-top: 30px; padding-top: 30px; border-top: 1px solid #1e293b; font-size: 13px; }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 30px; } .hero p { font-size: 18px; } }
     </style>
 </head>
 <body>
@@ -94,136 +91,127 @@
 <section class="hero">
     <div class="hero-content">
         <h1>Quanto vale la tua auto?</h1>
-        <h2>Valutazione 100% gratuita, facile e veloce</h2>
-        <p>Inserisci i dati e ricevi subito la tua offerta di vendita online a Roma.</p>
+        <p>Valutazione 100% gratuita, facile e veloce a Roma</p>
+        <div class="stats-bar">
+            <i class="fas fa-award"></i>
+            <span>Oltre 1.000 auto valutate con successo</span>
+        </div>
     </div>
-    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop" alt="Car" class="hero-img">
+    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop" class="hero-img">
 </section>
 
 <div class="form-wrapper">
     <div class="form-card">
         <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-        
         <form id="autoForm" action="https://formsubmit.co/pisanabravetta@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="Richiesta Valutazione - Via della Pisana">
             <input type="hidden" name="_captcha" value="false">
-
             <div class="step active">
                 <label>Marca</label>
                 <select name="Marca" id="marca" required>
-                    <option value="">Seleziona marca...</option>
-                    <option>Alfa Romeo</option><option>Audi</option><option>BMW</option><option>Fiat</option><option>Ford</option><option>Jeep</option><option>Lancia</option><option>Mercedes</option><option>Opel</option><option>Peugeot</option><option>Renault</option><option>Toyota</option><option>Volkswagen</option>
+                    <option value="">Seleziona Marca...</option>
+                    <option>Audi</option><option>BMW</option><option>Fiat</option><option>Ford</option><option>Jeep</option><option>Mercedes</option><option>Renault</option><option>Toyota</option><option>Volkswagen</option>
                 </select>
                 <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
             </div>
-
             <div class="step">
                 <label>Modello</label>
                 <select name="Modello" id="modello" required><option value="">Scegli marca...</option></select>
                 <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
-                <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
             </div>
-
             <div class="step">
-                <label>Anno e Chilometraggio</label>
+                <label>Anno e Chilometri</label>
                 <select name="Anno" id="anno" required></select>
                 <select name="KM" required>
                     <option value="">KM percorsi...</option>
-                    <option>0 - 50.000</option><option>50.000 - 100.000</option><option>100.000 - 150.000</option><option>Oltre 150.000</option>
+                    <option>0-50k</option><option>50k-100k</option><option>100k-150k</option><option>Oltre 150k</option>
                 </select>
                 <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
-                <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
             </div>
-
             <div class="step">
-                <label>Motore e Condizioni</label>
-                <input type="text" name="Cilindrata" placeholder="Cilindrata (es. 1.6 Diesel)" required>
-                <select name="Stato" required>
-                    <option value="">Condizioni generali...</option>
-                    <option>Ottime</option><option>Buone</option><option>Da rivedere</option><option>Incidentata</option>
-                </select>
-                <button type="button" class="btn-next" onclick="move(1)">Ultimo Step</button>
-                <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
-            </div>
-
-            <div class="step">
-                <label>I tuoi recapiti</label>
-                <input type="text" name="Nome" placeholder="Nome" required>
-                <input type="tel" name="Telefono" placeholder="Cellulare" required>
-                <button type="submit" class="btn-next">Ottieni Valutazione</button>
-                <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
+                <label>Dati di Contatto</label>
+                <input type="text" name="Nome" placeholder="Tuo Nome" required>
+                <input type="tel" name="Telefono" placeholder="Tuo Cellulare" required>
+                <button type="submit" class="btn-next">Invia e Ricevi Offerta</button>
             </div>
         </form>
-
-        <div id="loader" style="display:none; text-align:center;"><i class="fas fa-spinner fa-spin fa-2x" style="color:var(--primary)"></i><p>Calcolo valutazione...</p></div>
-        <div id="success" style="display:none; text-align:center;"><i class="fas fa-check-circle fa-4x" style="color:#10b981; margin-bottom:15px;"></i><h3>Richiesta Ricevuta!</h3><p>Ti contatteremo subito.</p></div>
+        <div id="loader" style="display:none; text-align:center;"><i class="fas fa-spinner fa-spin fa-2x"></i></div>
+        <div id="success" style="display:none; text-align:center;"><h3>Richiesta Inviata!</h3><p>Ti contatteremo a breve.</p></div>
     </div>
 </div>
 
-<section class="how-it-works">
+<section class="section-padding">
     <h2>Vendi la tua auto in 3 semplici passaggi</h2>
-    <div class="steps-container">
-        <div class="step-item"><div class="step-number">1</div><h3>Ricevi offerta</h3><p>Ottieni una stima online gratuita in pochi secondi.</p></div>
-        <div class="step-item"><div class="step-number">2</div><h3>Conferma i dati</h3><p>Verifichiamo insieme i dettagli della tua auto.</p></div>
-        <div class="step-item"><div class="step-number">3</div><h3>Pagamento</h3><p>Ricevi il pagamento istantaneo al momento del ritiro.</p></div>
+    <div class="steps-grid">
+        <div class="step-card"><div class="num">1</div><h3>Ricevi offerta</h3><p>Ottieni una valutazione gratuita online in meno di 2 minuti.</p></div>
+        <div class="step-card"><div class="num">2</div><h3>Confermiamo i dati</h3><p>Verifichiamo insieme i dettagli della tua auto telefonicamente.</p></div>
+        <div class="step-card"><div class="num">3</div><h3>Ricevi pagamento</h3><p>Ricevi il pagamento istantaneo e gestiamo noi tutta la burocrazia.</p></div>
     </div>
 </section>
 
-<section class="why-us">
-    <h2>Perché scegliere noi?</h2>
+<section class="section-padding bg-light">
+    <h2>Perché scegliere NoiAcquistiamoAuto?</h2>
     <div class="features-grid">
-        <div class="feature-card"><i class="fas fa-check-circle"></i><span>Valutazione gratuita e senza impegno</span></div>
-        <div class="feature-card"><i class="fas fa-check-circle"></i><span>Pagamento sicuro e immediato</span></div>
-        <div class="feature-card"><i class="fas fa-check-circle"></i><span>Passaggio di proprietà a nostro carico</span></div>
-        <div class="feature-card"><i class="fas fa-check-circle"></i><span>Esperti del settore a Roma</span></div>
+        <div class="feature-box"><i class="fas fa-euro-sign"></i><h3>Valutazione Gratuita</h3><p>Nessun costo nascosto o obbligo di vendita.</p></div>
+        <div class="feature-box"><i class="fas fa-bolt"></i><h3>Pagamento Immediato</h3><p>Bonifico istantaneo garantito alla firma.</p></div>
+        <div class="feature-box"><i class="fas fa-file-signature"></i><h3>Burocrazia Zero</h3><p>Gestiamo noi il passaggio di proprietà.</p></div>
+        <div class="feature-box"><i class="fas fa-shield-alt"></i><h3>Sicurezza Totale</h3><p>Siamo una realtà fisica con sede a Roma.</p></div>
     </div>
 </section>
 
-<section class="map-section">
+<section class="section-padding">
+    <h2>Cosa dicono di noi</h2>
+    <div class="review-grid">
+        <div class="review-card"><div class="stars">★★★★★</div><p>"Venduto la mia Panda velocemente. Professionali!"</p><strong>- Marco T.</strong></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p>"Valutazione onesta e pagamento immediato."</p><strong>- Giulia M.</strong></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p>"Hanno gestito tutto loro, zero stress."</p><strong>- Roberto F.</strong></div>
+    </div>
+</section>
+
+<section class="section-padding bg-light">
+    <h2>Domande frequenti</h2>
+    <div class="faq-box">
+        <div class="faq-item"><button class="faq-trigger">Come ricevo il pagamento? <i class="fas fa-plus"></i></button><div class="faq-content"><p>Tramite bonifico istantaneo durante l'atto di vendita.</p></div></div>
+        <div class="faq-item"><button class="faq-trigger">Quanto tempo ci vuole? <i class="fas fa-plus"></i></button><div class="faq-content"><p>Dalla valutazione al pagamento possono passare meno di 24 ore.</p></div></div>
+    </div>
+</section>
+
+<section class="section-padding">
     <h2>Vieni a trovarci</h2>
-    <p style="margin-bottom: 20px;">Via della Pisana, 313 - 00163 Roma (RM)</p>
-    <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2971.282845664161!2d12.392949776510307!3d41.86518177124316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13258bd60c73e047%3A0x6b77209353916960!2sVia%20della%20Pisana%2C%20313%2C%2000163%20Roma%20RM!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <p>Via della Pisana, 313 - Roma</p>
+    <div class="map-wrapper">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2971.071675122143!2d12.3995!3d41.8655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13258a6988f987f1%3A0x7d00000000000000!2sVia%20della%20Pisana%2C%20313%2C%2000163%20Roma%20RM!5e0!3m2!1sit!2sit!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 </section>
 
 <footer>
-    <a href="#" class="footer-logo">NOI<span>ACQUISTIAMO</span>AUTO</a>
+    <span class="footer-logo">NOI<span>ACQUISTIAMO</span>AUTO</span>
     <div class="footer-links">
         <a href="#">Privacy</a> | <a href="#">Termini</a> | <a href="#">Contatti</a>
     </div>
-    <p>Sede Operativa: Via della Pisana, 313 - Roma</p>
+    <p style="margin-top:20px;">Sede Operativa: Via della Pisana, 313 Roma</p>
     <div class="footer-info">© 2024 NoiAcquistiamoAuto - Tutti i diritti riservati.</div>
 </footer>
 
-<a href="https://wa.me/393203272238" class="wa-button" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/393203272238" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
 <script>
     document.querySelectorAll('.faq-trigger').forEach(btn => { btn.onclick = () => btn.parentElement.classList.toggle('active'); });
-
-    const modelli = {
-        "Alfa Romeo": ["Giulietta", "Stelvio", "Giulia"], "Audi": ["A1", "A3", "A4", "Q3"], "BMW": ["Serie 1", "Serie 3", "X1", "X3"], "Fiat": ["Panda", "500", "500X", "Tipo"], "Ford": ["Fiesta", "Focus", "Puma"], "Jeep": ["Renegade", "Compass"], "Lancia": ["Ypsilon"], "Mercedes": ["Classe A", "Classe B", "GLA"], "Opel": ["Corsa", "Mokka"], "Peugeot": ["208", "2008", "3008"], "Renault": ["Clio", "Captur"], "Toyota": ["Yaris", "Aygo"], "Volkswagen": ["Golf", "Polo", "T-Roc"]
-    };
-
-    let step = 0; const steps = document.querySelectorAll(".step");
-    const annoS = document.getElementById("anno");
-    for(let y=2024; y>=2008; y--) { let o = document.createElement("option"); o.text=y; o.value=y; annoS.add(o); }
-
+    const modelli = { Audi: ["A1", "A3", "Q3"], BMW: ["Serie 1", "X1"], Fiat: ["500", "Panda"], Ford: ["Fiesta", "Puma"], Jeep: ["Renegade"], Mercedes: ["Classe A"], Renault: ["Clio"], Toyota: ["Yaris"], Volkswagen: ["Golf", "Polo"] };
+    let s = 0; const steps = document.querySelectorAll(".step");
+    const annoS = document.getElementById("anno"); for(let y=2024; y>=2010; y--) { let o=document.createElement("option"); o.text=y; o.value=y; annoS.add(o); }
     document.getElementById("marca").onchange = function() {
-        const mS = document.getElementById("modello"); mS.innerHTML = '<option value="">Modello...</option>';
-        if(modelli[this.value]) modelli[this.value].forEach(m => { let o = document.createElement("option"); o.text=m; o.value=m; mS.add(o); });
+        const mS = document.getElementById("modello"); mS.innerHTML = "";
+        if(modelli[this.value]) modelli[this.value].forEach(m => { let o=document.createElement("option"); o.text=m; o.value=m; mS.add(o); });
     };
-
     function move(n) {
-        if (n === 1 && !steps[step].querySelector("select, input").checkValidity()) return steps[step].querySelector("select, input").reportValidity();
-        steps[step].classList.remove("active"); step += n; steps[step].classList.add("active");
-        document.getElementById("progressFill").style.width = ((step + 1) / steps.length) * 100 + "%";
+        if(n===1 && !steps[s].querySelector("select, input").checkValidity()) return steps[s].querySelector("select, input").reportValidity();
+        steps[s].classList.remove("active"); s+=n; steps[s].classList.add("active");
+        document.getElementById("progressFill").style.width = ((s+1)/steps.length)*100+"%";
     }
-
     document.getElementById("autoForm").onsubmit = function(e) {
-        e.preventDefault(); this.style.display = "none"; document.getElementById("loader").style.display = "block";
-        fetch(this.action, { method: "POST", body: new FormData(this), headers: {'Accept': 'application/json'} })
-        .then(() => { document.getElementById("loader").style.display = "none"; document.getElementById("success").style.display = "block"; });
+        e.preventDefault(); this.style.display="none"; document.getElementById("loader").style.display="block";
+        fetch(this.action,{method:"POST",body:new FormData(this),headers:{'Accept':'application/json'}})
+        .then(()=>{document.getElementById("loader").style.display="none"; document.getElementById("success").style.display="block";});
     };
 </script>
 </body>

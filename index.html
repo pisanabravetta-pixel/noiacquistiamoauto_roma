@@ -39,9 +39,8 @@
         label { display: block; margin-bottom: 8px; font-weight: 700; font-size: 14px; color: var(--secondary); }
         select, input { width: 100%; padding: 14px; margin-bottom: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px; outline: none; }
         
-        .privacy-check { display: flex; align-items: flex-start; gap: 10px; font-size: 12px; color: #64748b; margin-bottom: 15px; text-align: left; }
+        .privacy-check { display: flex; align-items: flex-start; gap: 10px; font-size: 11px; color: #64748b; margin-bottom: 15px; text-align: left; }
         .privacy-check input { width: auto; margin-top: 3px; }
-        .privacy-check a { color: var(--primary); text-decoration: underline; }
 
         .btn-next { width: 100%; padding: 16px; background: var(--primary); color: white; border: none; border-radius: 10px; font-size: 17px; font-weight: 800; cursor: pointer; text-transform: uppercase; }
         .btn-back { background: none; border: none; color: #94a3b8; cursor: pointer; margin-top: 10px; width: 100%; text-decoration: underline; font-size: 13px; }
@@ -53,13 +52,13 @@
         .step-card { background: white; padding: 30px; border-radius: 15px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
         .step-card .num { width: 45px; height: 45px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; margin: 0 auto 15px; font-size: 20px; }
 
-        /* PERCHÉ VENDERE A NOI */
+        /* REASONS */
         .reasons-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 50px; max-width: 1200px; margin-left: auto; margin-right: auto; }
         .reason-card { background: white; padding: 40px 30px; border-radius: 20px; border: 1px solid #e2e8f0; text-align: left; transition: all 0.3s ease; display: flex; flex-direction: column; height: 100%; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); }
-        .reason-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        .reason-card:hover { transform: translateY(-5px); border-color: var(--primary); }
         .reason-card i { font-size: 40px; color: var(--primary); margin-bottom: 20px; }
-        .reason-card h3 { font-family: 'Montserrat'; font-size: 20px; font-weight: 800; color: var(--secondary); text-transform: uppercase; margin-bottom: 12px; line-height: 1.2; }
-        .reason-card p { font-size: 15px; color: #475569; line-height: 1.6; }
+        .reason-card h3 { font-family: 'Montserrat'; font-size: 20px; font-weight: 800; color: var(--secondary); text-transform: uppercase; margin-bottom: 12px; }
+        .reason-card p { font-size: 15px; color: #475569; }
 
         /* FAQ */
         .faq-item { background: white; margin-bottom: 12px; border-radius: 12px; border: 1px solid #e2e8f0; text-align: left; overflow: hidden; }
@@ -67,21 +66,16 @@
         .faq-content { padding: 0 18px; max-height: 0; overflow: hidden; transition: 0.3s; font-size: 14px; color: #64748b; }
         .faq-item.active .faq-content { padding: 0 18px 18px; max-height: 150px; }
 
-        /* MODAL PRIVACY */
+        /* MODAL */
         .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); overflow-y: auto; }
         .modal-content { background: white; margin: 5% auto; padding: 30px; width: 90%; max-width: 700px; border-radius: 15px; position: relative; }
-        .close-modal { position: absolute; right: 20px; top: 20px; font-size: 24px; cursor: pointer; }
 
-        /* FOOTER */
         footer { background: var(--secondary); color: #cbd5e1; padding: 50px 5%; text-align: center; }
         .footer-legal { margin-top: 25px; font-size: 12px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
-        .footer-legal a { color: white; margin: 0 10px; text-decoration: none; opacity: 0.8; }
         .ragione-sociale { font-size: 10px; text-transform: uppercase; opacity: 0.7; }
-
-        .wa-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; z-index: 1000; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .wa-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; z-index: 1000; }
 
         @media (max-width: 768px) { .reasons-grid { grid-template-columns: 1fr; } }
-        @media (max-width: 480px) { .logo { font-size: 15px; } .hero h1 { font-size: 24px; } }
     </style>
 </head>
 <body>
@@ -113,14 +107,23 @@
                 <label>Marca dell'auto</label>
                 <select name="Marca" id="marca" required>
                     <option value="">Seleziona Marca...</option>
-                    <option>Alfa Romeo</option><option>Audi</option><option>BMW</option><option>Citroen</option><option>Dacia</option><option>Fiat</option><option>Ford</option><option>Hyundai</option><option>Jeep</option><option>Lancia</option><option>Mercedes</option><option>Opel</option><option>Peugeot</option><option>Renault</option><option>Toyota</option><option>Volkswagen</option>
+                    <option>Abarth</option><option>Alfa Romeo</option><option>Audi</option><option>BMW</option>
+                    <option>Citroen</option><option>Cupra</option><option>Dacia</option><option>DS</option>
+                    <option>DR Automobiles</option><option>Fiat</option><option>Ford</option><option>Honda</option>
+                    <option>Hyundai</option><option>Jaguar</option><option>Jeep</option><option>Kia</option>
+                    <option>Lancia</option><option>Land Rover</option><option>Lexus</option><option>Maserati</option>
+                    <option>Mazda</option><option>Mercedes-Benz</option><option>MINI</option><option>Mitsubishi</option>
+                    <option>Nissan</option><option>Opel</option><option>Peugeot</option><option>Porsche</option>
+                    <option>Renault</option><option>SEAT</option><option>Skoda</option><option>Smart</option>
+                    <option>Suzuki</option><option>Tesla</option><option>Toyota</option><option>Volkswagen</option>
+                    <option>Volvo</option><option>Altro...</option>
                 </select>
                 <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
             </div>
 
             <div class="step">
                 <label>Modello</label>
-                <select name="Modello" id="modello" required><option value="">Scegli marca...</option></select>
+                <input type="text" name="Modello" placeholder="Es: Panda, Golf, Qashqai..." required>
                 <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
                 <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
             </div>
@@ -131,7 +134,8 @@
                 <label>Chilometraggio</label>
                 <select name="KM" required>
                     <option value="">KM percorsi...</option>
-                    <option>0 - 50.000</option><option>50.000 - 100.000</option><option>100.000 - 150.000</option><option>Oltre 150.000</option>
+                    <option>0 - 30.000</option><option>30.000 - 60.000</option><option>60.000 - 100.000</option>
+                    <option>100.000 - 150.000</option><option>150.000 - 200.000</option><option>Oltre 200.000</option>
                 </select>
                 <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
             </div>
@@ -140,10 +144,11 @@
                 <label>Stato del Veicolo</label>
                 <select name="Stato" required>
                     <option value="">Condizioni generali...</option>
-                    <option>Ottime (Pari al nuovo)</option><option>Buone (Piccoli segni d'uso)</option><option>Da rivedere (Danni vari)</option><option>Incidentata / Non marciante</option>
+                    <option>Ottime (Pari al nuovo)</option><option>Buone (Piccoli segni d'uso)</option>
+                    <option>Da rivedere (Danni vari)</option><option>Incidentata / Non marciante</option>
                 </select>
                 <label>Motorizzazione</label>
-                <input type="text" name="Motore" placeholder="Es: 1.6 Diesel 120cv" required>
+                <input type="text" name="Motore" placeholder="Es: 1.6 Diesel o 1.0 Hybrid" required>
                 <button type="button" class="btn-next" onclick="move(1)">Ultimo Step</button>
             </div>
 
@@ -165,12 +170,12 @@
         <div id="evaluating-screen" style="display:none; text-align:center;">
             <div class="spinner-ring"></div>
             <h3 id="eval-text">Stiamo valutando la sua auto...</h3>
-            <p id="eval-subtext">Analisi database in corso</p>
+            <p id="eval-subtext">Analisi database Quattroruote ed Eurotax</p>
         </div>
         <div id="success" style="display:none; text-align:center; padding: 20px;">
             <i class="fas fa-check-circle fa-4x" style="color:#10b981; margin-bottom:20px;"></i>
-            <h3>Richiesta inviata con successo!</h3>
-            <p>Ti contatteremo a breve sulla base dei dati forniti.</p>
+            <h3>Richiesta Ricevuta!</h3>
+            <p>Angelucci Domenico la ricontatterà a breve.</p>
         </div>
     </div>
 </div>
@@ -187,68 +192,43 @@
 <section class="section-padding bg-light">
     <h2 style="font-family: Montserrat; text-transform: uppercase;">Perché vendere la tua auto a NoiAcquistiamoAuto?</h2>
     <div class="reasons-grid">
-        <div class="reason-card">
-            <i class="fas fa-handshake"></i>
-            <h3>Nessuna sorpresa</h3>
-            <p>Ti offriamo un'offerta reale sulla base dei dati che ci hai fornito, solo se riscontriamo differenze il prezzo verrà modificato.</p>
-        </div>
-        <div class="reason-card">
-            <i class="fas fa-leaf"></i>
-            <h3>Senza stress</h3>
-            <p>Eviti perdite di tempo, trattative e telefonate fastidiose da parte di privati.</p>
-        </div>
-        <div class="reason-card">
-            <i class="fas fa-bolt"></i>
-            <h3>Vendi velocemente</h3>
-            <p>Fissi un appuntamento presso la nostra sede di Roma e vendi la tua auto in giornata.</p>
-        </div>
-        <div class="reason-card">
-            <i class="fas fa-file-contract"></i>
-            <h3>Senza pratiche noiose</h3>
-            <p>Pensiamo noi alle pratiche burocratiche, incluso il passaggio di proprietà, tutto a nostre spese.</p>
-        </div>
+        <div class="reason-card"><i class="fas fa-handshake"></i><h3>Nessuna sorpresa</h3><p>Offerta reale sulla base dei dati forniti, modificata solo se riscontriamo differenze.</p></div>
+        <div class="reason-card"><i class="fas fa-leaf"></i><h3>Senza stress</h3><p>Eviti perdite di tempo, trattative e telefonate fastidiose da parte di privati.</p></div>
+        <div class="reason-card"><i class="fas fa-bolt"></i><h3>Vendi velocemente</h3><p>Fissi un appuntamento a Roma e vendi la tua auto in giornata senza attese.</p></div>
+        <div class="reason-card"><i class="fas fa-file-contract"></i><h3>Senza pratiche noiose</h3><p>Pensiamo noi a tutto, incluso il passaggio di proprietà a nostre spese.</p></div>
     </div>
 </section>
 
 <section class="section-padding bg-light">
-    <h2 style="font-family: Montserrat;">DOMANDE FREQUENTI</h2>
+    <h2>Domande Frequenti</h2>
     <div style="max-width:700px; margin:40px auto 0;">
-        <div class="faq-item"><button class="faq-trigger">Come ricevo il pagamento? <i class="fas fa-plus"></i></button><div class="faq-content"><p>Bonifico istantaneo nel momento della firma, valuta immediata.</p></div></div>
-        <div class="faq-item"><button class="faq-trigger">Vendete auto intestate a defunti? <i class="fas fa-plus"></i></button><div class="faq-content"><p>Sì, gestiamo noi tutta la pratica burocratica necessaria con gli eredi.</p></div></div>
-        <div class="faq-item"><button class="faq-trigger">Che documenti servono? <i class="fas fa-plus"></i></button><div class="faq-content"><p>Libretto di circolazione, certificato di proprietà e documento d'identità.</p></div></div>
-        <div class="faq-item"><button class="faq-trigger">Quanto tempo ci vuole per il passaggio? <i class="fas fa-plus"></i></button><div class="faq-content"><p>Il passaggio è immediato tramite la nostra agenzia convenzionata.</p></div></div>
+        <div class="faq-item"><button class="faq-trigger">Come ricevo il pagamento? <i class="fas fa-plus"></i></button><div class="faq-content"><p>Il pagamento avviene tramite bonifico istantaneo contestuale al passaggio.</p></div></div>
+        <div class="faq-item"><button class="faq-trigger">Vendete auto intestate a defunti? <i class="fas fa-plus"></i></button><div class="faq-content"><p>Sì, gestiamo le pratiche di successione e vendita con gli eredi.</p></div></div>
     </div>
 </section>
 
 <section class="section-padding">
     <h2>Vieni in sede</h2>
     <p>Via della Pisana, 313 - Roma</p>
-    <div class="map-wrapper"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.627793402!2d12.404221!3d41.879482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13258bc894563821%3A0x7d0a68d4f40445d3!2sVia%20della%20Pisana%2C%20313%2C%2000163%20Roma%20RM!5e0!3m2!1sit!2sit!4v1700000000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+    <div style="margin-top:20px; border-radius:15px; overflow:hidden; box-shadow:0 10px 20px rgba(0,0,0,0.1);">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.623490089868!2d12.4042453!3d41.8794821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13258bc9118c7b89%3A0x7d0139b819f6a738!2sVia%20della%20Pisana%2C%20313%2C%2000163%20Roma%20RM!5e0!3m2!1sit!2sit!4v1700000000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
 </section>
 
 <div id="privacyModal" class="modal">
     <div class="modal-content">
-        <span class="close-modal" onclick="closeModal()">×</span>
+        <span style="float:right; cursor:pointer;" onclick="closeModal()">×</span>
         <h2>Informativa Privacy</h2>
-        <div style="font-size:14px; color:#475569; text-align:left; max-height:400px; overflow-y:auto; margin-top:20px;">
-            <p><strong>Titolare:</strong> Angelucci Domenico - Via della Pisana, 313 Roma.</p><br>
-            <p><strong>Dati raccolti:</strong> I dati (Nome, Telefono, Dati Auto) sono usati solo per la valutazione del veicolo.</p><br>
-            <p><strong>Cookie:</strong> Usiamo solo cookie tecnici per il modulo di contatto.</p>
-        </div>
+        <p style="font-size:14px; margin-top:20px;">Titolare: Angelucci Domenico. I dati sono trattati solo per finalità di valutazione auto.</p>
     </div>
 </div>
 
 <footer>
     <span class="logo" style="color:white">NOI<span>ACQUISTIAMO</span>AUTO</span>
-    <p style="margin-top:10px;">Sede: Via della Pisana, 313 Roma | Tel: 06 66152690</p>
-    
+    <p style="margin-top:10px;">Via della Pisana, 313 Roma | Tel: 06 66152690</p>
     <div class="footer-legal">
         <p>Ragione Sociale: <span class="ragione-sociale">Angelucci Domenico</span> | P.IVA: 09496981003</p>
-        <p style="margin-top:10px;">
-            <a href="javascript:void(0)" onclick="openModal()">Privacy Policy</a> | 
-            <a href="javascript:void(0)" onclick="openModal()">Cookie Policy</a>
-        </p>
-        <p style="margin-top:15px; opacity:0.5;">© 2024 Tutti i diritti riservati.</p>
+        <p style="margin-top:10px;"><a href="javascript:void(0)" onclick="openModal()" style="color:white; opacity:0.7;">Privacy Policy</a></p>
     </div>
 </footer>
 
@@ -257,17 +237,11 @@
 <script>
     function openModal() { document.getElementById("privacyModal").style.display = "block"; }
     function closeModal() { document.getElementById("privacyModal").style.display = "none"; }
-    window.onclick = function(e) { if (e.target == document.getElementById("privacyModal")) closeModal(); }
-
+    
     document.querySelectorAll('.faq-trigger').forEach(btn => { btn.onclick = () => btn.parentElement.classList.toggle('active'); });
 
-    const modelli = { "Alfa Romeo": ["Giulietta", "Stelvio", "Giulia", "Mito"], "Audi": ["A1", "A3", "A4", "Q3", "Q5"], "BMW": ["Serie 1", "Serie 3", "X1", "X3"], "Citroen": ["C1", "C3", "C4"], "Dacia": ["Sandero", "Duster"], "Fiat": ["Panda", "500", "500X", "Tipo"], "Ford": ["Fiesta", "Focus", "Puma"], "Hyundai": ["i10", "Tucson"], "Jeep": ["Renegade", "Compass"], "Lancia": ["Ypsilon"], "Mercedes": ["Classe A", "Classe B", "GLA"], "Opel": ["Corsa", "Mokka"], "Peugeot": ["208", "2008", "3008"], "Renault": ["Clio", "Captur"], "Toyota": ["Yaris", "Aygo X"], "Volkswagen": ["Golf", "Polo", "T-Roc", "Tiguan"] };
     let step = 0; const steps = document.querySelectorAll(".step");
-    const annoS = document.getElementById("anno"); for(let y=2024; y>=2010; y--) { let o=document.createElement("option"); o.text=y; o.value=y; annoS.add(o); }
-    document.getElementById("marca").onchange = function() {
-        const mS = document.getElementById("modello"); mS.innerHTML = '<option value="">Modello...</option>';
-        if(modelli[this.value]) modelli[this.value].forEach(m => { let o=document.createElement("option"); o.text=m; o.value=m; mS.add(o); });
-    };
+    const annoS = document.getElementById("anno"); for(let y=2024; y>=2008; y--) { let o=document.createElement("option"); o.text=y; o.value=y; annoS.add(o); }
 
     function move(n) {
         if (n === 1 && !steps[step].querySelector("select, input").checkValidity()) return steps[step].querySelector("select, input").reportValidity();
@@ -280,12 +254,11 @@
         const form = this;
         document.getElementById("evaluating-screen").style.display = "block";
         form.style.display = "none";
-        setTimeout(() => { document.getElementById("eval-text").innerText = "Confronto listini Quattroruote..."; }, 1500);
-        setTimeout(() => { document.getElementById("eval-text").innerText = "Analisi quotazioni Eurotax..."; }, 3500);
+        setTimeout(() => { document.getElementById("eval-text").innerText = "Confronto listini Eurotax..."; }, 2000);
         setTimeout(() => {
             fetch(form.action, { method: "POST", body: new FormData(form), headers: {'Accept': 'application/json'} })
             .then(() => { document.getElementById("evaluating-screen").style.display = "none"; document.getElementById("success").style.display = "block"; });
-        }, 5500);
+        }, 5000);
     };
 </script>
 </body>

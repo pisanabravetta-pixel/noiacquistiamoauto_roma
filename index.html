@@ -100,79 +100,72 @@
 <div class="form-wrapper">
     <div class="form-card">
         <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-        <form id="autoForm" action="https://formsubmit.co/info@noiacquistiamoautoroma.it" method="POST">
-            <input type="hidden" name="_captcha" value="false">
-            <div class="step active">
-                <label>Marca</label>
-                <select name="Marca" id="marca" required>
-                    <option value="">Seleziona Marca...</option>
-                    <option>Alfa Romeo</option><option>Audi</option><option>BMW</option><option>Citroen</option><option>Dacia</option><option>Fiat</option><option>Ford</option><option>Hyundai</option><option>Jeep</option><option>Kia</option><option>Lancia</option><option>Land Rover</option><option>Mercedes-Benz</option><option>MINI</option><option>Nissan</option><option>Opel</option><option>Peugeot</option><option>Renault</option><option>Smart</option><option>Suzuki</option><option>Toyota</option><option>Volkswagen</option><option>Altro...</option>
-                </select>
-                <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
-            </div>
+       <form id="autoForm" action="https://formsubmit.co/info@noiacquistiamoautoroma.it" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    
+    <div class="step active">
+        <label>Marca</label>
+        <select name="Marca" id="marca" required>
+            <option value="">Seleziona Marca...</option>
+            <option>Alfa Romeo</option><option>Audi</option><option>BMW</option><option>Citroen</option><option>Dacia</option><option>Fiat</option><option>Ford</option><option>Hyundai</option><option>Jeep</option><option>Kia</option><option>Lancia</option><option>Land Rover</option><option>Mercedes-Benz</option><option>MINI</option><option>Nissan</option><option>Opel</option><option>Peugeot</option><option>Renault</option><option>Smart</option><option>Suzuki</option><option>Toyota</option><option>Volkswagen</option><option>Altro...</option>
+        </select>
+        <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
+    </div>
 
-            <div class="step">
-                <label>Modello</label>
-                <input type="text" name="Modello" placeholder="Es: Panda, Golf, Qashqai..." required>
-                <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
-                <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
-            </div>
+    <div class="step">
+        <label>Modello</label>
+        <input type="text" name="Modello" placeholder="Es: Panda, Golf, Qashqai..." required>
+        <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
+        <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
+    </div>
 
-            <div class="step">
-                <label>Anno e Chilometri</label>
-                <select name="Anno" id="anno" required></select>
-                <select name="KM" required>
-                    <option value="">Chilometri...</option>
-                    <option>0 - 50.000</option><option>50.000 - 100.000</option><option>100.000 - 150.000</option><option>Oltre 150.000</option>
-                </select>
-                <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
-                <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
-            </div>
+    <div class="step">
+        <label>Anno e Chilometri</label>
+        <select name="Anno" id="anno" required></select>
+        <select name="KM" required>
+            <option value="">Chilometri...</option>
+            <option>0 - 50.000</option><option>50.000 - 100.000</option><option>100.000 - 150.000</option><option>Oltre 150.000</option>
+        </select>
+        <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
+        <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
+    </div>
 
-            <div class="step">
-                <h3>Cilindrata e Carburante</h3>
-                <input type="text" name="cilindrata" placeholder="Es. 1.6 o 1600cc" required>
-                <select name="carburante" required>
-                    <option value="">Seleziona Carburante...</option>
-                    <option>Benzina</option>
-                    <option>Diesel</option>
-                    <option>GPL</option>
-                    <option>Metano</option>
-                    <option>Ibrida</option>
-                    <option>Elettrica</option>
-                </select>
-                <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
-                <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
-            </div>
+    <div class="step">
+        <h3>Cilindrata e Carburante</h3>
+        <input type="text" name="cilindrata" placeholder="Es. 1.6 o 1600cc" required style="margin-bottom: 10px;">
+        <select name="carburante" required>
+            <option value="">Seleziona Carburante...</option>
+            <option>Benzina</option><option>Diesel</option><option>GPL</option><option>Metano</option><option>Ibrida</option><option>Elettrica</option>
+        </select>
+        <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
+        <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
+    </div>
 
-            <div class="step">
-                <h3>Condizioni Generali</h3>
-                <select name="condizioni" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 10px;">
-                    <option value="">Seleziona lo stato della vettura...</option>
-                    <option value="ottime">Ottime (Nessun lavoro da fare)</option>
-                    <option value="buone">Buone (Piccoli segni di usura)</option>
-                    <option value="sufficienti">Sufficienti (Necessita manutenzione)</option>
-                    <option value="da-riparare">Da riparare / Incidentata</option>
-                </select>
-                <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
-                <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
-            </div>
+    <div class="step">
+        <h3>Condizioni Generali</h3>
+        <select name="condizioni" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 10px;">
+            <option value="">Seleziona lo stato della vettura...</option>
+            <option value="ottime">Ottime (Nessun lavoro da fare)</option>
+            <option value="buone">Buone (Piccoli segni di usura)</option>
+            <option value="sufficienti">Sufficienti (Necessita manutenzione)</option>
+            <option value="da-riparare">Da riparare / Incidentata</option>
+        </select>
+        <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
+        <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
+    </div>
 
-            <div class="step">
-                <label>Recapiti</label>
-                <input type="text" name="Nome" placeholder="Tuo Nome" required>
-                <input type="tel" name="Telefono" placeholder="Tuo Cellulare" required>
-                <div class="privacy-check">
-                    <input type="checkbox" id="checkPriv" required>
-                    <label for="checkPriv">Accetto la <a href="javascript:void(0)" onclick="openModal()" style="color:var(--primary)">Privacy & Cookie Policy</a></label>
-                </div>
-                <button type="submit" class="btn-next">Invia Richiesta</button>
-                <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
-            </div>
-               <button type="submit" class="btn-next">Invia Richiesta</button>
-<button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
-            </div>
-        </form>
+    <div class="step">
+        <label>Recapiti</label>
+        <input type="text" name="Nome" placeholder="Tuo Nome" required>
+        <input type="tel" name="Telefono" placeholder="Tuo Cellulare" required>
+        <div class="privacy-check">
+            <input type="checkbox" id="checkPriv" required>
+            <label for="checkPriv">Accetto la <a href="javascript:void(0)" onclick="openModal()" style="color:var(--primary)">Privacy & Cookie Policy</a></label>
+        </div>
+        <button type="submit" class="btn-next">Invia Richiesta</button>
+        <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
+    </div>
+</form>
         <div id="evaluating-screen" style="display:none; text-align:center;">
             <p id="eval-text">Analisi database Quattroruote ed Eurotax...</p>
         </div>

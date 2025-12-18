@@ -117,14 +117,28 @@
                 <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
             </div>
             <div class="step">
-                <label>Anno e Chilometri</label>
-                <select name="Anno" id="anno" required></select>
-                <select name="KM" required>
-                    <option value="">Chilometri...</option>
-                    <option>0 - 50.000</option><option>50.000 - 100.000</option><option>100.000 - 150.000</option><option>Oltre 150.000</option>
-                </select>
-                <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
-            </div>
+    <h3>Cilindrata</h3>
+    <input type="text" name="cilindrata" placeholder="Es. 1.6 o 1600cc" required>
+    <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
+    <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
+</div>
+            <div class="step">
+    <h3>Cilindrata</h3>
+    <input type="text" name="cilindrata" placeholder="Es. 1.6 o 1600cc" required>
+</div>
+
+<div class="step">
+    <h3>Condizioni Generali</h3>
+    <select name="condizioni" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 10px;">
+        <option value="">Seleziona lo stato della vettura...</option>
+        <option value="ottime">Ottime (Nessun lavoro da fare)</option>
+        <option value="buone">Buone (Piccoli segni di usura)</option>
+        <option value="sufficienti">Sufficienti (Necessita manutenzione)</option>
+        <option value="da-riparare">Da riparare / Incidentata</option>
+    </select>
+    <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
+    <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
+</div>
             <div class="step">
                 <label>Recapiti</label>
                 <input type="text" name="Nome" placeholder="Tuo Nome" required>
@@ -133,7 +147,8 @@
                     <input type="checkbox" id="checkPriv" required>
                     <label for="checkPriv">Accetto la <a href="javascript:void(0)" onclick="openModal()" style="color:var(--primary)">Privacy & Cookie Policy</a></label>
                 </div>
-                <button type="submit" class="btn-next">Invia Richiesta</button>
+               <button type="submit" class="btn-next">Invia Richiesta</button>
+<button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
             </div>
         </form>
         <div id="evaluating-screen" style="display:none; text-align:center;">

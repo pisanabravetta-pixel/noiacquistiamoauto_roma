@@ -110,14 +110,15 @@
                 </select>
                 <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
             </div>
+
             <div class="step">
                 <label>Modello</label>
                 <input type="text" name="Modello" placeholder="Es: Panda, Golf, Qashqai..." required>
                 <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
                 <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
             </div>
+
             <div class="step">
-        <div class="step">
                 <label>Anno e Chilometri</label>
                 <select name="Anno" id="anno" required></select>
                 <select name="KM" required>
@@ -127,24 +128,36 @@
                 <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
                 <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
             </div>
-    <h3>Cilindrata</h3>
-    <input type="text" name="cilindrata" placeholder="Es. 1.6 o 1600cc" required>
-    <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
-    <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
-</div>
 
-<div class="step">
-    <h3>Condizioni Generali</h3>
-    <select name="condizioni" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 10px;">
-        <option value="">Seleziona lo stato della vettura...</option>
-        <option value="ottime">Ottime (Nessun lavoro da fare)</option>
-        <option value="buone">Buone (Piccoli segni di usura)</option>
-        <option value="sufficienti">Sufficienti (Necessita manutenzione)</option>
-        <option value="da-riparare">Da riparare / Incidentata</option>
-    </select>
-    <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
-    <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
-</div>
+            <div class="step">
+                <h3>Cilindrata e Carburante</h3>
+                <input type="text" name="cilindrata" placeholder="Es. 1.6 o 1600cc" required>
+                <select name="carburante" required>
+                    <option value="">Seleziona Carburante...</option>
+                    <option>Benzina</option>
+                    <option>Diesel</option>
+                    <option>GPL</option>
+                    <option>Metano</option>
+                    <option>Ibrida</option>
+                    <option>Elettrica</option>
+                </select>
+                <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
+                <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
+            </div>
+
+            <div class="step">
+                <h3>Condizioni Generali</h3>
+                <select name="condizioni" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 10px;">
+                    <option value="">Seleziona lo stato della vettura...</option>
+                    <option value="ottime">Ottime (Nessun lavoro da fare)</option>
+                    <option value="buone">Buone (Piccoli segni di usura)</option>
+                    <option value="sufficienti">Sufficienti (Necessita manutenzione)</option>
+                    <option value="da-riparare">Da riparare / Incidentata</option>
+                </select>
+                <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
+                <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
+            </div>
+
             <div class="step">
                 <label>Recapiti</label>
                 <input type="text" name="Nome" placeholder="Tuo Nome" required>
@@ -153,6 +166,9 @@
                     <input type="checkbox" id="checkPriv" required>
                     <label for="checkPriv">Accetto la <a href="javascript:void(0)" onclick="openModal()" style="color:var(--primary)">Privacy & Cookie Policy</a></label>
                 </div>
+                <button type="submit" class="btn-next">Invia Richiesta</button>
+                <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
+            </div>
                <button type="submit" class="btn-next">Invia Richiesta</button>
 <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
             </div>

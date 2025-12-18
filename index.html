@@ -117,14 +117,20 @@
                 <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
             </div>
             <div class="step">
+        <div class="step">
+                <label>Anno e Chilometri</label>
+                <select name="Anno" id="anno" required></select>
+                <select name="KM" required>
+                    <option value="">Chilometri...</option>
+                    <option>0 - 50.000</option><option>50.000 - 100.000</option><option>100.000 - 150.000</option><option>Oltre 150.000</option>
+                </select>
+                <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
+                <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
+            </div>
     <h3>Cilindrata</h3>
     <input type="text" name="cilindrata" placeholder="Es. 1.6 o 1600cc" required>
     <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
     <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
-</div>
-            <div class="step">
-    <h3>Cilindrata</h3>
-    <input type="text" name="cilindrata" placeholder="Es. 1.6 o 1600cc" required>
 </div>
 
 <div class="step">

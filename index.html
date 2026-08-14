@@ -1,319 +1,1859 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
-  <title>Acquisto Auto Usate Roma – Valutazione Gratuita e Pagamento Immediato</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Acquistiamo auto usate a Roma e provincia. Valutazione gratuita online, ritiro rapido e pagamento immediato. Compila il modulo e vendi subito la tua auto.">
+<title>Compro Auto Usate Roma | Noi Acquistiamo Auto</title>
 
+<meta name="description" content="Compriamo auto usate a Roma da 2.000 a 10.000 euro. Cerchiamo soprattutto benzina, GPL e ibride. Contattaci su WhatsApp: prima trattativa, poi vieni in sede.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#091525">
 
-<meta name="keywords" content="compro auto Roma, acquisto auto usate Roma, valutazione auto Roma, vendere auto Roma pagamento istantaneo, compro auto usata Roma Nord Roma Sud">
-<meta name="robots" content="index, follow">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root { --primary: #e10600; --secondary: #002e6d; --dark-blue: #0a192f; --light-bg: #f8fafc; --white: #ffffff; --text: #1e293b; }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; overflow-x: hidden; }
+<style>
+:root{
+    --blue:#091525;
+    --blue2:#12243c;
+    --red:#e30613;
+    --red-dark:#b9000b;
+    --green:#20c66b;
+    --green-dark:#0b8f49;
+    --light:#f5f7fa;
+    --text:#172033;
+    --muted:#64748b;
+    --border:#e2e8f0;
+    --white:#fff;
+}
 
-        /* HEADER */
-        nav { background: var(--white); padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 1000; height: 70px; }
-        .logo { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 18px; color: var(--secondary); text-decoration: none; }
-        .logo span { color: var(--primary); }
-        .phone-badge { background: #f1f5f9; padding: 8px 12px; border-radius: 50px; color: var(--primary); font-weight: 800; text-decoration: none; font-size: 13px; border: 1px solid #e2e8f0; }
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-        /* HERO */
-        .hero { position: relative; background: linear-gradient(135deg, #0b1d33 0%, #162e4e 100%); color: white; padding: 40px 5% 120px; text-align: center; }
-        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 800; margin-bottom: 10px; }
-        .hero p { font-size: 16px; color: #cbd5e1; margin-bottom: 20px; }
-        .stats-bar { background: var(--white); padding: 12px 25px; border-radius: 50px; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-top: 10px; position: relative; z-index: 4; }
-        .stats-bar span { font-weight: 800; color: var(--secondary); font-size: 14px; }
-        .hero-img { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 500px; opacity: 0.3; z-index: 1; pointer-events: none; }
+html{
+    scroll-behavior:smooth;
+}
 
-        /* FORM CARD */
-        .form-wrapper { max-width: 500px; margin: -80px auto 40px; padding: 0 15px; position: relative; z-index: 5; }
-        .form-card { background: var(--white); padding: 30px 20px; border-radius: 16px; box-shadow: 0 25px 50px rgba(0,0,0,0.15); border-top: 6px solid var(--primary); }
-        .progress-bar { height: 5px; background: #f1f5f9; border-radius: 10px; margin-bottom: 25px; overflow: hidden; }
-        .progress-fill { height: 100%; background: var(--primary); width: 25%; transition: 0.5s; }
-        .step { display: none; }
-        .step.active { display: block; animation: fadeIn 0.3s; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        
-        label { display: block; margin-bottom: 8px; font-weight: 700; font-size: 14px; color: var(--secondary); }
-        select, input { width: 100%; padding: 14px; margin-bottom: 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 16px; outline: none; }
-        .privacy-check { display: flex; align-items: flex-start; gap: 10px; font-size: 11px; color: #64748b; margin-bottom: 15px; text-align: left; }
-        .btn-next { width: 100%; padding: 16px; background: var(--primary); color: white; border: none; border-radius: 10px; font-size: 17px; font-weight: 800; cursor: pointer; text-transform: uppercase; }
-        .btn-back { background: none; border: none; color: #94a3b8; cursor: pointer; margin-top: 10px; width: 100%; text-decoration: underline; font-size: 13px; }
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:var(--text);
+    background:#fff;
+    line-height:1.6;
+}
 
-        /* GRID SECTIONS */
-        .section-padding { padding: 60px 5%; text-align: center; }
-        .bg-light { background: var(--light-bg); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px; }
+a{
+    text-decoration:none;
+    color:inherit;
+}
 
-        .step-card { background: white; padding: 30px; border-radius: 15px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        .step-card .num { width: 45px; height: 45px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; margin: 0 auto 15px; font-size: 20px; }
+.container{
+    width:min(1120px,92%);
+    margin:auto;
+}
 
-        .reason-card { background: white; padding: 30px; border-radius: 20px; border: 1px solid #e2e8f0; text-align: left; transition: 0.3s; }
-        .reason-card i { font-size: 40px; color: var(--primary); margin-bottom: 20px; }
-        .reason-card h3 { font-family: 'Montserrat'; font-size: 18px; margin-bottom: 10px; color: var(--secondary); }
+/* HEADER */
 
-        .review-card { background: white; padding: 25px; border-radius: 15px; border: 1px solid #e2e8f0; text-align: left; }
-        .stars { color: #facc15; margin-bottom: 10px; }
-        .review-text { font-style: italic; font-size: 14px; color: #475569; margin-bottom: 15px; }
-        .review-author { font-weight: 700; font-size: 13px; color: var(--secondary); }
+header{
+    height:72px;
+    background:#fff;
+    border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
 
-        /* FAQ */
-        .faq-item { background: white; margin-bottom: 10px; border-radius: 10px; border: 1px solid #e2e8f0; text-align: left; overflow: hidden; }
-        .faq-trigger { width: 100%; padding: 18px; background: none; border: none; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-        .faq-content { padding: 0 18px; max-height: 0; overflow: hidden; transition: 0.3s; font-size: 14px; color: #64748b; }
-        .faq-item.active .faq-content { padding: 0 18px 18px; max-height: 150px; }
+.header-inner{
+    height:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
-        .map-container { margin-top: 30px; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }
+.logo{
+    font-size:21px;
+    font-weight:900;
+    letter-spacing:-1px;
+    color:var(--blue);
+}
 
-        /* MODAL */
-        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); overflow-y: auto; }
-        .modal-content { background: white; margin: 5% auto; padding: 30px; width: 90%; max-width: 600px; border-radius: 15px; position: relative; }
+.logo span{
+    color:var(--red);
+}
 
-        /* FOOTER */
-        footer { background: var(--secondary); color: #cbd5e1; padding: 50px 5%; text-align: center; }
-        .footer-legal { margin-top: 25px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
-        .ragione-sociale { font-size: 10px; text-transform: uppercase; opacity: 0.7; letter-spacing: 0.5px; }
-        .footer-links a { color: white; text-decoration: none; margin: 0 10px; opacity: 0.8; font-size: 12px; cursor: pointer; }
-        .wa-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; z-index: 1000; }
-    </style>
+.header-phone{
+    font-weight:800;
+    color:var(--blue);
+}
+
+/* HERO */
+
+.hero{
+    background:
+    radial-gradient(circle at 80% 20%,rgba(227,6,19,.18),transparent 35%),
+    linear-gradient(135deg,var(--blue),var(--blue2));
+    color:#fff;
+    padding:75px 0 85px;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:55px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 14px;
+    border:1px solid rgba(255,255,255,.2);
+    background:rgba(255,255,255,.08);
+    border-radius:30px;
+    font-size:13px;
+    font-weight:900;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(40px,5vw,64px);
+    line-height:1.02;
+    letter-spacing:-2.5px;
+    margin-bottom:22px;
+}
+
+.hero h1 span{
+    color:#ff3945;
+}
+
+.hero-text{
+    color:#d9e3ef;
+    font-size:19px;
+    max-width:650px;
+    margin-bottom:28px;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:54px;
+    padding:0 24px;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:900;
+    border:2px solid transparent;
+    cursor:pointer;
+}
+
+.btn-whatsapp{
+    background:var(--green);
+    color:#062a17;
+}
+
+.btn-whatsapp:hover{
+    background:#19b961;
+}
+
+.btn-red{
+    background:var(--red);
+    color:#fff;
+}
+
+.btn-outline{
+    border-color:#fff;
+    color:#fff;
+}
+
+.hero-card{
+    background:#fff;
+    color:var(--text);
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 25px 60px rgba(0,0,0,.3);
+}
+
+.hero-card h2{
+    font-size:23px;
+    margin-bottom:20px;
+}
+
+.criteria{
+    display:grid;
+    gap:12px;
+}
+
+.criteria-item{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    font-weight:800;
+}
+
+.check{
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    background:#e7fff0;
+    color:#0a994c;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:900;
+    flex-shrink:0;
+}
+
+.check.no{
+    background:#fff0f1;
+    color:var(--red);
+}
+
+/* SECTIONS */
+
+.section{
+    padding:75px 0;
+}
+
+.section-light{
+    background:var(--light);
+}
+
+.center{
+    text-align:center;
+}
+
+.eyebrow{
+    color:var(--red);
+    font-size:13px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    margin-bottom:8px;
+}
+
+.section-title{
+    font-size:clamp(30px,4vw,44px);
+    line-height:1.1;
+    letter-spacing:-1.2px;
+    margin-bottom:14px;
+}
+
+.lead{
+    max-width:720px;
+    margin:auto;
+    color:var(--muted);
+    font-size:17px;
+}
+
+/* CARDS */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:40px;
+}
+
+.card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:17px;
+    padding:28px;
+}
+
+.card h3{
+    font-size:20px;
+    margin:13px 0 8px;
+}
+
+.card p{
+    color:var(--muted);
+}
+
+.icon{
+    width:52px;
+    height:52px;
+    border-radius:13px;
+    background:#fff0f1;
+    color:var(--red);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:23px;
+    font-weight:900;
+}
+
+/* CRITERI */
+
+.criteria-box{
+    margin-top:38px;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:30px;
+}
+
+.criteria-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:13px;
+}
+
+.criteria-box-item{
+    background:var(--light);
+    border-radius:10px;
+    padding:15px;
+    font-weight:800;
+}
+
+.criteria-box-item.bad{
+    background:#fff0f1;
+    color:#b6000b;
+}
+
+.small-note{
+    margin-top:18px;
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* FORMULA */
+
+.formula{
+    background:var(--blue);
+    color:#fff;
+    border-radius:25px;
+    padding:50px;
+}
+
+.formula .card{
+    background:rgba(255,255,255,.06);
+    border-color:rgba(255,255,255,.1);
+}
+
+.formula .card h3{
+    color:#fff;
+}
+
+.formula .card p{
+    color:#cbd7e7;
+}
+
+/* PROCESS */
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin-top:40px;
+}
+
+.process-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:25px;
+}
+
+.number{
+    width:43px;
+    height:43px;
+    border-radius:50%;
+    background:var(--red);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:900;
+    font-size:18px;
+    margin-bottom:15px;
+}
+
+.process-card h3{
+    margin-bottom:7px;
+}
+
+.process-card p{
+    color:var(--muted);
+}
+
+/* CTA */
+
+.final-cta{
+    background:linear-gradient(135deg,var(--red),var(--red-dark));
+    color:#fff;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.final-cta h2{
+    font-size:clamp(31px,4vw,47px);
+    margin-bottom:12px;
+}
+
+.final-cta p{
+    color:#ffe1e3;
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+/* FAQ */
+
+.faq{
+    max-width:800px;
+    margin:38px auto 0;
+}
+
+.faq-item{
+    border-bottom:1px solid var(--border);
+}
+
+.faq-question{
+    width:100%;
+    background:none;
+    border:0;
+    padding:19px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    text-align:left;
+    font-size:16px;
+    font-weight:900;
+    cursor:pointer;
+    color:var(--text);
+}
+
+.faq-answer{
+    display:none;
+    color:var(--muted);
+    padding:0 0 20px;
+}
+
+.faq-item.active .faq-answer{
+    display:block;
+}
+
+/* SEDE */
+
+.location{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    align-items:center;
+}
+
+.location-card{
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:30px;
+}
+
+.location-card p{
+    color:var(--muted);
+    margin:8px 0;
+}
+
+/* FOOTER */
+
+footer{
+    background:#071221;
+    color:#cbd5e1;
+    padding:50px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    gap:35px;
+}
+
+footer h3{
+    color:#fff;
+    margin-bottom:13px;
+}
+
+footer a{
+    display:block;
+    margin:7px 0;
+    font-size:14px;
+}
+
+.footer-description{
+    font-size:14px;
+    max-width:400px;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.1);
+    margin-top:30px;
+    padding-top:20px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+    font-size:12px;
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:var(--green);
+    color:#06301a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:900;
+    font-size:17px;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+    z-index:900;
+}
+
+/* COOKIE */
+
+.cookie-banner{
+    display:none;
+    position:fixed;
+    left:15px;
+    right:15px;
+    bottom:15px;
+    z-index:3000;
+    background:#fff;
+    border:1px solid #d7dee7;
+    border-radius:16px;
+    padding:22px;
+    box-shadow:0 15px 50px rgba(0,0,0,.25);
+}
+
+.cookie-banner.visible{
+    display:block;
+}
+
+.cookie-banner h3{
+    margin-bottom:7px;
+}
+
+.cookie-banner p{
+    max-width:900px;
+    color:var(--muted);
+    font-size:13px;
+}
+
+.cookie-buttons{
+    display:flex;
+    gap:9px;
+    flex-wrap:wrap;
+    margin-top:15px;
+}
+
+.cookie-buttons button{
+    border:0;
+    border-radius:9px;
+    padding:11px 18px;
+    font-weight:800;
+    cursor:pointer;
+}
+
+.cookie-accept{
+    background:var(--green);
+}
+
+.cookie-reject{
+    background:#e9edf2;
+}
+
+.cookie-custom{
+    background:var(--blue);
+    color:#fff;
+}
+
+/* MODAL */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.72);
+    z-index:4000;
+    padding:25px;
+    overflow:auto;
+}
+
+.modal-box{
+    background:#fff;
+    max-width:800px;
+    margin:30px auto;
+    padding:32px;
+    border-radius:17px;
+    position:relative;
+}
+
+.modal-box h2{
+    margin-bottom:17px;
+}
+
+.modal-box h3{
+    margin:20px 0 7px;
+}
+
+.modal-box p{
+    color:#536176;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.close{
+    position:absolute;
+    right:18px;
+    top:10px;
+    background:none;
+    border:0;
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .location{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:550px){
+
+    .header-phone{
+        display:none;
+    }
+
+    .hero{
+        padding:50px 0 60px;
+    }
+
+    .hero h1{
+        font-size:41px;
+    }
+
+    .hero-text{
+        font-size:17px;
+    }
+
+    .buttons .btn{
+        width:100%;
+    }
+
+    .criteria-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .formula{
+        padding:30px 20px;
+    }
+
+    .section{
+        padding:55px 0;
+    }
+
+    .whatsapp-float{
+        width:56px;
+        height:56px;
+        right:15px;
+        bottom:15px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<nav>
-    <a href="#" class="logo">NOI<span>ACQUISTIAMO</span>AUTO</a>
-    <a href="tel:0666152690" class="phone-badge"><i class="fas fa-phone-alt"></i> 06 66152690</a>
-</nav>
+<header>
+    <div class="container header-inner">
+
+        <a href="#" class="logo">
+            NOI<span>ACQUISTIAMO</span>AUTO
+        </a>
+
+        <a href="tel:0666152690" class="header-phone">
+            ☎ 06 66152690
+        </a>
+
+    </div>
+</header>
+
+
+<main>
+
+<!-- HERO -->
 
 <section class="hero">
-   <h1>Acquisto auto usate a Roma – Valutazione gratuita</h1>
-<p>Compriamo auto usate a Roma e provincia con pagamento immediato</p>
 
-    <div class="stats-bar">
-        <i class="fas fa-check-circle" style="color:#10b981"></i>
-        <span>Oltre 1.000 auto valutate a Roma</span>
-    </div>
-    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=1000&auto=format&fit=crop" class="hero-img">
-</section>
+<div class="container hero-grid">
 
-<div class="form-wrapper">
-    <div class="form-card">
-        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-       <form id="autoForm" action="https://formsubmit.co/info@noiacquistiamoautoroma.it" method="POST">
-    <input type="hidden" name="_captcha" value="false">
-    
-    <div class="step active">
-        <label>Marca</label>
-        <select name="Marca" id="marca" required>
-            <option value="">Seleziona Marca...</option>
-            <option>Alfa Romeo</option><option>Audi</option><option>BMW</option><option>Citroen</option><option>Dacia</option><option>Fiat</option><option>Ford</option><option>Hyundai</option><option>Jeep</option><option>Kia</option><option>Lancia</option><option>Land Rover</option><option>Mercedes-Benz</option><option>MINI</option><option>Nissan</option><option>Opel</option><option>Peugeot</option><option>Renault</option><option>Smart</option><option>Suzuki</option><option>Toyota</option><option>Volkswagen</option><option>Altro...</option>
-        </select>
-        <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
-    </div>
+<div>
 
-    <div class="step">
-        <label>Modello</label>
-        <input type="text" name="Modello" placeholder="Es: Panda, Golf, Qashqai..." required>
-        <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
-        <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
-    </div>
-
-    <div class="step">
-        <label>Anno e Chilometri</label>
-        <select name="Anno" id="anno" required></select>
-        <select name="KM" required>
-            <option value="">Chilometri...</option>
-            <option>0 - 50.000</option><option>50.000 - 100.000</option><option>100.000 - 150.000</option><option>Oltre 150.000</option>
-        </select>
-        <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
-        <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
-    </div>
-
-    <div class="step">
-        <h3>Cilindrata e Carburante</h3>
-        <input type="text" name="cilindrata" placeholder="Es. 1.6 o 1600cc" required style="margin-bottom: 10px;">
-        <select name="carburante" required>
-            <option value="">Seleziona Carburante...</option>
-            <option>Benzina</option><option>Diesel</option><option>GPL</option><option>Metano</option><option>Ibrida</option><option>Elettrica</option>
-        </select>
-        <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
-        <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
-    </div>
-
-    <div class="step">
-        <h3>Condizioni Generali</h3>
-        <select name="condizioni" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 10px;">
-            <option value="">Seleziona lo stato della vettura...</option>
-            <option value="ottime">Ottime (Nessun lavoro da fare)</option>
-            <option value="buone">Buone (Piccoli segni di usura)</option>
-            <option value="sufficienti">Sufficienti (Necessita manutenzione)</option>
-            <option value="da-riparare">Da riparare / Incidentata</option>
-        </select>
-        <button type="button" class="btn-next" onclick="move(1)">Avanti</button>
-        <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
-    </div>
-
-    <div class="step">
-        <label>Recapiti</label>
-        <input type="text" name="Nome" placeholder="Tuo Nome" required>
-        <input type="tel" name="Telefono" placeholder="Tuo Cellulare" required>
-        <div class="privacy-check">
-            <input type="checkbox" id="checkPriv" required>
-            <label for="checkPriv">Accetto la <a href="javascript:void(0)" onclick="openModal()" style="color:var(--primary)">Privacy & Cookie Policy</a></label>
-        </div>
-        <button type="submit" class="btn-next">Invia Richiesta</button>
-        <button type="button" class="btn-back" onclick="move(-1)">Indietro</button>
-    </div>
-</form>
-        <div id="evaluating-screen" style="display:none; text-align:center;">
-            <p id="eval-text">Analisi database Quattroruote ed Eurotax...</p>
-        </div>
-        <div id="success" style="display:none; text-align:center;">
-            <i class="fas fa-check-circle fa-4x" style="color:#10b981; margin-bottom:15px;"></i>
-            <h3>Richiesta Inviata!</h3>
-            <p>Domenico ti contatterà a breve.</p>
-        </div>
-    </div>
+<div class="badge">
+ACQUISTIAMO AUTO USATE A ROMA
 </div>
-<section class="section-padding" style="max-width:900px; margin:auto;">
-  <h2>Acquisto auto usate a Roma</h2>
-  <p>
-    Noi Acquistiamo Auto Roma è specializzata nell’acquisto di auto usate,
-    anche incidentate o non funzionanti, in tutta Roma e provincia.
-    Offriamo valutazione gratuita online, ritiro immediato e pagamento
-    istantaneo con bonifico.
-  </p>
-  <p>
-    Operiamo in tutte le zone di Roma: EUR, Ostia, Monteverde, Aurelio,
-    Tiburtina, Prenestina, Appio, Roma Nord e Roma Sud.
-  </p>
-</section>
 
-<section class="section-padding">
-    <h2 style="font-family: Montserrat;">VENDI L'AUTO IN 3 PASSAGGI</h2>
-    <div class="grid">
-        <div class="step-card"><div class="num">1</div><h3>Valutazione</h3><p>Ricevi la stima online gratuita.</p></div>
-        <div class="step-card"><div class="num">2</div><h3>Incontro</h3><p>Verifica rapida in Via della Pisana.</p></div>
-        <div class="step-card"><div class="num">3</div><h3>Pagamento</h3><p>Bonifico istantaneo immediato.</p></div>
-    </div>
-</section>
+<h1>
+Hai un'auto da vendere?
+<span>Compriamo noi.</span>
+</h1>
 
-<section class="section-padding bg-light">
-    <h2 style="font-family: Montserrat;">COSA DICONO I NOSTRI CLIENTI</h2>
-    <div class="grid">
-        <div class="review-card">
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="review-text">"Veloce, onesto e professionale. Domenico mi ha seguito dall'inizio alla fine. Bonifico arrivato subito."</p>
-            <div class="review-author">Marco R. (Roma)</div>
-        </div>
-        <div class="review-card">
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="review-text">"Ho venduto la mia Panda senza dover gestire perditempo su internet. Tutto risolto in un pomeriggio."</p>
-            <div class="review-author">Elena V. (Roma)</div>
-        </div>
-        <div class="review-card">
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="review-text">"Ottima valutazione, superiore a quella di altri concessionari in zona. Pratiche sbrigate subito."</p>
-            <div class="review-author">Roberto F. (Bravetta)</div>
-        </div>
-        <div class="review-card">
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="review-text">"Puntuali e precisi. Sede facile da raggiungere e personale molto cordiale. Consigliatissimo!"</p>
-            <div class="review-author">Sandra M. (Eur)</div>
-        </div>
-    </div>
-</section>
-
-<section class="section-padding">
-    <h2 style="font-family: Montserrat;">PERCHÉ SCEGLIERE NOI?</h2>
-    <div class="grid">
-        <div class="reason-card"><i class="fas fa-handshake"></i><h3>Nessuna Sorpresa</h3><p>Offerta reale basata sui dati forniti.</p></div>
-        <div class="reason-card"><i class="fas fa-leaf"></i><h3>Senza Stress</h3><p>Nessuna trattativa estenuante con privati.</p></div>
-        <div class="reason-card"><i class="fas fa-bolt"></i><h3>Rapidità</h3><p>Vendi la tua auto lo stesso giorno.</p></div>
-        <div class="reason-card"><i class="fas fa-file-contract"></i><h3>Burocrazia Zero</h3><p>Pensiamo noi a tutti i documenti.</p></div>
-    </div>
-</section>
-
-<section class="section-padding bg-light">
-    <h2>DOMANDE FREQUENTI</h2>
-    <div style="max-width:700px; margin:40px auto 0;">
-        <div class="faq-item"><button class="faq-trigger">Ci pensate voi al passaggio di proprietà? <i class="fas fa-chevron-down"></i></button><div class="faq-content"><p>Certamente. Tutte le pratiche burocratiche e il costo del passaggio sono a nostro carico e vengono espletati immediatamente in sede.</p></div></div>
-        <div class="faq-item"><button class="faq-trigger">Come ricevo il pagamento? <i class="fas fa-chevron-down"></i></button><div class="faq-content"><p>Tramite bonifico istantaneo al momento della firma dei documenti, con valuta immediata sul tuo conto.</p></div></div>
-        <div class="faq-item"><button class="faq-trigger">Serve l'appuntamento? <i class="fas fa-chevron-down"></i></button><div class="faq-content"><p>Sì, ti consigliamo di chiamare lo 06 66152690 per fissare la perizia tecnica ed evitare attese.</p></div></div>
-        <div class="faq-item"><button class="faq-trigger">Che documenti servono? <i class="fas fa-chevron-down"></i></button><div class="faq-content"><p>Libretto di circolazione originale, Certificato di Proprietà (o CDPD) e un documento d'identità valido.</p></div></div>
-    </div>
-</section>
-
-<section class="section-padding">
-    <h2>VIENI IN SEDE</h2>
-    <p>Via della Pisana, 313 - Roma</p>
-    <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.623490089868!2d12.4042453!3d41.8794821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13258bc9118c7b89%3A0x7d0139b819f6a738!2sVia%20della%20Pisana%2C%20313%2C%2000163%20Roma%20RM!5e0!3m2!1sit!2sit!4v17000000000009" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-</section>
-<footer>
-    <span class="logo" style="color:white">NOI<span>ACQUISTIAMO</span>AUTO</span>
-    <p style="margin-top:10px;">Via della Pisana, 313 Roma | Tel: 06 66152690</p>
-    <div class="footer-legal">
-       <p class="footer-links" style="margin-top:15px;">
-    <a href="/vendere-auto-usata-roma.html">Vendere auto usata a Roma</a> |
-    <a onclick="openModal()">Privacy Policy</a> |
-    <a onclick="openModal()">Cookie Policy</a>
+<p class="hero-text">
+Mandaci foto e informazioni su WhatsApp.
+Se la tua auto rientra nella nostra ricerca,
+parliamo direttamente con te e facciamo una proposta.
+Se troviamo l'accordo, vieni in sede e concludiamo.
 </p>
 
-    </div>
-</footer>
+<div class="buttons">
 
-<a href="https://wa.me/393203272238" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a
+class="btn btn-whatsapp"
+href="https://wa.me/393203272238?text=Ciao%2C%20vorrei%20vendere%20la%20mia%20auto.%20Vi%20invio%20foto%20e%20informazioni."
+target="_blank"
+rel="noopener"
+>
+💬 Scrivici su WhatsApp
+</a>
 
-<div id="privacyModal" class="modal">
-    <div class="modal-content">
-        <span style="float:right; cursor:pointer; font-size:24px;" onclick="closeModal()">×</span>
-        <h2>Privacy & Cookie Policy</h2>
-        <div style="font-size:14px; color:#475569; text-align:left; margin-top:20px; max-height:300px; overflow-y:auto;">
-            <p><strong>Titolare del trattamento:</strong> Angelucci Domenico, Via della Pisana 313, Roma.</p><br>
-            <p><strong>Dati raccolti:</strong> I dati personali forniti (nome, telefono, dati veicolo) sono utilizzati esclusivamente per formulare un'offerta di acquisto e per il contatto commerciale relativo alla valutazione.</p><br>
-            <p><strong>Cookie:</strong> Questo sito utilizza esclusivamente cookie tecnici necessari al corretto funzionamento del modulo di contatto. Non vengono utilizzati cookie di profilazione o di terze parti.</p>
-        </div>
-    </div>
+<a
+class="btn btn-outline"
+href="tel:0666152690"
+>
+☎ Chiamaci
+</a>
+
 </div>
 
-<script>
-    function openModal() { document.getElementById("privacyModal").style.display = "block"; }
-    function closeModal() { document.getElementById("privacyModal").style.display = "none"; }
-    document.querySelectorAll('.faq-trigger').forEach(btn => { 
-        btn.onclick = () => btn.parentElement.classList.toggle('active'); 
-    });
-    let step = 0; const steps = document.querySelectorAll(".step");
-    const annoS = document.getElementById("anno"); 
-    
-    /* CORREZIONE ANNI: Ciclo dal 2024 a scendere fino al 2000 */
-    for(let y=2024; y>=2000; y--) { 
-        let o=document.createElement("option"); o.text=y; o.value=y; annoS.add(o); 
-    }
+</div>
 
-    function move(n) {
-        if (n === 1 && !steps[step].querySelector("select, input").checkValidity()) return steps[step].querySelector("select, input").reportValidity();
-        steps[step].classList.remove("active"); step += n; steps[step].classList.add("active");
-        document.getElementById("progressFill").style.width = ((step + 1) / steps.length) * 100 + "%";
-    }
-    document.getElementById("autoForm").onsubmit = function(e) {
-        e.preventDefault();
-        document.getElementById("evaluating-screen").style.display = "block";
-        this.style.display = "none";
-        setTimeout(() => {
-            fetch(this.action, { method: "POST", body: new FormData(this), headers: {'Accept': 'application/json'} })
-            .then(() => { 
-                document.getElementById("evaluating-screen").style.display = "none"; 
-                document.getElementById("success").style.display = "block"; 
-            });
-        }, 3000);
-    };
+
+<div class="hero-card">
+
+<h2>
+Le auto che cerchiamo
+</h2>
+
+<div class="criteria">
+
+<div class="criteria-item">
+<span class="check">✓</span>
+Da €2.000 a €10.000
+</div>
+
+<div class="criteria-item">
+<span class="check">✓</span>
+Benzina
+</div>
+
+<div class="criteria-item">
+<span class="check">✓</span>
+GPL
+</div>
+
+<div class="criteria-item">
+<span class="check">✓</span>
+Ibride
+</div>
+
+<div class="criteria-item">
+<span class="check">✓</span>
+Anche non recentissime
+</div>
+
+<div class="criteria-item">
+<span class="check no">×</span>
+No elettriche
+</div>
+
+<div class="criteria-item">
+<span class="check no">×</span>
+Diesel solo vere occasioni
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FORMULA NO STRESS -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="center">
+
+<div class="eyebrow">
+La nostra formula
+</div>
+
+<h2 class="section-title">
+Formula No Stress
+</h2>
+
+<p class="lead">
+Tu vuoi vendere. Noi vogliamo acquistare.
+Prima parliamo, poi trattiamo e solo se troviamo
+un accordo vieni in sede.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+<div class="card">
+
+<div class="icon">
+1
+</div>
+
+<h3>
+Ci contatti
+</h3>
+
+<p>
+Scrivici su WhatsApp con marca, modello,
+anno, chilometri, alimentazione, prezzo richiesto
+e qualche fotografia.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+2
+</div>
+
+<h3>
+Prima trattativa
+</h3>
+
+<p>
+Valutiamo le informazioni che ci mandi.
+Se l'auto ci interessa, parliamo direttamente
+con te per arrivare a un accordo.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+3
+</div>
+
+<h3>
+Vieni in sede
+</h3>
+
+<p>
+Solo dopo aver trovato un accordo vieni da noi
+con l'auto. Verifichiamo la vettura e completiamo
+la compravendita.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CRITERI -->
+
+<section class="section section-light">
+
+<div class="container">
+
+<div class="center">
+
+<div class="eyebrow">
+La nostra ricerca
+</div>
+
+<h2 class="section-title">
+Non tutte le auto fanno al caso nostro
+</h2>
+
+<p class="lead">
+Preferiamo essere chiari subito.
+Così non perdi tempo a mandarci auto che
+non rientrano nella nostra ricerca.
+</p>
+
+</div>
+
+
+<div class="criteria-box">
+
+<div class="criteria-grid">
+
+<div class="criteria-box-item">
+✓ Benzina da €2.000 a €10.000
+</div>
+
+<div class="criteria-box-item">
+✓ GPL da €2.000 a €10.000
+</div>
+
+<div class="criteria-box-item">
+✓ Ibride da €2.000 a €10.000
+</div>
+
+<div class="criteria-box-item">
+✓ Anche auto non recentissime
+</div>
+
+<div class="criteria-box-item bad">
+✕ Auto elettriche escluse
+</div>
+
+<div class="criteria-box-item bad">
+✕ Diesel generalmente esclusi
+</div>
+
+</div>
+
+<p class="small-note">
+<strong>Importante:</strong>
+la fascia di prezzo è un criterio di ricerca e non
+costituisce una promessa di acquisto.
+Ogni auto viene valutata caso per caso in base a
+modello, anno, chilometri, condizioni e prezzo richiesto.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VANTAGGI -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="formula">
+
+<div class="eyebrow" style="color:#ff5260">
+Perché vendere a noi
+</div>
+
+<h2 class="section-title" style="color:#fff">
+Meno perdite di tempo.
+Più semplicità.
+</h2>
+
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+⚡ Rapidità
+</h3>
+
+<p>
+Se l'auto ci interessa, cerchiamo di
+concludere senza trascinare la trattativa
+per giorni.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+🤝 Niente perditempo
+</h3>
+
+<p>
+Non devi pubblicare annunci, rispondere
+a decine di messaggi o ricevere sconosciuti
+a casa.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+💳 Pagamento
+</h3>
+
+<p>
+Una volta conclusa la compravendita e
+completate le pratiche, procediamo con
+il pagamento concordato.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- COME FUNZIONA -->
+
+<section class="section section-light">
+
+<div class="container">
+
+<div class="center">
+
+<div class="eyebrow">
+Come funziona
+</div>
+
+<h2 class="section-title">
+Dal primo messaggio alla vendita
+</h2>
+
+</div>
+
+
+<div class="process-grid">
+
+<div class="process-card">
+
+<div class="number">
+1
+</div>
+
+<h3>
+WhatsApp
+</h3>
+
+<p>
+Ci mandi dati, fotografie e prezzo richiesto.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="number">
+2
+</div>
+
+<h3>
+Trattativa
+</h3>
+
+<p>
+Parliamo dell'auto e verifichiamo se può interessarci.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="number">
+3
+</div>
+
+<h3>
+Accordo
+</h3>
+
+<p>
+Se troviamo un prezzo che va bene a entrambi,
+fissiamo l'appuntamento.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="number">
+4
+</div>
+
+<h3>
+In sede
+</h3>
+
+<p>
+Porti l'auto da noi e, dopo le verifiche,
+concludiamo la compravendita.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="final-cta">
+
+<h2>
+Hai un'auto da vendere?
+</h2>
+
+<p>
+Prima di perdere tempo con annunci e telefonate,
+parlane con noi.
+</p>
+
+<a
+class="btn btn-whatsapp"
+href="https://wa.me/393203272238?text=Ciao%2C%20vorrei%20vendere%20la%20mia%20auto.%20Vi%20invio%20foto%20e%20informazioni."
+target="_blank"
+rel="noopener"
+>
+💬 Invia la tua auto su WhatsApp
+</a>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="center">
+
+<div class="eyebrow">
+Domande frequenti
+</div>
+
+<h2 class="section-title">
+Prima di contattarci
+</h2>
+
+</div>
+
+
+<div class="faq">
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+Ritirate l'auto a domicilio?
+<span>＋</span>
+</button>
+
+<div class="faq-answer">
+No.
+Prima facciamo il contatto e la trattativa.
+Se troviamo l'accordo, l'auto deve essere
+portata presso la nostra sede di
+Via della Pisana 313 a Roma.
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+Devo venire subito in sede?
+<span>＋</span>
+</button>
+
+<div class="faq-answer">
+No.
+Il primo contatto e la prima trattativa possono
+essere fatti comodamente a distanza,
+preferibilmente tramite WhatsApp.
+Vieni in sede solo se l'auto ci interessa
+e troviamo un accordo.
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+Quanto deve costare l'auto?
+<span>＋</span>
+</button>
+
+<div class="faq-answer">
+La nostra fascia di ricerca principale è
+indicativamente tra 2.000 e 10.000 euro.
+Il prezzo finale dipende da modello, anno,
+chilometri, condizioni, mercato e prezzo
+richiesto dal proprietario.
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+Comprate diesel?
+<span>＋</span>
+</button>
+
+<div class="faq-answer">
+Il diesel non è tra le nostre motorizzazioni
+preferite. Possiamo valutarlo soltanto quando
+rappresenta una vera occasione, soprattutto
+in rapporto a modello, condizioni e prezzo.
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+Comprate auto elettriche?
+<span>＋</span>
+</button>
+
+<div class="faq-answer">
+No.
+In questo momento la nostra ricerca è
+concentrata su benzina, GPL e ibride.
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+Come avviene il pagamento?
+<span>＋</span>
+</button>
+
+<div class="faq-answer">
+Il pagamento viene effettuato secondo quanto
+concordato al momento della conclusione della
+compravendita e delle relative pratiche.
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SEDE -->
+
+<section class="section section-light">
+
+<div class="container location">
+
+<div>
+
+<div class="eyebrow">
+Dove siamo
+</div>
+
+<h2 class="section-title">
+Vieni da noi quando abbiamo già trovato l'accordo
+</h2>
+
+<p style="color:var(--muted);font-size:17px">
+
+Non facciamo perdere tempo al venditore
+con appuntamenti inutili.
+
+Prima ci mandi le informazioni,
+poi trattiamo.
+
+Solo se l'auto ci interessa vieni in sede.
+
+</p>
+
+</div>
+
+
+<div class="location-card">
+
+<h3>
+NOI ACQUISTIAMO AUTO
+</h3>
+
+<p>
+📍 Via della Pisana 313, Roma
+</p>
+
+<p>
+☎
+<a href="tel:0666152690">
+06 66152690
+</a>
+</p>
+
+<p>
+💬
+<a href="https://wa.me/393203272238" target="_blank">
+WhatsApp 320 327 2238
+</a>
+</p>
+
+<a
+class="btn btn-red"
+style="margin-top:15px"
+href="https://www.google.com/maps/search/?api=1&query=Via+della+Pisana+313+Roma"
+target="_blank"
+rel="noopener"
+>
+Apri indicazioni
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div>
+
+<div class="logo" style="color:#fff">
+NOI<span>ACQUISTIAMO</span>AUTO
+</div>
+
+<p class="footer-description" style="margin-top:10px">
+Acquisto di auto usate a Roma.
+Contatto, trattativa e conclusione in sede.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Contatti
+</h3>
+
+<a href="tel:0666152690">
+06 66152690
+</a>
+
+<a
+href="https://wa.me/393203272238"
+target="_blank"
+rel="noopener"
+>
+WhatsApp 320 327 2238
+</a>
+
+<a href="mailto:angelucci.lancia@tiscali.it">
+angelucci.lancia@tiscali.it
+</a>
+
+</div>
+
+
+<div>
+
+<h3>
+Informazioni
+</h3>
+
+<a
+href="#"
+onclick="openModal('privacy');return false"
+>
+Privacy Policy
+</a>
+
+<a
+href="#"
+onclick="openModal('cookie');return false"
+>
+Cookie Policy
+</a>
+
+<a
+href="#"
+onclick="openCookieSettings();return false"
+>
+Gestisci preferenze cookie
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+<span>
+© 2026 Noi Acquistiamo Auto — P.IVA 09496981003
+</span>
+
+<span>
+Angelucci Domenico · Via della Pisana 313, Roma
+</span>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+class="whatsapp-float"
+href="https://wa.me/393203272238?text=Ciao%2C%20vorrei%20vendere%20la%20mia%20auto."
+target="_blank"
+rel="noopener"
+aria-label="Contattaci su WhatsApp"
+>
+WA
+</a>
+
+
+<!-- COOKIE BANNER -->
+
+<div id="cookieBanner" class="cookie-banner">
+
+<h3>
+La tua privacy
+</h3>
+
+<p>
+Utilizziamo cookie e tecnologie simili.
+I cookie tecnici necessari sono attivi per il funzionamento
+del sito. Al momento non utilizziamo Google Analytics,
+Meta Pixel o altri strumenti di profilazione.
+Puoi accettare, rifiutare o personalizzare le preferenze.
+</p>
+
+<div class="cookie-buttons">
+
+<button
+class="cookie-accept"
+onclick="setCookies('all')"
+>
+Accetta
+</button>
+
+<button
+class="cookie-reject"
+onclick="setCookies('necessary')"
+>
+Rifiuta
+</button>
+
+<button
+class="cookie-custom"
+onclick="openCookieSettings()"
+>
+Personalizza
+</button>
+
+</div>
+
+</div>
+
+
+<!-- COOKIE SETTINGS -->
+
+<div id="cookieModal" class="modal">
+
+<div class="modal-box">
+
+<button
+class="close"
+onclick="closeModal('cookie')"
+>
+×
+</button>
+
+<h2>
+Preferenze cookie
+</h2>
+
+<h3>
+Cookie tecnici
+</h3>
+
+<p>
+Necessari al funzionamento del sito e alla memorizzazione
+delle preferenze espresse dall'utente.
+</p>
+
+<h3>
+Cookie analitici e marketing
+</h3>
+
+<p>
+Al momento non utilizziamo Google Analytics,
+Meta Pixel o altri strumenti di analisi o marketing
+di terze parti.
+</p>
+
+<p>
+Se in futuro verranno aggiunti strumenti che richiedono
+il consenso dell'utente, dovranno essere configurati
+affinché non vengano attivati prima della scelta richiesta.
+</p>
+
+<div class="cookie-buttons">
+
+<button
+class="cookie-accept"
+onclick="setCookies('all')"
+>
+Accetta tutti
+</button>
+
+<button
+class="cookie-reject"
+onclick="setCookies('necessary')"
+>
+Solo necessari
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRIVACY -->
+
+<div id="privacyModal" class="modal">
+
+<div class="modal-box">
+
+<button
+class="close"
+onclick="closeModal('privacy')"
+>
+×
+</button>
+
+<h2>
+Privacy Policy
+</h2>
+
+<h3>
+Titolare del trattamento
+</h3>
+
+<p>
+Angelucci Domenico,
+Via della Pisana 313, Roma.
+P.IVA 09496981003.
+Email:
+angelucci.lancia@tiscali.it
+</p>
+
+<h3>
+Dati trattati
+</h3>
+
+<p>
+Quando ci contatti volontariamente tramite telefono,
+email o WhatsApp possiamo ricevere dati identificativi
+e di contatto e informazioni relative al veicolo che
+desideri vendere, comprese marca, modello, anno,
+chilometraggio, alimentazione, fotografie e prezzo richiesto.
+</p>
+
+<h3>
+Finalità del trattamento
+</h3>
+
+<p>
+I dati vengono utilizzati per rispondere alla richiesta,
+valutare l'eventuale interesse all'acquisto del veicolo,
+gestire la trattativa e, in caso di compravendita,
+svolgere gli adempimenti necessari.
+</p>
+
+<h3>
+Conferimento dei dati
+</h3>
+
+<p>
+Il conferimento dei dati è volontario.
+Alcune informazioni sono tuttavia necessarie per
+poter rispondere alla richiesta e valutare il veicolo.
+</p>
+
+<h3>
+Conservazione
+</h3>
+
+<p>
+I dati vengono conservati per il periodo necessario
+alle finalità per cui sono stati raccolti e per gli
+eventuali obblighi previsti dalla legge.
+</p>
+
+<h3>
+Diritti dell'interessato
+</h3>
+
+<p>
+L'interessato può esercitare i diritti previsti dalla
+normativa applicabile, tra cui accesso, rettifica,
+cancellazione, limitazione e opposizione nei casi previsti,
+contattando il titolare all'indirizzo email indicato.
+</p>
+
+<p style="margin-top:20px">
+<strong>Nota:</strong>
+questa informativa deve essere verificata rispetto
+all'effettiva organizzazione dell'attività, ai fornitori
+utilizzati e ai trattamenti realmente effettuati.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- COOKIE POLICY -->
+
+<div id="cookiePolicyModal" class="modal">
+
+<div class="modal-box">
+
+<button
+class="close"
+onclick="closeModal('cookiePolicy')"
+>
+×
+</button>
+
+<h2>
+Cookie Policy
+</h2>
+
+<h3>
+Cookie tecnici
+</h3>
+
+<p>
+Il sito utilizza esclusivamente le tecnologie necessarie
+al proprio funzionamento e alla gestione delle preferenze
+cookie dell'utente.
+</p>
+
+<h3>
+Cookie di analisi e marketing
+</h3>
+
+<p>
+Al momento il sito non utilizza Google Analytics,
+Meta Pixel o altri strumenti di profilazione o marketing
+di terze parti.
+</p>
+
+<h3>
+Gestione delle preferenze
+</h3>
+
+<p>
+L'utente può modificare in qualsiasi momento la propria
+scelta attraverso il link "Gestisci preferenze cookie"
+presente nel footer.
+</p>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* FAQ */
+
+document
+.querySelectorAll(".faq-question")
+.forEach(function(button){
+
+button.addEventListener("click",function(){
+
+const item=button.parentElement;
+
+item.classList.toggle("active");
+
+button.querySelector("span").textContent=
+item.classList.contains("active") ? "−" : "＋";
+
+});
+
+});
+
+
+/* COOKIE */
+
+const cookieBanner=
+document.getElementById("cookieBanner");
+
+function setCookies(choice){
+
+localStorage.setItem(
+"cookieChoice",
+choice
+);
+
+cookieBanner.classList.remove("visible");
+
+closeModal("cookie");
+
+}
+
+
+function openCookieSettings(){
+
+document
+.getElementById("cookieModal")
+.style.display="block";
+
+}
+
+
+function openModal(type){
+
+if(type==="privacy"){
+
+document
+.getElementById("privacyModal")
+.style.display="block";
+
+}
+
+if(type==="cookie"){
+
+document
+.getElementById("cookiePolicyModal")
+.style.display="block";
+
+}
+
+}
+
+
+function closeModal(type){
+
+const ids={
+privacy:"privacyModal",
+cookie:"cookieModal",
+cookiePolicy:"cookiePolicyModal"
+};
+
+if(ids[type]){
+
+document
+.getElementById(ids[type])
+.style.display="none";
+
+}
+
+}
+
+
+window.addEventListener("click",function(event){
+
+if(event.target.classList.contains("modal")){
+
+event.target.style.display="none";
+
+}
+
+});
+
+
+/* MOSTRA COOKIE BANNER AL PRIMO ACCESSO */
+
+if(!localStorage.getItem("cookieChoice")){
+
+cookieBanner.classList.add("visible");
+
+}
+
 </script>
+
 </body>
 </html>

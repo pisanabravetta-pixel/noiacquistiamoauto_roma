@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -13,358 +14,337 @@
 
 <style>
 
-/* =========================
-   BASE
-========================= */
-
 *{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 body{
-    font-family:Arial,sans-serif;
-    color:#172033;
-    line-height:1.65;
-    background:#fff;
+font-family:Arial,sans-serif;
+color:#182334;
+line-height:1.65;
+background:#fff;
 }
 
 .container{
-    max-width:1100px;
-    width:92%;
-    margin:auto;
+max-width:1100px;
+width:92%;
+margin:auto;
 }
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
 
 /* =========================
-   NAVBAR - IDENTICA ALLA HOME
+   NAVBAR - UGUALE HOME
 ========================= */
 
 header{
-    height:76px;
-    background:#fff;
-    border-bottom:1px solid #e2e8f0;
-    position:sticky;
-    top:0;
-    z-index:1000;
+height:76px;
+background:#fff;
+border-bottom:1px solid #e2e8f0;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .header-inner{
-    height:100%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+height:100%;
+display:flex;
+align-items:center;
+justify-content:space-between;
 }
 
+/* LOGO */
+
 .logo{
-    font-family:Arial,sans-serif;
-    font-size:27px;
-    font-weight:900;
-    letter-spacing:-1.4px;
-    color:#081525;
-    white-space:nowrap;
-    text-decoration:none;
+font-family:Arial,sans-serif;
+font-size:27px;
+font-weight:900;
+letter-spacing:-1.4px;
+color:#081525;
+white-space:nowrap;
+text-decoration:none;
 }
 
 .logo span{
-    color:#e10613;
+color:#e10613;
 }
 
-.phone{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    font-weight:800;
-    font-size:15px;
-    color:#081525;
-    text-decoration:none;
-}
+/* NAVIGAZIONE */
 
 .main-nav{
-    display:flex;
-    align-items:center;
-    gap:24px;
-    margin-left:auto;
-    margin-right:25px;
+display:flex;
+align-items:center;
+gap:24px;
+margin-left:auto;
+margin-right:25px;
 }
 
 .main-nav a{
-    font-size:13px;
-    font-weight:800;
-    color:#081525;
-    white-space:nowrap;
-    text-decoration:none;
-    transition:.2s;
+font-size:13px;
+font-weight:800;
+color:#081525;
+white-space:nowrap;
+text-decoration:none;
+transition:.2s;
 }
 
 .main-nav a:hover{
-    color:#e10613;
+color:#e10613;
 }
 
+/* TELEFONO */
+
+.phone{
+display:flex;
+align-items:center;
+gap:8px;
+font-weight:800;
+font-size:15px;
+color:#081525;
+text-decoration:none;
+white-space:nowrap;
+}
+
+/* MENU MOBILE */
+
 .mobile-menu-button{
-    display:none;
-    border:0;
-    background:#081525;
-    color:#fff;
-    width:44px;
-    height:44px;
-    border-radius:9px;
-    font-size:23px;
-    cursor:pointer;
+display:none;
+border:0;
+background:#081525;
+color:#fff;
+width:44px;
+height:44px;
+border-radius:9px;
+font-size:23px;
+cursor:pointer;
 }
 
 .mobile-menu{
-    display:none;
+display:none;
 }
-
-
-/* =========================
-   NAVBAR RESPONSIVE
-========================= */
 
 @media(max-width:1100px){
 
-    .main-nav{
-        gap:12px;
-        margin-right:15px;
-    }
+.main-nav{
+gap:12px;
+margin-right:15px;
+}
 
-    .main-nav a{
-        font-size:11px;
-    }
+.main-nav a{
+font-size:11px;
+}
 
 }
 
 @media(max-width:850px){
 
-    header{
-        height:70px;
-    }
-
-    .header-inner{
-        justify-content:space-between;
-    }
-
-    .main-nav,
-    .phone{
-        display:none;
-    }
-
-    .mobile-menu-button{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-    }
-
-    .mobile-menu{
-        position:absolute;
-        left:0;
-        right:0;
-        top:70px;
-        background:#fff;
-        border-top:1px solid #e2e8f0;
-        box-shadow:0 12px 30px rgba(0,0,0,.15);
-        padding:10px 20px 18px;
-    }
-
-    .mobile-menu.open{
-        display:block;
-    }
-
-    .mobile-menu a{
-        display:block;
-        padding:15px 5px;
-        border-bottom:1px solid #e2e8f0;
-        font-size:15px;
-        font-weight:800;
-        color:#081525;
-        text-decoration:none;
-    }
-
-    .mobile-menu a:last-child{
-        border-bottom:0;
-        color:#e10613;
-    }
-
+.header-inner{
+justify-content:space-between;
 }
 
-@media(max-width:550px){
-
-    .logo{
-        font-size:24px;
-        letter-spacing:-1.2px;
-    }
-
+.main-nav,
+.phone{
+display:none;
 }
 
+.mobile-menu-button{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.mobile-menu{
+position:absolute;
+left:0;
+right:0;
+top:76px;
+background:#fff;
+border-top:1px solid #e2e8f0;
+box-shadow:0 12px 30px rgba(0,0,0,.15);
+padding:10px 20px 18px;
+}
+
+.mobile-menu.open{
+display:block;
+}
+
+.mobile-menu a{
+display:block;
+padding:15px 5px;
+border-bottom:1px solid #e2e8f0;
+font-size:15px;
+font-weight:800;
+color:#081525;
+text-decoration:none;
+}
+
+.mobile-menu a:last-child{
+border-bottom:0;
+color:#081525;
+}
+
+}
 
 /* =========================
    HERO
 ========================= */
 
 .hero{
-    padding:75px 0;
-    background:#f4f6f8;
-    text-align:center;
+padding:75px 0;
+background:#f4f6f8;
+text-align:center;
 }
 
 h1{
-    font-size:clamp(38px,6vw,58px);
-    line-height:1.1;
-    margin-bottom:20px;
+font-size:clamp(38px,6vw,58px);
+line-height:1.1;
+margin-bottom:20px;
 }
 
 .hero p{
-    max-width:760px;
-    margin:auto;
-    font-size:18px;
-    color:#5d6b7c;
+max-width:760px;
+margin:auto;
+font-size:18px;
+color:#5d6b7c;
 }
 
-
 /* =========================
-   SECTIONS
+   SEZIONI
 ========================= */
 
 section{
-    padding:70px 0;
+padding:70px 0;
 }
 
 h2{
-    font-size:34px;
-    margin-bottom:18px;
+font-size:34px;
+margin-bottom:18px;
 }
 
+/* =========================
+   GRID
+========================= */
+
 .grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-    margin-top:35px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+margin-top:35px;
 }
 
 .card{
-    padding:28px;
-    border:1px solid #dfe5eb;
-    border-radius:16px;
+padding:28px;
+border:1px solid #dfe5eb;
+border-radius:16px;
 }
 
 .card h3{
-    margin-bottom:10px;
+margin-bottom:10px;
 }
 
 .card p{
-    color:#64748b;
+color:#64748b;
 }
 
-
 /* =========================
-   CRITERIA
+   CRITERI
 ========================= */
 
 .criteria{
-    margin-top:35px;
-    border:1px solid #dfe5eb;
-    border-radius:16px;
-    overflow:hidden;
+margin-top:35px;
+border:1px solid #dfe5eb;
+border-radius:16px;
+overflow:hidden;
 }
 
 .row{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    padding:20px;
-    border-bottom:1px solid #e5e9ee;
+display:grid;
+grid-template-columns:1fr 1fr;
+padding:20px;
+border-bottom:1px solid #e5e9ee;
 }
 
 .row:last-child{
-    border-bottom:0;
+border-bottom:0;
 }
 
 .row span:last-child{
-    color:#64748b;
+color:#64748b;
 }
 
 .no{
-    color:#c0000b!important;
-    font-weight:900;
+color:#c0000b!important;
+font-weight:900;
 }
 
 .yes{
-    color:#087b40!important;
-    font-weight:900;
+color:#087b40!important;
+font-weight:900;
 }
+
+/* =========================
+   WARNING
+========================= */
 
 .warning{
-    margin-top:25px;
-    background:#fff5d9;
-    padding:20px;
-    border-radius:12px;
-    font-weight:800;
+margin-top:25px;
+background:#fff5d9;
+padding:20px;
+border-radius:12px;
+font-weight:800;
 }
-
 
 /* =========================
    CTA
 ========================= */
 
 .cta{
-    background:#081525;
-    color:#fff;
-    text-align:center;
+background:#081525;
+color:#fff;
+text-align:center;
 }
 
 .btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:16px 26px;
-    background:#20c66b;
-    color:#052a17;
-    font-weight:900;
-    border-radius:9px;
-    text-decoration:none;
+display:inline-block;
+margin-top:25px;
+padding:16px 26px;
+background:#20c66b;
+color:#052a17;
+font-weight:900;
+border-radius:9px;
+text-decoration:none;
 }
-
 
 /* =========================
    FOOTER
 ========================= */
 
 footer{
-    background:#07111f;
-    color:#cbd5e1;
-    padding:35px 0;
-    text-align:center;
-    font-size:14px;
+background:#07111f;
+color:#cbd5e1;
+padding:35px 0;
+text-align:center;
+font-size:14px;
 }
 
-
 /* =========================
-   MOBILE CONTENT
+   MOBILE
 ========================= */
 
 @media(max-width:700px){
 
-    .grid,
-    .row{
-        grid-template-columns:1fr;
-    }
+.grid,
+.row{
+grid-template-columns:1fr;
+}
 
-    .row{
-        gap:5px;
-    }
+.row{
+gap:5px;
+}
 
-    .hero{
-        padding:60px 0;
-    }
-
-    h2{
-        font-size:30px;
-    }
+h2{
+font-size:30px;
+}
 
 }
 
@@ -373,9 +353,8 @@ footer{
 
 <body>
 
-
 <!-- =========================
-     HEADER / NAVBAR
+     NAVBAR
 ========================= -->
 
 <header>
@@ -419,7 +398,6 @@ aria-label="Apri menu"
 </button>
 
 </div>
-
 
 <div
 class="mobile-menu"
@@ -489,80 +467,33 @@ Le caratteristiche che cerchiamo
 <div class="criteria">
 
 <div class="row">
-
-<strong>
-Fascia di prezzo
-</strong>
-
-<span class="yes">
-Circa 2.000 – 10.000 €
-</span>
-
+<strong>Fascia di prezzo</strong>
+<span class="yes">Circa 2.000 – 10.000 €</span>
 </div>
 
-
 <div class="row">
-
-<strong>
-Benzina
-</strong>
-
-<span class="yes">
-Sì
-</span>
-
+<strong>Benzina</strong>
+<span class="yes">Sì</span>
 </div>
 
-
 <div class="row">
-
-<strong>
-GPL
-</strong>
-
-<span class="yes">
-Sì
-</span>
-
+<strong>GPL</strong>
+<span class="yes">Sì</span>
 </div>
 
-
 <div class="row">
-
-<strong>
-Ibride
-</strong>
-
-<span class="yes">
-Sì
-</span>
-
+<strong>Ibride</strong>
+<span class="yes">Sì</span>
 </div>
 
-
 <div class="row">
-
-<strong>
-Elettriche
-</strong>
-
-<span class="no">
-No
-</span>
-
+<strong>Elettriche</strong>
+<span class="no">No</span>
 </div>
 
-
 <div class="row">
-
-<strong>
-Diesel
-</strong>
-
-<span>
-Solo vere occasioni
-</span>
-
+<strong>Diesel</strong>
+<span>Solo vere occasioni</span>
 </div>
 
 </div>
@@ -573,7 +504,7 @@ Solo vere occasioni
 
 
 <!-- =========================
-     AUTO
+     AUTO CHE CERCHIAMO
 ========================= -->
 
 <section style="background:#f5f7fa">
@@ -590,7 +521,6 @@ quando prezzo, condizioni, chilometraggio e caratteristiche
 rendono la vettura interessante per la nostra attività.
 </p>
 
-
 <div class="grid">
 
 <div class="card">
@@ -606,7 +536,6 @@ nella fascia di prezzo prevista.
 
 </div>
 
-
 <div class="card">
 
 <h3>
@@ -620,7 +549,6 @@ sono compatibili con la nostra ricerca.
 
 </div>
 
-
 <div class="card">
 
 <h3>
@@ -633,7 +561,6 @@ in considerazione.
 </p>
 
 </div>
-
 
 <div class="card">
 
@@ -650,7 +577,6 @@ nella fascia di prezzo ricercata.
 
 </div>
 
-
 <div class="warning">
 
 ⚠️ Le auto elettriche non rientrano nella nostra ricerca.
@@ -665,7 +591,7 @@ una vera occasione.
 
 
 <!-- =========================
-     PROPOSTA AUTO
+     COME PROPORRE L'AUTO
 ========================= -->
 
 <section>
@@ -680,7 +606,6 @@ Hai una vettura che potrebbe interessarci?
 Non è necessario conoscere con precisione il valore dell'auto.
 Mandaci su WhatsApp le informazioni principali:
 </p>
-
 
 <ul style="margin:25px 0 0 22px">
 
@@ -709,7 +634,6 @@ Fotografie della vettura
 </li>
 
 </ul>
-
 
 <p style="margin-top:25px">
 
@@ -783,7 +707,7 @@ P.IVA 09496981003 · Angelucci Domenico
 
 
 <!-- =========================
-     MOBILE MENU SCRIPT
+     MENU MOBILE
 ========================= -->
 
 <script>
@@ -796,24 +720,23 @@ document.getElementById("mobileMenu");
 
 if(mobileMenuButton && mobileMenu){
 
-    mobileMenuButton.addEventListener(
-        "click",
-        function(){
+mobileMenuButton.addEventListener(
+"click",
+function(){
 
-            mobileMenu.classList.toggle("open");
+mobileMenu.classList.toggle("open");
 
-            mobileMenuButton.textContent =
-                mobileMenu.classList.contains("open")
-                ? "✕"
-                : "☰";
+mobileMenuButton.textContent =
+mobileMenu.classList.contains("open")
+? "✕"
+: "☰";
 
-        }
-    );
+}
+);
 
 }
 
 </script>
-
 
 </body>
 </html>

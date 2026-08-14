@@ -27,21 +27,8 @@ width:92%;
 margin:auto;
 }
 
-header{
-background:#fff;
-border-bottom:1px solid #e2e8f0;
-padding:20px 0;
-}
 
-.logo{
-font-size:27px;
-font-weight:900;
-color:#081525;
-}
 
-.logo span{
-color:#e10613;
-}
 
 .hero{
 background:linear-gradient(135deg,#071322,#163452);
@@ -182,12 +169,15 @@ grid-template-columns:1fr;
 
 <body>
 
-<header>
-<div class="container">
-<div class="logo">NOI<span>ACQUISTIAMO</span>AUTO</div>
-</div>
-</header>
+<div id="navbar"></div>
 
+<script>
+fetch("navbar.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("navbar").innerHTML = data;
+});
+</script>
 <section class="hero">
 <div class="container hero-grid">
 

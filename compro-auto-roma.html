@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Compro Auto Roma | Acquistiamo Auto Usate a Roma</title>
+
+<meta name="description" content="Compro auto Roma: acquistiamo auto usate direttamente dai proprietari. Benzina, GPL e ibride da 2.000 a 10.000 euro. Contattaci su WhatsApp. Pagamento immediato e passaggio in sede.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#081525">
+<link rel="canonical" href="https://www.noiacquistiamoautoroma.it/compro-auto-roma.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --blue:#081525;
+    --blue2:#102844;
+    --red:#e10613;
+    --red2:#b9000b;
+    --green:#20c66b;
+    --light:#f5f7fa;
+    --text:#182334;
+    --muted:#64748b;
+    --border:#e2e8f0;
+    --white:#fff;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Open Sans",Arial,sans-serif;
+    color:var(--text);
+    line-height:1.65;
+    background:#fff;
+}
+
+h1,h2,h3{
+    font-family:"Montserrat",Arial,sans-serif;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(1120px,92%);
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    height:76px;
+    background:#fff;
+    border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.header-inner{
+    height:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-family:"Montserrat",Arial,sans-serif;
+    font-size:29px;
+    font-weight:900;
+    letter-spacing:-1.5px;
+    color:var(--blue);
+    white-space:nowrap;
+}
+
+.logo span{
+    color:var(--red);
+}
+
+.phone{
+    font-weight:900;
+    color:var(--blue);
+}
+
+/* HERO */
+
+.hero{
+    background:
+    radial-gradient(circle at 80% 20%,rgba(225,6,19,.20),transparent 35%),
+    linear-gradient(135deg,#071322,#132c4a);
+    color:#fff;
+    padding:82px 0 90px;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.08fr .92fr;
+    gap:55px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    border:1px solid rgba(255,255,255,.22);
+    background:rgba(255,255,255,.07);
+    padding:8px 15px;
+    border-radius:50px;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:1px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(42px,5vw,64px);
+    line-height:1.02;
+    letter-spacing:-2.5px;
+    margin-bottom:22px;
+}
+
+.hero h1 span{
+    color:#ff3b47;
+}
+
+.hero-text{
+    color:#d9e3ee;
+    font-size:18px;
+    max-width:650px;
+    margin-bottom:28px;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.btn{
+    min-height:55px;
+    padding:0 25px;
+    border-radius:10px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:900;
+    border:2px solid transparent;
+}
+
+.btn-whatsapp{
+    background:var(--green);
+    color:#052a17;
+}
+
+.btn-red{
+    background:var(--red);
+    color:#fff;
+}
+
+.btn-outline{
+    border-color:rgba(255,255,255,.7);
+    color:#fff;
+}
+
+.hero-card{
+    background:#fff;
+    color:var(--text);
+    border-radius:22px;
+    padding:32px;
+    box-shadow:0 25px 60px rgba(0,0,0,.30);
+}
+
+.hero-card h2{
+    font-size:25px;
+    margin-bottom:20px;
+}
+
+.list{
+    display:grid;
+    gap:12px;
+}
+
+.list-item{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    font-weight:800;
+}
+
+.check{
+    width:28px;
+    height:28px;
+    min-width:28px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#e8fff1;
+    color:#07944a;
+    font-weight:900;
+}
+
+.cross{
+    background:#fff0f1;
+    color:var(--red);
+}
+
+/* SECTIONS */
+
+.section{
+    padding:78px 0;
+}
+
+.light{
+    background:var(--light);
+}
+
+.center{
+    text-align:center;
+}
+
+.eyebrow{
+    color:var(--red);
+    font-size:12px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    margin-bottom:8px;
+}
+
+.title{
+    font-size:clamp(31px,4vw,45px);
+    line-height:1.1;
+    letter-spacing:-1.4px;
+    margin-bottom:14px;
+}
+
+.lead{
+    max-width:760px;
+    margin:auto;
+    color:var(--muted);
+    font-size:17px;
+}
+
+/* INTRO */
+
+.intro-grid{
+    margin-top:45px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.intro-card{
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:28px;
+    background:#fff;
+}
+
+.intro-card h3{
+    font-size:19px;
+    margin-bottom:9px;
+}
+
+.intro-card p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* SEARCH */
+
+.search-grid{
+    margin-top:42px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.search-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:27px 18px;
+    text-align:center;
+}
+
+.search-icon{
+    font-size:31px;
+    margin-bottom:8px;
+}
+
+.search-card h3{
+    font-size:18px;
+}
+
+.search-card p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+.excluded{
+    margin:23px auto 0;
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.excluded span{
+    padding:10px 17px;
+    border-radius:9px;
+    font-weight:900;
+    font-size:13px;
+}
+
+.electric{
+    background:#fff0f1;
+    color:#b6000b;
+}
+
+.diesel{
+    background:#fff7df;
+    color:#8a5b00;
+}
+
+/* WHY */
+
+.why{
+    margin-top:43px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.why-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:27px;
+}
+
+.why-card h3{
+    margin-bottom:8px;
+}
+
+.why-card p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* STEPS */
+
+.steps{
+    margin-top:43px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:17px;
+}
+
+.step{
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:26px;
+    background:#fff;
+}
+
+.number{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:var(--red);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:900;
+    margin-bottom:15px;
+}
+
+.step h3{
+    font-size:18px;
+    margin-bottom:7px;
+}
+
+.step p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+.step strong{
+    color:var(--red);
+}
+
+/* SEO TEXT */
+
+.seo-text{
+    max-width:850px;
+    margin:42px auto 0;
+}
+
+.seo-text h3{
+    font-size:21px;
+    margin:25px 0 8px;
+}
+
+.seo-text p{
+    color:var(--muted);
+    font-size:15px;
+}
+
+/* CTA */
+
+.cta{
+    background:linear-gradient(135deg,var(--red),var(--red2));
+    color:#fff;
+    text-align:center;
+    padding:75px 20px;
+}
+
+.cta h2{
+    font-size:clamp(32px,4vw,48px);
+    margin-bottom:12px;
+}
+
+.cta p{
+    color:#ffe3e5;
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+/* LOCATION */
+
+.location{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.location p{
+    color:var(--muted);
+    font-size:16px;
+}
+
+.location-card{
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:31px;
+}
+
+.location-card h3{
+    margin-bottom:15px;
+}
+
+.location-card a{
+    color:var(--red);
+    font-weight:800;
+}
+
+/* FAQ */
+
+.faq{
+    max-width:820px;
+    margin:40px auto 0;
+}
+
+.faq-item{
+    border-bottom:1px solid var(--border);
+}
+
+.question{
+    width:100%;
+    border:0;
+    background:none;
+    padding:19px 0;
+    display:flex;
+    justify-content:space-between;
+    text-align:left;
+    font-size:16px;
+    font-weight:900;
+    cursor:pointer;
+}
+
+.answer{
+    display:none;
+    color:var(--muted);
+    font-size:14px;
+    padding-bottom:20px;
+}
+
+.faq-item.active .answer{
+    display:block;
+}
+
+/* FOOTER */
+
+footer{
+    background:#07111f;
+    color:#cbd5e1;
+    padding:52px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    color:#fff;
+    margin-bottom:13px;
+    font-size:16px;
+}
+
+.footer-description{
+    max-width:430px;
+    font-size:14px;
+}
+
+.footer-links a{
+    display:block;
+    margin:8px 0;
+    font-size:14px;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.1);
+    margin-top:35px;
+    padding-top:20px;
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    flex-wrap:wrap;
+    font-size:12px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:61px;
+    height:61px;
+    border-radius:50%;
+    background:var(--green);
+    color:#06301a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:900;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+    z-index:900;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px){
+
+    header{
+        height:70px;
+    }
+
+    .header-inner{
+        justify-content:center;
+    }
+
+    .logo{
+        font-size:25px;
+    }
+
+    .phone{
+        display:none;
+    }
+
+    .hero-grid,
+    .location,
+    .why{
+        grid-template-columns:1fr;
+    }
+
+    .intro-grid{
+        grid-template-columns:1fr;
+    }
+
+    .search-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .steps{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:550px){
+
+    .logo{
+        font-size:24px;
+    }
+
+    .hero{
+        padding:55px 0 62px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero-text{
+        font-size:16px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .buttons .btn{
+        width:100%;
+    }
+
+    .hero-card{
+        padding:25px;
+    }
+
+    .section{
+        padding:58px 0;
+    }
+
+    .search-grid,
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    .whatsapp{
+        width:57px;
+        height:57px;
+        right:15px;
+        bottom:15px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container header-inner">
+
+<a href="index.html" class="logo">
+NOI<span>ACQUISTIAMO</span>AUTO
+</a>
+
+<a href="tel:0666152690" class="phone">
+☎ 06 66152690
+</a>
+
+</div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="badge">
+COMPRO AUTO ROMA
+</div>
+
+<h1>
+Cerchi chi compra la tua auto a Roma?
+<br>
+<span>La compriamo noi.</span>
+</h1>
+
+<p class="hero-text">
+Se vuoi vendere la tua auto a Roma, contattaci direttamente.
+Mandaci su WhatsApp marca, modello, anno, chilometri,
+alimentazione, prezzo richiesto ed eventualmente alcune foto.
+Se la vettura rientra nella nostra ricerca, possiamo formularti
+una proposta.
+</p>
+
+<div class="buttons">
+
+<a
+class="btn btn-whatsapp"
+href="https://wa.me/393203272238?text=Ciao%2C%20vorrei%20vendere%20la%20mia%20auto.%20Vi%20invio%20informazioni%20e%20foto."
+target="_blank"
+rel="noopener"
+>
+💬 INVIA LA TUA AUTO SU WHATSAPP
+</a>
+
+<a
+class="btn btn-outline"
+href="tel:0666152690"
+>
+☎ CHIAMACI
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-card">
+
+<h2>
+Cosa acquistiamo
+</h2>
+
+<div class="list">
+
+<div class="list-item">
+<span class="check">✓</span>
+Auto da circa 2.000 a 10.000 €
+</div>
+
+<div class="list-item">
+<span class="check">✓</span>
+Benzina
+</div>
+
+<div class="list-item">
+<span class="check">✓</span>
+GPL
+</div>
+
+<div class="list-item">
+<span class="check">✓</span>
+Ibride
+</div>
+
+<div class="list-item">
+<span class="check">✓</span>
+Anche auto non recentissime
+</div>
+
+<div class="list-item">
+<span class="check cross">×</span>
+Auto elettriche escluse
+</div>
+
+<div class="list-item">
+<span class="check cross">!</span>
+Diesel solo vere occasioni
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="center">
+
+<div class="eyebrow">
+Vendere auto a Roma
+</div>
+
+<h2 class="title">
+Vuoi vendere la tua auto senza perdere tempo?
+</h2>
+
+<p class="lead">
+Invece di pubblicare un annuncio e aspettare telefonate,
+messaggi e appuntamenti con privati, puoi contattarci
+direttamente.
+</p>
+
+</div>
+
+<div class="intro-grid">
+
+<div class="intro-card">
+
+<h3>📱 Ci mandi le informazioni</h3>
+
+<p>
+Puoi scriverci direttamente su WhatsApp con i dati
+della vettura e, se vuoi, alcune fotografie.
+</p>
+
+</div>
+
+<div class="intro-card">
+
+<h3>💬 Trattiamo a distanza</h3>
+
+<p>
+Se l'auto è interessante per la nostra ricerca,
+parliamo con te e valutiamo la possibilità di acquistarla.
+</p>
+
+</div>
+
+<div class="intro-card">
+
+<h3>🏁 Concludi in sede</h3>
+
+<p>
+Solo se troviamo un accordo vieni presso la nostra sede
+con l'auto per le verifiche e la conclusione.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- AUTO -->
+
+<section class="section light">
+
+<div class="container">
+
+<div class="center">
+
+<div class="eyebrow">
+La nostra ricerca
+</div>
+
+<h2 class="title">
+Quali auto compriamo a Roma
+</h2>
+
+<p class="lead">
+La nostra ricerca è concentrata principalmente su queste
+tipologie di vetture.
+</p>
+
+</div>
+
+<div class="search-grid">
+
+<div class="search-card">
+<div class="search-icon">💶</div>
+<h3>2.000 – 10.000 €</h3>
+<p>La nostra fascia principale</p>
+</div>
+
+<div class="search-card">
+<div class="search-icon">⛽</div>
+<h3>Benzina</h3>
+<p>Una delle motorizzazioni più richieste</p>
+</div>
+
+<div class="search-card">
+<div class="search-icon">♻️</div>
+<h3>GPL</h3>
+<p>Particolarmente interessante</p>
+</div>
+
+<div class="search-card">
+<div class="search-icon">🔋</div>
+<h3>Ibride</h3>
+<p>Valutiamo anche le vetture ibride</p>
+</div>
+
+</div>
+
+<div class="excluded">
+
+<span class="electric">
+✕ ELETTRICHE ESCLUSE
+</span>
+
+<span class="diesel">
+⚠ DIESEL SOLO SE VERA OCCASIONE
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PERCHÉ -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="center">
+
+<div class="eyebrow">
+Perché contattarci
+</div>
+
+<h2 class="title">
+La soluzione semplice per vendere la tua auto
+</h2>
+
+</div>
+
+<div class="why">
+
+<div class="why-card">
+<h3>🚫 Niente annunci</h3>
+<p>
+Non devi pubblicare annunci sui portali e aspettare
+che arrivino potenziali acquirenti.
+</p>
+</div>
+
+<div class="why-card">
+<h3>🚫 Niente perditempo</h3>
+<p>
+Eviti telefonate, messaggi e trattative con persone
+che magari non sono realmente interessate.
+</p>
+</div>
+
+<div class="why-card">
+<h3>📲 Prima trattativa a distanza</h3>
+<p>
+Prima di venire in sede puoi parlare con noi
+e capire se possiamo arrivare a un accordo.
+</p>
+</div>
+
+<div class="why-card">
+<h3>⚡ Pagamento immediato</h3>
+<p>
+Dopo le verifiche e il completamento delle pratiche,
+procediamo con il pagamento secondo quanto concordato.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- COME FUNZIONA -->
+
+<section class="section light">
+
+<div class="container">
+
+<div class="center">
+
+<div class="eyebrow">
+Semplice e diretto
+</div>
+
+<h2 class="title">
+Come vendere la tua auto a Roma
+</h2>
+
+<p class="lead">
+Quattro passaggi, senza inutili perdite di tempo.
+</p>
+
+</div>
+
+<div class="steps">
+
+<div class="step">
+
+<div class="number">1</div>
+
+<h3>Scrivici su WhatsApp</h3>
+
+<p>
+Mandaci marca, modello, anno, chilometri,
+alimentazione, prezzo richiesto e foto.
+</p>
+
+</div>
+
+<div class="step">
+
+<div class="number">2</div>
+
+<h3>Valutiamo l'auto</h3>
+
+<p>
+Verifichiamo se la vettura rientra nella nostra
+ricerca e valutiamo la proposta.
+</p>
+
+</div>
+
+<div class="step">
+
+<div class="number">3</div>
+
+<h3>Vieni in sede</h3>
+
+<p>
+Se troviamo l'accordo, porti la vettura
+presso la nostra sede a Roma.
+</p>
+
+</div>
+
+<div class="step">
+
+<div class="number">4</div>
+
+<h3>Pagamento e passaggio</h3>
+
+<p>
+Dopo le verifiche completiamo la compravendita
+con <strong>pagamento immediato e passaggio in sede.</strong>
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SEO CONTENT -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="center">
+
+<div class="eyebrow">
+Compro auto usate Roma
+</div>
+
+<h2 class="title">
+Cerchiamo auto usate da acquistare direttamente
+</h2>
+
+</div>
+
+<div class="seo-text">
+
+<h3>Compro auto a Roma: come funziona?</h3>
+
+<p>
+Se stai cercando un'attività che compra auto usate a Roma,
+puoi contattarci direttamente senza dover necessariamente
+pubblicare un annuncio online. La prima valutazione può
+essere effettuata a distanza attraverso le informazioni
+che ci invii su WhatsApp.
+</p>
+
+<h3>Quali auto ci interessano?</h3>
+
+<p>
+Cerchiamo principalmente vetture nella fascia indicativa
+tra 2.000 e 10.000 euro, con particolare interesse per
+benzina, GPL e ibride. Possiamo valutare anche auto non
+recentissime. Le auto elettriche sono escluse dalla nostra
+ricerca, mentre le diesel vengono considerate soprattutto
+quando rappresentano una vera occasione.
+</p>
+
+<h3>Devo portare subito l'auto?</h3>
+
+<p>
+No. Il primo contatto avviene a distanza. Se la vettura
+può interessarci, discutiamo la possibile compravendita.
+Solo dopo aver trovato un accordo viene fissato
+l'appuntamento presso la nostra sede di Roma.
+</p>
+
+<h3>Perché vendere direttamente a noi?</h3>
+
+<p>
+Vendere direttamente significa evitare la gestione di un
+annuncio, le telefonate dei potenziali acquirenti, le
+trattative ripetute e gli appuntamenti con privati.
+Il nostro obiettivo è rendere il percorso più semplice:
+prima ci contatti, poi valutiamo l'auto e, se troviamo
+l'accordo, concludiamo in sede.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>
+Hai un'auto da vendere a Roma?
+</h2>
+
+<p>
+Mandaci marca, modello, anno, chilometri, prezzo e foto.
+</p>
+
+<a
+class="btn btn-whatsapp"
+href="https://wa.me/393203272238?text=Ciao%2C%20vorrei%20vendere%20la%20mia%20auto.%20Vi%20invio%20informazioni%20e%20foto."
+target="_blank"
+rel="noopener"
+>
+💬 CONTATTACI SU WHATSAPP
+</a>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="section light">
+
+<div class="container">
+
+<div class="center">
+
+<div class="eyebrow">
+Domande frequenti
+</div>
+
+<h2 class="title">
+Compro auto Roma: le domande più frequenti
+</h2>
+
+</div>
+
+<div class="faq">
+
+<div class="faq-item">
+
+<button class="question">
+Comprate auto direttamente dai privati?
+<span>＋</span>
+</button>
+
+<div class="answer">
+Sì. Puoi contattarci direttamente e inviarci le
+informazioni della tua auto. Se rientra nella nostra
+ricerca, valuteremo la possibilità di acquistarla.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="question">
+Quali auto cercate?
+<span>＋</span>
+</button>
+
+<div class="answer">
+Principalmente auto tra circa 2.000 e 10.000 euro,
+benzina, GPL e ibride. Valutiamo anche auto non
+recentissime. Le elettriche sono escluse e il diesel
+viene considerato soprattutto quando è una vera occasione.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="question">
+Devo pubblicare un annuncio?
+<span>＋</span>
+</button>
+
+<div class="answer">
+No. Puoi contattarci direttamente su WhatsApp senza
+pubblicare annunci e senza organizzare appuntamenti
+con potenziali acquirenti.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="question">
+Fate il ritiro dell'auto a domicilio?
+<span>＋</span>
+</button>
+
+<div class="answer">
+No. Dopo aver trovato l'accordo, la vettura deve essere
+portata presso la nostra sede di Via della Pisana 313,
+Roma.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="question">
+Come avviene il pagamento?
+<span>＋</span>
+</button>
+
+<div class="answer">
+Dopo le verifiche della vettura e il completamento
+delle pratiche previste per la compravendita,
+procediamo con il pagamento secondo quanto concordato.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SEDE -->
+
+<section class="section">
+
+<div class="container location">
+
+<div>
+
+<div class="eyebrow">
+Dove siamo
+</div>
+
+<h2 class="title">
+Vendere la tua auto a Roma,
+poi vieni da noi.
+</h2>
+
+<p>
+La prima fase viene gestita comodamente a distanza.
+Se la vettura ci interessa e troviamo un accordo,
+fissiamo l'appuntamento.
+<br><br>
+L'auto deve essere portata presso la nostra sede.
+Qui vengono effettuate le verifiche e completate
+le pratiche della compravendita.
+</p>
+
+</div>
+
+<div class="location-card">
+
+<h3>
+NOI ACQUISTIAMO AUTO
+</h3>
+
+<p>📍 Via della Pisana 313, Roma</p>
+
+<p>
+☎
+<a href="tel:0666152690">
+06 66152690
+</a>
+</p>
+
+<p>
+💬
+<a href="https://wa.me/393203272238"
+target="_blank"
+rel="noopener">
+WhatsApp 320 327 2238
+</a>
+</p>
+
+<a
+class="btn btn-red"
+style="margin-top:18px"
+href="https://www.google.com/maps/search/?api=1&query=Via+della+Pisana+313+Roma"
+target="_blank"
+rel="noopener"
+>
+📍 APRI INDICAZIONI
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<div class="logo" style="color:#fff">
+NOI<span>ACQUISTIAMO</span>AUTO
+</div>
+
+<p class="footer-description" style="margin-top:12px">
+Acquistiamo auto usate a Roma direttamente dai
+proprietari. Benzina, GPL e ibride nella nostra
+principale fascia di ricerca.
+</p>
+
+</div>
+
+<div>
+
+<h3>Contatti</h3>
+
+<div class="footer-links">
+
+<a href="tel:0666152690">
+☎ 06 66152690
+</a>
+
+<a
+href="https://wa.me/393203272238"
+target="_blank"
+rel="noopener">
+💬 WhatsApp 320 327 2238
+</a>
+
+<a href="mailto:angelucci.lancia@tiscali.it">
+✉ angelucci.lancia@tiscali.it
+</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3>Informazioni</h3>
+
+<div class="footer-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="vendere-auto-usata-roma.html">
+Vendere auto usata a Roma
+</a>
+
+<a href="#">
+Privacy Policy
+</a>
+
+<a href="#">
+Cookie Policy
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<span>
+© 2026 Noi Acquistiamo Auto
+</span>
+
+<span>
+P.IVA 09496981003 · Angelucci Domenico
+</span>
+
+<span>
+Via della Pisana 313, Roma
+</span>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- WHATSAPP FLOAT -->
+
+<a
+class="whatsapp"
+href="https://wa.me/393203272238?text=Ciao%2C%20vorrei%20vendere%20la%20mia%20auto.%20Vi%20invio%20informazioni%20e%20foto."
+target="_blank"
+rel="noopener"
+aria-label="Contatta Noi Acquistiamo Auto su WhatsApp">
+WA
+</a>
+
+
+<script>
+
+document.querySelectorAll(".question").forEach(function(button){
+
+button.addEventListener("click",function(){
+
+const item=button.parentElement;
+const icon=button.querySelector("span");
+
+item.classList.toggle("active");
+
+icon.textContent=
+item.classList.contains("active") ? "−" : "＋";
+
+});
+
+});
+
+</script>
+
+</body>
+</html>

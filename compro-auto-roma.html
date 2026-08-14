@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -32,8 +33,9 @@ width:92%;
 margin:auto;
 }
 
+
 /* =========================
-   NAVBAR - IDENTICA HOME
+   NAVBAR
 ========================= */
 
 header{
@@ -49,8 +51,9 @@ z-index:1000;
 height:100%;
 display:flex;
 align-items:center;
-justify-content:space-between;
 }
+
+/* LOGO */
 
 .logo{
 font-family:Arial,sans-serif;
@@ -60,28 +63,22 @@ letter-spacing:-1.4px;
 color:#081525;
 white-space:nowrap;
 text-decoration:none;
+display:block;
+flex-shrink:0;
 }
 
 .logo span{
 color:#e10613;
 }
 
-.phone{
-display:flex;
-align-items:center;
-gap:8px;
-font-weight:800;
-font-size:15px;
-color:#081525;
-text-decoration:none;
-}
+
+/* MENU */
 
 .main-nav{
 display:flex;
 align-items:center;
 gap:24px;
-margin-left:auto;
-margin-right:25px;
+margin-left:45px;
 }
 
 .main-nav a{
@@ -97,6 +94,24 @@ transition:.2s;
 color:#e10613;
 }
 
+
+/* TELEFONO */
+
+.phone{
+display:flex;
+align-items:center;
+gap:8px;
+margin-left:auto;
+font-weight:800;
+font-size:15px;
+color:#081525;
+text-decoration:none;
+white-space:nowrap;
+}
+
+
+/* PULSANTE MOBILE */
+
 .mobile-menu-button{
 display:none;
 border:0;
@@ -107,26 +122,48 @@ height:44px;
 border-radius:9px;
 font-size:23px;
 cursor:pointer;
+margin-left:auto;
 }
+
+
+/* MENU MOBILE */
 
 .mobile-menu{
 display:none;
 }
 
+
+/* =========================
+   TABLET
+========================= */
+
 @media(max-width:1100px){
 
 .main-nav{
-gap:12px;
-margin-right:15px;
+gap:14px;
+margin-left:30px;
 }
 
 .main-nav a{
 font-size:11px;
 }
 
+.phone{
+font-size:13px;
 }
 
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
 @media(max-width:850px){
+
+header{
+height:70px;
+}
 
 .header-inner{
 justify-content:space-between;
@@ -174,6 +211,7 @@ color:#e10613;
 }
 
 }
+
 
 /* =========================
    HERO
@@ -244,6 +282,11 @@ font-weight:700;
 border-bottom:1px solid #eee;
 }
 
+
+/* =========================
+   SEZIONI
+========================= */
+
 section{
 padding:75px 0;
 }
@@ -289,6 +332,11 @@ margin-bottom:10px;
 color:#64748b;
 }
 
+
+/* =========================
+   CTA
+========================= */
+
 .cta{
 background:#e10613;
 color:#fff;
@@ -299,6 +347,11 @@ text-align:center;
 margin-top:10px;
 }
 
+
+/* =========================
+   FOOTER
+========================= */
+
 footer{
 background:#07111f;
 color:#cbd5e1;
@@ -306,6 +359,11 @@ padding:35px 0;
 text-align:center;
 font-size:14px;
 }
+
+
+/* =========================
+   MOBILE CONTENUTO
+========================= */
 
 @media(max-width:800px){
 
@@ -316,22 +374,55 @@ grid-template-columns:1fr;
 
 }
 
+
+/* =========================
+   MOBILE PICCOLO
+========================= */
+
+@media(max-width:550px){
+
+.logo{
+font-size:24px;
+}
+
+.hero{
+padding:60px 0;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+}
+
 </style>
 </head>
 
+
 <body>
 
+
 <!-- =========================
-     NAVBAR IDENTICA ALLA HOME
+     NAVBAR
 ========================= -->
 
 <header>
 
 <div class="container header-inner">
 
+
+<!-- LOGO -->
+
 <a href="index.html" class="logo">
 NOI<span>ACQUISTIAMO</span>AUTO
 </a>
+
+
+<!-- MENU DESKTOP -->
 
 <nav class="main-nav">
 
@@ -353,18 +444,29 @@ Vendere Auto Usata Roma
 
 </nav>
 
+
+<!-- TELEFONO -->
+
 <a href="tel:0666152690" class="phone">
 ☎ 06 66152690
 </a>
 
+
+<!-- PULSANTE MOBILE -->
+
 <button
 class="mobile-menu-button"
 id="mobileMenuButton"
+type="button"
 >
 ☰
 </button>
 
+
 </div>
+
+
+<!-- MENU MOBILE -->
 
 <div
 class="mobile-menu"
@@ -396,9 +498,15 @@ Vendere Auto Usata Roma
 </header>
 
 
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
 
 <div class="container hero-grid">
+
 
 <div>
 
@@ -428,6 +536,7 @@ rel="noopener"
 </a>
 
 </div>
+
 
 <div class="hero-card">
 
@@ -470,6 +579,11 @@ Cosa cerchiamo
 </section>
 
 
+
+<!-- =========================
+     SEZIONE 1
+========================= -->
+
 <section>
 
 <div class="container">
@@ -488,6 +602,7 @@ le informazioni che ci invii.
 
 </div>
 
+
 <div class="cards">
 
 <div class="card">
@@ -503,6 +618,7 @@ della tua automobile insieme alle fotografie.
 
 </div>
 
+
 <div class="card">
 
 <h3>
@@ -515,6 +631,7 @@ delle auto che stiamo cercando.
 </p>
 
 </div>
+
 
 <div class="card">
 
@@ -536,6 +653,11 @@ la nostra sede di Via della Pisana 313, Roma.
 </section>
 
 
+
+<!-- =========================
+     SEZIONE 2
+========================= -->
+
 <section class="light">
 
 <div class="container">
@@ -553,6 +675,7 @@ e niente inutili perdite di tempo.
 
 </div>
 
+
 <div class="cards">
 
 <div class="card">
@@ -567,6 +690,7 @@ Marca, modello, anno, km, alimentazione e prezzo richiesto.
 
 </div>
 
+
 <div class="card">
 
 <h3>
@@ -578,6 +702,7 @@ Alcune fotografie ci permettono una prima valutazione.
 </p>
 
 </div>
+
 
 <div class="card">
 
@@ -597,6 +722,11 @@ Se l'auto ci interessa, discutiamo direttamente la possibile proposta.
 
 </section>
 
+
+
+<!-- =========================
+     CTA
+========================= -->
 
 <section class="cta">
 
@@ -624,6 +754,11 @@ rel="noopener"
 </section>
 
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
 <div class="container">
@@ -649,11 +784,12 @@ P.IVA 09496981003 · Angelucci Domenico
 </footer>
 
 
-<script>
 
-/* =========================
-   MENU MOBILE
-========================= */
+<!-- =========================
+     JAVASCRIPT MENU
+========================= -->
+
+<script>
 
 const mobileMenuButton =
 document.getElementById("mobileMenuButton");
@@ -680,6 +816,7 @@ mobileMenu.classList.contains("open")
 }
 
 </script>
+
 
 </body>
 </html>

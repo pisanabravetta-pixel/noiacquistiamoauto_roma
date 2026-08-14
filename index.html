@@ -2315,7 +2315,17 @@ if(!localStorage.getItem("cookieChoice")){
     cookieBanner.classList.add("visible");
 
 }
+const mobileMenuButton = document.getElementById("mobileMenuButton");
+const mobileMenu = document.getElementById("mobileMenu");
 
+mobileMenuButton.addEventListener("click", function(){
+
+    mobileMenu.classList.toggle("open");
+
+    mobileMenuButton.textContent =
+        mobileMenu.classList.contains("open") ? "✕" : "☰";
+
+});
 </script>
 
 </body>

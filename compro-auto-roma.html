@@ -12,7 +12,12 @@
 <link rel="canonical" href="https://www.noiacquistiamoautoroma.it/compro-auto-roma.html">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
 
 body{
 font-family:Arial,sans-serif;
@@ -25,6 +30,149 @@ background:#fff;
 max-width:1100px;
 width:92%;
 margin:auto;
+}
+
+/* =========================
+   NAVBAR - UGUALE HOME
+========================= */
+
+header{
+height:76px;
+background:#fff;
+border-bottom:1px solid #e2e8f0;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.header-inner{
+height:100%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-family:Arial,sans-serif;
+font-size:27px;
+font-weight:900;
+letter-spacing:-1.4px;
+color:#081525;
+white-space:nowrap;
+text-decoration:none;
+}
+
+.logo span{
+color:#e10613;
+}
+
+.phone{
+display:flex;
+align-items:center;
+gap:8px;
+font-weight:800;
+font-size:15px;
+color:#081525;
+text-decoration:none;
+}
+
+.main-nav{
+display:flex;
+align-items:center;
+gap:24px;
+margin-left:auto;
+margin-right:25px;
+}
+
+.main-nav a{
+font-size:13px;
+font-weight:800;
+color:#081525;
+white-space:nowrap;
+text-decoration:none;
+transition:.2s;
+}
+
+.main-nav a:hover{
+color:#e10613;
+}
+
+.mobile-menu-button{
+display:none;
+border:0;
+background:#081525;
+color:#fff;
+width:44px;
+height:44px;
+border-radius:9px;
+font-size:23px;
+cursor:pointer;
+}
+
+.mobile-menu{
+display:none;
+}
+
+@media(max-width:1100px){
+
+.main-nav{
+gap:12px;
+margin-right:15px;
+}
+
+.main-nav a{
+font-size:11px;
+}
+
+}
+
+@media(max-width:850px){
+
+.header-inner{
+justify-content:space-between;
+}
+
+.main-nav,
+.phone{
+display:none;
+}
+
+.mobile-menu-button{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.mobile-menu{
+position:absolute;
+left:0;
+right:0;
+top:70px;
+background:#fff;
+border-top:1px solid #e2e8f0;
+box-shadow:0 12px 30px rgba(0,0,0,.15);
+padding:10px 20px 18px;
+}
+
+.mobile-menu.open{
+display:block;
+}
+
+.mobile-menu a{
+display:block;
+padding:15px 5px;
+border-bottom:1px solid #e2e8f0;
+font-size:15px;
+font-weight:800;
+color:#081525;
+text-decoration:none;
+}
+
+.mobile-menu a:last-child{
+border-bottom:0;
+color:#e10613;
+}
+
 }
 
 /* =========================
@@ -160,26 +308,93 @@ font-size:14px;
 }
 
 @media(max-width:800px){
+
 .hero-grid,
 .cards{
 grid-template-columns:1fr;
 }
+
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<div id="navbar"></div>
+<!-- =========================
+     NAVBAR
+========================= -->
 
-<script>
-fetch("navbar.html")
-.then(response => response.text())
-.then(data => {
-    document.getElementById("navbar").innerHTML = data;
-});
-</script>
+<header>
+
+<div class="container header-inner">
+
+<a href="index.html" class="logo">
+NOI<span>ACQUISTIAMO</span>AUTO
+</a>
+
+<nav class="main-nav">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="compro-auto-roma.html">
+Compro Auto Roma
+</a>
+
+<a href="compro-auto-usate-roma.html">
+Compro Auto Usate Roma
+</a>
+
+<a href="vendere-auto-usata-roma.html">
+Vendere Auto Usata Roma
+</a>
+
+</nav>
+
+<a href="tel:0666152690" class="phone">
+☎ 06 66152690
+</a>
+
+<button
+class="mobile-menu-button"
+id="mobileMenuButton"
+>
+☰
+</button>
+
+</div>
+
+<div
+class="mobile-menu"
+id="mobileMenu"
+>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="compro-auto-roma.html">
+Compro Auto Roma
+</a>
+
+<a href="compro-auto-usate-roma.html">
+Compro Auto Usate Roma
+</a>
+
+<a href="vendere-auto-usata-roma.html">
+Vendere Auto Usata Roma
+</a>
+
+<a href="tel:0666152690">
+☎ 06 66152690
+</a>
+
+</div>
+
+</header>
+
 
 <section class="hero">
 
@@ -187,9 +402,13 @@ fetch("navbar.html")
 
 <div>
 
-<div class="badge">COMPRO AUTO ROMA</div>
+<div class="badge">
+COMPRO AUTO ROMA
+</div>
 
-<h1>Hai un'auto da vendere a Roma?</h1>
+<h1>
+Hai un'auto da vendere a Roma?
+</h1>
 
 <p>
 La acquistiamo direttamente dai proprietari.
@@ -199,10 +418,12 @@ Se la vettura rientra nella nostra ricerca,
 possiamo formularti una proposta.
 </p>
 
-<a class="btn whatsapp"
+<a
+class="btn whatsapp"
 href="https://wa.me/393203272238?text=Ciao%2C%20vorrei%20vendere%20la%20mia%20auto.%20Vi%20invio%20informazioni%20e%20foto."
 target="_blank"
-rel="noopener">
+rel="noopener"
+>
 💬 INVIA LA TUA AUTO SU WHATSAPP
 </a>
 
@@ -210,20 +431,44 @@ rel="noopener">
 
 <div class="hero-card">
 
-<h2>Cosa cerchiamo</h2>
+<h2>
+Cosa cerchiamo
+</h2>
 
-<div>✓ Benzina</div>
-<div>✓ GPL</div>
-<div>✓ Ibride</div>
-<div>✓ Circa 2.000 – 10.000 €</div>
-<div>✓ Anche auto non recentissime</div>
-<div>✕ Auto elettriche escluse</div>
-<div>⚠ Diesel solo vere occasioni</div>
+<div>
+✓ Benzina
+</div>
 
+<div>
+✓ GPL
+</div>
+
+<div>
+✓ Ibride
+</div>
+
+<div>
+✓ Circa 2.000 – 10.000 €
+</div>
+
+<div>
+✓ Anche auto non recentissime
+</div>
+
+<div>
+✕ Auto elettriche escluse
+</div>
+
+<div>
+⚠ Diesel solo vere occasioni
 </div>
 
 </div>
+
+</div>
+
 </section>
+
 
 <section>
 
@@ -231,7 +476,9 @@ rel="noopener">
 
 <div class="center">
 
-<h2>Acquistiamo auto usate a Roma</h2>
+<h2>
+Acquistiamo auto usate a Roma
+</h2>
 
 <p class="lead">
 Il primo contatto avviene comodamente a distanza.
@@ -244,27 +491,42 @@ le informazioni che ci invii.
 <div class="cards">
 
 <div class="card">
-<h3>📱 Ci contatti</h3>
+
+<h3>
+📱 Ci contatti
+</h3>
+
 <p>
 Scrivici su WhatsApp e inviaci i dati principali
 della tua automobile insieme alle fotografie.
 </p>
+
 </div>
 
 <div class="card">
-<h3>🔎 Valutiamo</h3>
+
+<h3>
+🔎 Valutiamo
+</h3>
+
 <p>
 Verifichiamo se la vettura corrisponde alle caratteristiche
 delle auto che stiamo cercando.
 </p>
+
 </div>
 
 <div class="card">
-<h3>🤝 Concludiamo in sede</h3>
+
+<h3>
+🤝 Concludiamo in sede
+</h3>
+
 <p>
 Se troviamo un accordo, porti l'auto presso
 la nostra sede di Via della Pisana 313, Roma.
 </p>
+
 </div>
 
 </div>
@@ -273,13 +535,16 @@ la nostra sede di Via della Pisana 313, Roma.
 
 </section>
 
+
 <section class="light">
 
 <div class="container">
 
 <div class="center">
 
-<h2>Vendere direttamente è semplice</h2>
+<h2>
+Vendere direttamente è semplice
+</h2>
 
 <p class="lead">
 Niente annunci, niente appuntamenti con decine di persone
@@ -291,18 +556,39 @@ e niente inutili perdite di tempo.
 <div class="cards">
 
 <div class="card">
-<h3>1. Invia i dati</h3>
-<p>Marca, modello, anno, km, alimentazione e prezzo richiesto.</p>
+
+<h3>
+1. Invia i dati
+</h3>
+
+<p>
+Marca, modello, anno, km, alimentazione e prezzo richiesto.
+</p>
+
 </div>
 
 <div class="card">
-<h3>2. Invia le foto</h3>
-<p>Alcune fotografie ci permettono una prima valutazione.</p>
+
+<h3>
+2. Invia le foto
+</h3>
+
+<p>
+Alcune fotografie ci permettono una prima valutazione.
+</p>
+
 </div>
 
 <div class="card">
-<h3>3. Parliamo</h3>
-<p>Se l'auto ci interessa, discutiamo direttamente la possibile proposta.</p>
+
+<h3>
+3. Parliamo
+</h3>
+
+<p>
+Se l'auto ci interessa, discutiamo direttamente la possibile proposta.
+</p>
+
 </div>
 
 </div>
@@ -311,18 +597,25 @@ e niente inutili perdite di tempo.
 
 </section>
 
+
 <section class="cta">
 
 <div class="container">
 
-<h2>Hai un'auto da vendere?</h2>
+<h2>
+Hai un'auto da vendere?
+</h2>
 
-<p>Contattaci direttamente su WhatsApp.</p>
+<p>
+Contattaci direttamente su WhatsApp.
+</p>
 
-<a class="btn whatsapp"
+<a
+class="btn whatsapp"
 href="https://wa.me/393203272238?text=Ciao%2C%20vorrei%20vendere%20la%20mia%20auto.%20Vi%20invio%20informazioni%20e%20foto."
 target="_blank"
-rel="noopener">
+rel="noopener"
+>
 💬 SCRIVICI SU WHATSAPP
 </a>
 
@@ -330,20 +623,63 @@ rel="noopener">
 
 </section>
 
+
 <footer>
 
 <div class="container">
 
-<strong>NOI ACQUISTIAMO AUTO</strong><br><br>
+<strong>
+NOI ACQUISTIAMO AUTO
+</strong>
 
-Via della Pisana 313, Roma<br>
-06 66152690 · WhatsApp 320 327 2238<br><br>
+<br><br>
+
+Via della Pisana 313, Roma
+
+<br>
+
+06 66152690 · WhatsApp 320 327 2238
+
+<br><br>
 
 P.IVA 09496981003 · Angelucci Domenico
 
 </div>
 
 </footer>
+
+
+<script>
+
+/* =========================
+   MENU MOBILE
+========================= */
+
+const mobileMenuButton =
+document.getElementById("mobileMenuButton");
+
+const mobileMenu =
+document.getElementById("mobileMenu");
+
+if(mobileMenuButton && mobileMenu){
+
+mobileMenuButton.addEventListener(
+"click",
+function(){
+
+mobileMenu.classList.toggle("open");
+
+mobileMenuButton.textContent =
+mobileMenu.classList.contains("open")
+? "✕"
+: "☰";
+
+}
+);
+
+}
+
+</script>
 
 </body>
 </html>
